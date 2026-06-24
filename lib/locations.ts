@@ -227,6 +227,61 @@ export const metros: Metro[] = [
     communities: ["Santa Maria", "Goleta", "Carpinteria", "Lompoc", "Montecito", "Buellton"],
     geo: { lat: 34.4208, lng: -119.6982 },
   },
+  {
+    slug: "long-beach",
+    name: "Long Beach",
+    region: "Long Beach & the South Bay",
+    blurb:
+      "Port logistics, waterfront development, and dense residential. Your bond should keep pace with the work.",
+    context:
+      "Long Beach pairs one of the busiest ports in the country with steady commercial and residential construction across the South Bay. Contractors here move fast, and we make the license and contract bonds the easy part, including for credit-challenged and newer operators.",
+    communities: ["Signal Hill", "Lakewood", "Carson", "Seal Beach", "San Pedro", "Wilmington"],
+    geo: { lat: 33.7701, lng: -118.1937 },
+  },
+  {
+    slug: "anaheim",
+    name: "Anaheim",
+    region: "Anaheim & North Orange County",
+    blurb:
+      "Resort-district hospitality and the Platinum Triangle keep the cranes busy. Get bonded without the wait.",
+    context:
+      "Anaheim's tourism and resort district, plus the ongoing Platinum Triangle build-out, drive a steady stream of hospitality, commercial, and residential work. We bond North OC contractors quickly and build the contract-bond capacity larger projects require.",
+    communities: ["Fullerton", "Garden Grove", "Orange", "Buena Park", "Placentia", "Yorba Linda"],
+    geo: { lat: 33.8366, lng: -117.9143 },
+  },
+  {
+    slug: "coachella-valley",
+    name: "the Coachella Valley",
+    region: "Riverside County desert",
+    blurb:
+      "Resort, hospitality, and seasonal residential across the desert. Practical bonding, no runaround.",
+    context:
+      "From Palm Springs to Indio, the Coachella Valley runs on resort, hospitality, and second-home residential construction, with a seasonal rhythm all its own. We give desert contractors fast license bonds and real help with contract bonds for the valley's bigger projects.",
+    communities: ["Palm Springs", "Palm Desert", "Indio", "Cathedral City", "La Quinta", "Rancho Mirage", "Coachella"],
+    geo: { lat: 33.8303, lng: -116.5453 },
+  },
+  {
+    slug: "redding",
+    name: "Redding",
+    region: "Shasta County & the North State",
+    blurb:
+      "North State rebuilding and residential growth. Fast license bonds from people who pick up the phone.",
+    context:
+      "Redding anchors the North State, where residential rebuilding, forestry, and commercial work keep contractors busy across Shasta County and beyond. We bond North State contractors quickly and place the tougher files other brokers pass on.",
+    communities: ["Anderson", "Red Bluff", "Shasta Lake", "Cottonwood", "Palo Cedro"],
+    geo: { lat: 40.5865, lng: -122.3917 },
+  },
+  {
+    slug: "salinas",
+    name: "Salinas",
+    region: "Monterey County & the Central Coast",
+    blurb:
+      "Agriculture and Central Coast residential. Bonding that fits the way Monterey County builds.",
+    context:
+      "Salinas and Monterey County combine some of the most productive agriculture in the world with coastal residential and commercial construction. We give Central Coast contractors fast license bonds and human help with contract bonds, credit challenges welcome.",
+    communities: ["Monterey", "Seaside", "Marina", "Soledad", "Gonzales", "Greenfield", "King City"],
+    geo: { lat: 36.6777, lng: -121.6555 },
+  },
 ];
 
 export function getMetro(slug: string): Metro | undefined {

@@ -4,6 +4,7 @@ import { bonds } from "@/lib/regulatory";
 import { metros } from "@/lib/locations";
 import { insuranceProducts } from "@/lib/insurance";
 import { guides } from "@/lib/guides";
+import { commercialBonds } from "@/lib/commercial-bonds";
 
 type Freq = MetadataRoute.Sitemap[number]["changeFrequency"];
 
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/surety-bonds", priority: 0.8, freq: "monthly" },
     { path: "/bonding-vs-insurance", priority: 0.7, freq: "monthly" },
     { path: "/resources", priority: 0.7, freq: "monthly" },
+    { path: "/commercial-bonds", priority: 0.7, freq: "monthly" },
+    { path: "/why-use-a-surety-broker", priority: 0.7, freq: "monthly" },
     { path: "/get-a-quote", priority: 0.8, freq: "monthly" },
     { path: "/about", priority: 0.6, freq: "yearly" },
     { path: "/contact", priority: 0.6, freq: "yearly" },
@@ -48,7 +51,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     freq: "monthly" as Freq,
   }));
 
-  return [...staticPaths, ...bondPaths, ...metroPaths, ...insurancePaths, ...guidePaths].map((entry) => ({
+  const commercialPaths = commercialBonds.map((b) => ({
+    path: `/commercial-bonds/${b.slug}`,
+    priority: 0.6,
+    freq: "monthly" as Freq,
+  }));
+
+  return [
+    ...staticPaths,
+    ...bondPaths,
+    ...metroPaths,
+    ...insurancePaths,
+    ...guidePaths,
+    ...commercialPaths,
+  ].map((entry) => ({
     url: `${site.url}${entry.path}`,
     lastModified: now,
     changeFrequency: entry.freq,

@@ -58,6 +58,34 @@ export const guides: Guide[] = [
     category: "Bond Costs",
     keyword: "surety bond bad credit",
   },
+  {
+    slug: "bid-bond-cost",
+    title: "How Much Does a Bid Bond Cost?",
+    excerpt: "Why most bid bonds carry no separate premium, and what actually drives the cost.",
+    category: "Bond Costs",
+    keyword: "bid bond cost",
+  },
+  {
+    slug: "what-a-contractor-license-bond-covers",
+    title: "What Does a Contractor License Bond Cover?",
+    excerpt: "Who the bond protects, what a valid claim looks like, and what it does not cover.",
+    category: "Licensing",
+    keyword: "what does a contractor license bond cover",
+  },
+  {
+    slug: "california-llc-contractor-requirements",
+    title: "California LLC Contractor Bond Requirements",
+    excerpt: "The two bonds (and the insurance) an LLC contractor needs, on top of the license bond.",
+    category: "Licensing",
+    keyword: "california llc contractor requirements",
+  },
+  {
+    slug: "contractor-bond-claims-and-lapses",
+    title: "Contractor Bond Claims & Lapses: What to Know",
+    excerpt: "What happens when a claim is filed or your bond lapses, and how to protect your license.",
+    category: "Licensing",
+    keyword: "contractor bond claim",
+  },
 ];
 
 export function guideHref(slug: string) {

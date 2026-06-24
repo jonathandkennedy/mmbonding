@@ -75,6 +75,11 @@ export const primaryNav: NavItem[] = [
         href: "/disciplinary-bond",
         blurb: "Reinstate a license after a CSLB disciplinary action.",
       },
+      {
+        label: "Commercial & Specialty Bonds",
+        href: "/commercial-bonds",
+        blurb: "Notary, auto dealer, immigration consultant, and more.",
+      },
     ],
   },
   {
