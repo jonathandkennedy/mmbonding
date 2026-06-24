@@ -63,17 +63,19 @@ These are marked `TODO` in `lib/site.ts` and noted on-page where relevant:
 
 ## Forms
 
-The quote and contact forms deliver leads via **Formspree** (the launch backend: no server code,
-works on Vercel, emails leads instantly). To turn it on, create a form at
-[formspree.io](https://formspree.io) and set the hashid in an env var (see `.env.example`):
+All forms (quote, contact, insurance referral, license-school referral) deliver leads via
+**Formspree** (the launch backend: no server code, works on Vercel, emails leads instantly). It is
+already wired and live: the form id is committed as a default in `lib/forms.ts` (a Formspree id is
+a public value), so submissions work on every deploy with no dashboard step. To point at a
+different form, set an env var (see `.env.example`):
 
 ```bash
-NEXT_PUBLIC_FORMSPREE_FORM_ID=abcdwxyz   # shared, or use the quote/contact-specific vars
+NEXT_PUBLIC_FORMSPREE_FORM_ID=yourid   # overrides the default; or use the quote/contact-specific vars
 ```
 
-Until that's set, the forms show their success state but mark themselves a preview (no email sent).
-The submit handler (`lib/forms.ts`) already captures UTM params + `gclid` for attribution, flags
-hard-to-place leads with a priority subject, and includes a honeypot. It's deliberately swappable:
+The submit handler (`lib/forms.ts`) captures UTM params + `gclid` for attribution, flags
+hard-to-place leads with a priority subject, routes insurance and license-school referrals with
+their own subjects, and includes a honeypot. It's deliberately swappable:
 when the richer **Supabase** pipeline lands (structured `leads` / `insurance_referrals` tables, RLS,
 CallRail integration, Slack/email webhooks, renewal reminders — plan §7), point `submitLead()` at a
 server action and the form components don't change.

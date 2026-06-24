@@ -16,12 +16,21 @@
 
 export type FormKind = "quote" | "contact";
 
+/**
+ * Default Formspree form. A Formspree form id is a PUBLIC identifier (it ships
+ * in the client bundle either way), so committing it is fine and means the
+ * forms work on every deploy with no dashboard step. Override per-environment
+ * with the env vars below (e.g. a separate production form, or split
+ * quote/contact inboxes).
+ */
+const DEFAULT_FORMSPREE_ID = "xdarajbg";
+
 function formId(kind: FormKind): string | undefined {
   const specific =
     kind === "quote"
       ? process.env.NEXT_PUBLIC_FORMSPREE_QUOTE_ID
       : process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_ID;
-  return specific || process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
+  return specific || process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || DEFAULT_FORMSPREE_ID;
 }
 
 export function isFormBackendConfigured(kind: FormKind): boolean {
