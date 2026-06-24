@@ -307,6 +307,159 @@ export const commercialBonds: CommercialBond[] = [
       },
     ],
   },
+  {
+    slug: "utility-street-cut-bond",
+    category: "Permit & Site Improvement",
+    name: "Utility & Street Cut Bond",
+    shortName: "Street Cut Bond",
+    intro:
+      "Cutting into a public street to run or repair utilities? Cities require a street cut bond guaranteeing you restore the pavement to standard. We issue them fast.",
+    amountLabel: "Set by the permit",
+    authority: "Required by the city or county",
+    whatItIs:
+      "A street cut or utility bond guarantees that when you open a public street or right-of-way for utility work, you patch and restore it to the agency's standard. The city sets the amount with the permit.",
+    whoNeedsIt: [
+      "Utility, underground, and excavation contractors cutting public streets",
+      "Plumbers and contractors running laterals into the right-of-way",
+      "Anyone pulling a street-cut or utility-encroachment permit",
+    ],
+    faqs: [
+      {
+        q: "How much is a street cut bond?",
+        a: "The agency sets the amount with the permit, based on the cut size and restoration cost. The premium is a small percentage of that, and these bonds are usually quick to issue.",
+      },
+    ],
+  },
+  {
+    slug: "well-drilling-bond",
+    category: "Permit & Site Improvement",
+    name: "Water Well Drilling Bond",
+    shortName: "Well Drilling Bond",
+    intro:
+      "County well permits require a water well drilling bond guaranteeing you construct and seal wells to code. We place them for C-57 well contractors.",
+    amountLabel: "Set by the county",
+    authority: "Required by the county",
+    whatItIs:
+      "A well drilling bond guarantees that water wells are constructed, sealed, and when needed destroyed per the county's standards and state well standards. The county sets the bond with the drilling permit.",
+    whoNeedsIt: [
+      "C-57 water well drilling contractors",
+      "Pump and well-service contractors a county requires to bond",
+    ],
+    faqs: [
+      {
+        q: "Why do counties require a well bond?",
+        a: "Wells affect groundwater, so counties require the bond to guarantee proper construction and sealing. The amount is set by the county; we quote the premium once you have it.",
+      },
+    ],
+  },
+  {
+    slug: "demolition-bond",
+    category: "Permit & Site Improvement",
+    name: "Demolition Permit Bond",
+    shortName: "Demolition Bond",
+    intro:
+      "Demolition permits often require a bond guaranteeing safe demolition, utility disconnects, and site cleanup. We issue them quickly for demo contractors.",
+    amountLabel: "Set by the permit",
+    authority: "Required by the city or county",
+    whatItIs:
+      "A demolition bond guarantees that a permitted demolition is completed safely and the site is cleared and restored per the agency's conditions, including capping utilities and removing debris. The agency sets the amount.",
+    whoNeedsIt: [
+      "Demolition (C-21) contractors",
+      "General contractors pulling demolition permits",
+    ],
+    faqs: [
+      {
+        q: "How fast can I get a demolition bond?",
+        a: "Usually quickly. Give us the agency, the required amount, and your business details, and we can often turn it around the same day.",
+      },
+    ],
+  },
+  {
+    slug: "talent-agency-bond",
+    name: "California Talent Agency Bond",
+    shortName: "Talent Agency Bond",
+    intro:
+      "California talent agencies must file a $50,000 surety bond to be licensed. We place them for new and established agencies.",
+    amountLabel: "$50,000",
+    authority: "California Labor Commissioner",
+    statute: "Labor Code §1700.15",
+    whatItIs:
+      "The talent agency bond protects artists and clients against violations of California's Talent Agencies Act. It is required to obtain and keep a talent agency license from the Labor Commissioner.",
+    whoNeedsIt: [
+      "New talent agencies applying for a California license",
+      "Agencies renewing their license",
+    ],
+    faqs: [
+      {
+        q: "How much does the talent agency bond cost?",
+        a: "You pay a premium that is a percentage of the $50,000, set by underwriting and driven mostly by credit. We shop markets for your best rate.",
+      },
+    ],
+  },
+  {
+    slug: "debt-collector-bond",
+    name: "California Debt Collector Bond",
+    shortName: "Debt Collector Bond",
+    intro:
+      "California licenses debt collectors, and the license requires a $25,000 surety bond filed with the DFPI. We place them for new and renewing licensees.",
+    amountLabel: "$25,000",
+    authority: "California DFPI",
+    statute: "Debt Collection Licensing Act",
+    whatItIs:
+      "Under California's Debt Collection Licensing Act, debt collectors must be licensed by the Department of Financial Protection and Innovation and file a $25,000 surety bond protecting consumers.",
+    whoNeedsIt: [
+      "Debt collectors and collection agencies licensing with the DFPI",
+      "Licensees renewing under the Debt Collection Licensing Act",
+    ],
+    faqs: [
+      {
+        q: "Is this the same as an old collection agency bond?",
+        a: "California now licenses debt collectors through the DFPI under the Debt Collection Licensing Act, with a $25,000 bond. We place the current bond for new and renewing licensees.",
+      },
+    ],
+  },
+  {
+    slug: "seller-of-travel-bond",
+    name: "California Seller of Travel Bond",
+    shortName: "Seller of Travel Bond",
+    intro:
+      "California sellers of travel must register and meet the state's consumer-protection requirements, which can include a surety bond. We help you place it.",
+    amountLabel: "Varies by the program",
+    authority: "California Attorney General, Seller of Travel program",
+    whatItIs:
+      "California's Seller of Travel law protects consumers who buy travel. Registered sellers must meet the program's consumer-protection requirements, and a surety bond can be part of satisfying them. We quote the bond for your situation.",
+    whoNeedsIt: [
+      "Travel agencies and sellers of travel registering in California",
+      "Sellers a contract or the program requires to post a bond",
+    ],
+    faqs: [
+      {
+        q: "Do all sellers of travel need a bond?",
+        a: "Not always; the Seller of Travel program has specific requirements and options. Tell us your situation and we will confirm whether a bond fits and quote it.",
+      },
+    ],
+  },
+  {
+    slug: "farm-labor-contractor-bond",
+    name: "California Farm Labor Contractor Bond",
+    shortName: "Farm Labor Contractor Bond",
+    intro:
+      "California farm labor contractors must be licensed and post a surety bond protecting workers' wages. We place them, ag credit challenges included.",
+    amountLabel: "Set by the FLC license",
+    authority: "California Labor Commissioner",
+    whatItIs:
+      "The farm labor contractor (FLC) bond guarantees payment of wages and compliance with California's farm labor laws. It is required to hold an FLC license from the Labor Commissioner. The required amount is set by the licensing requirement.",
+    whoNeedsIt: [
+      "Farm labor contractors licensing in California",
+      "FLC licensees renewing their registration",
+    ],
+    faqs: [
+      {
+        q: "Can a farm labor contractor with thin credit get bonded?",
+        a: "Often, yes. Ag and seasonal businesses are squarely in our hard-to-place wheelhouse. We shop markets that write credit-challenged files rather than declining at the door.",
+      },
+    ],
+  },
 ];
 
 export function getCommercialBond(slug: string): CommercialBond | undefined {

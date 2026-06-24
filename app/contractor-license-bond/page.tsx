@@ -156,6 +156,16 @@ export default function Page() {
           <strong>{facts.filingWindow}</strong>, and many qualifying applicants are bonded the same
           business day. We handle the paperwork and confirm the filing for you.
         </p>
+
+        <h2>Contractor license bonds by metro</h2>
+        <p>
+          We bond contractors across California. For local guidance, see the contractor license bond
+          in{" "}
+          <Link href="/contractor-license-bond/los-angeles">Los Angeles</Link>,{" "}
+          <Link href="/contractor-license-bond/orange-county">Orange County</Link>, and{" "}
+          <Link href="/contractor-license-bond/san-diego">San Diego</Link>, or browse all{" "}
+          <Link href="/surety-bonds">locations</Link>.
+        </p>
       </Prose>
     </BondPage>
   );
