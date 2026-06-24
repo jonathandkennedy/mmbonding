@@ -45,6 +45,24 @@ export const facts = {
   caActiveLicensees: 325000,
 } as const;
 
+/**
+ * SBA Surety Bond Guarantee (SBG) Program — FEDERAL figures, not CA. The SBA
+ * guarantees a share of the surety's loss so sureties can bond small, new, and
+ * credit-challenged contractors. Verify against sba.gov/funding-programs/surety-bonds
+ * at build and quarterly (statutory limits adjust). Source: SBA.gov, 2024 increase.
+ */
+export const sba = {
+  /** Max contract size the SBA will guarantee a bond for. */
+  contractLimit: 9_000_000,
+  /** Higher limit for federal contracts when a contracting officer certifies. */
+  federalContractLimit: 14_000_000,
+  /** SBA covers this share of a surety's loss for most contracts. */
+  guaranteeLowPct: 80,
+  /** Higher share: contracts up to the threshold below, and for 8(a)/HUBZone/veteran/disadvantaged firms. */
+  guaranteeHighPct: 90,
+  guaranteeHighThreshold: 100_000,
+} as const;
+
 export type BondKey =
   | "contractor-license-bond"
   | "bid-bond"

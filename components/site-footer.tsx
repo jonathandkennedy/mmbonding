@@ -13,6 +13,7 @@ const footerCols: { heading: string; links: { label: string; href: string }[] }[
     links: [
       { label: bonds["contractor-license-bond"].name, href: bonds["contractor-license-bond"].href },
       { label: "Contract Bonds", href: "/contract-bonds" },
+      { label: "SBA Surety Bonds", href: "/sba-surety-bonds" },
       { label: bonds["llc-employee-worker-bond"].name, href: bonds["llc-employee-worker-bond"].href },
       { label: bonds["disciplinary-bond"].name, href: bonds["disciplinary-bond"].href },
       { label: "Commercial & Specialty", href: "/commercial-bonds" },

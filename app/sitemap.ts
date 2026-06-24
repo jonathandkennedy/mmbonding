@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/contractor-license-bond", priority: 0.9, freq: "monthly" },
     { path: "/contract-bonds", priority: 0.8, freq: "monthly" },
     { path: "/hard-to-place-surety-bonds", priority: 0.9, freq: "monthly" },
+    { path: "/sba-surety-bonds", priority: 0.8, freq: "monthly" },
     { path: "/hard-to-place-surety-bonds/no-credit-check-contractor-bond", priority: 0.7, freq: "monthly" },
     { path: "/surety-bonds", priority: 0.8, freq: "monthly" },
     { path: "/bonding-vs-insurance", priority: 0.7, freq: "monthly" },

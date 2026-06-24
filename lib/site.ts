@@ -61,6 +61,11 @@ export const primaryNav: NavItem[] = [
         blurb: "Bid, performance & payment bonds for public and private work.",
       },
       {
+        label: "SBA Surety Bonds",
+        href: "/sba-surety-bonds",
+        blurb: "Get bonded through the SBA program when standard markets say no.",
+      },
+      {
         label: "Bond of Qualifying Individual",
         href: "/bond-of-qualifying-individual",
         blurb: "The $25,000 BQI for RME / minority-owner qualifiers.",
