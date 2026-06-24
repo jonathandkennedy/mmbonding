@@ -513,6 +513,204 @@ export const metros: Metro[] = [
     communities: ["Santa Clara", "Sunnyvale", "Milpitas", "Campbell", "Cupertino", "Morgan Hill"],
     geo: { lat: 37.3382, lng: -121.8863 },
   },
+  {
+    slug: "elk-grove",
+    name: "Elk Grove",
+    region: "Sacramento County",
+    blurb:
+      "One of the region's largest, fastest-growing suburbs. New construction everywhere, and we bond it.",
+    context:
+      "Elk Grove is one of the largest and fastest-growing suburbs in the Sacramento region, full of new residential and the commercial work that follows. Newer and growing contractors get declined by automated sites; we build programs for exactly that.",
+    communities: ["Sacramento", "Galt", "Wilton", "Laguna", "Franklin"],
+    geo: { lat: 38.4088, lng: -121.3716 },
+  },
+  {
+    slug: "roseville",
+    name: "Roseville",
+    region: "Placer County",
+    blurb:
+      "Placer County's retail and residential engine. Fast license bonds, real contract-bond help.",
+    context:
+      "Roseville anchors fast-growing Placer County with major retail, commercial, and residential construction. We give local contractors quick license bonds and the contract-bond capacity bigger projects require.",
+    communities: ["Rocklin", "Lincoln", "Citrus Heights", "Granite Bay", "Antelope"],
+    geo: { lat: 38.7521, lng: -121.288 },
+  },
+  {
+    slug: "folsom",
+    name: "Folsom",
+    region: "Sacramento County",
+    blurb:
+      "Affluent, tech-driven, and master-planned. A bond should be the easy part, and with us it is.",
+    context:
+      "Folsom blends a strong tech employment base with historic charm and master-planned residential growth east of Sacramento. We move the routine license bonds fast and quote credit challenges honestly.",
+    communities: ["El Dorado Hills", "Orangevale", "Rancho Cordova", "Granite Bay", "Cameron Park"],
+    geo: { lat: 38.6779, lng: -121.1761 },
+  },
+  {
+    slug: "hayward",
+    name: "Hayward",
+    region: "Alameda County, East Bay",
+    blurb:
+      "East Bay industry and dense residential. Keep your bonds from slowing the build.",
+    context:
+      "Hayward sits at the center of the East Bay with a deep industrial base and busy residential and commercial construction. We bond Hayward-area contractors fast and place the tougher files other brokers turn away.",
+    communities: ["San Leandro", "Union City", "Castro Valley", "Fremont", "San Lorenzo"],
+    geo: { lat: 37.6688, lng: -122.0808 },
+  },
+  {
+    slug: "concord",
+    name: "Concord",
+    region: "Contra Costa County, East Bay",
+    blurb:
+      "The largest city in Contra Costa, with a major redevelopment pipeline. Fast bonds, tough cases welcome.",
+    context:
+      "Concord is the largest city in Contra Costa County, with suburban growth and a major reuse pipeline at the former Naval Weapons Station. We give local contractors fast license bonds and contract-bond capacity for larger work.",
+    communities: ["Walnut Creek", "Pleasant Hill", "Martinez", "Pittsburg", "Clayton", "Antioch"],
+    geo: { lat: 37.978, lng: -122.0311 },
+  },
+  {
+    slug: "vallejo",
+    name: "Vallejo",
+    region: "Solano County, North Bay",
+    blurb:
+      "Waterfront, Mare Island redevelopment, and affordable North Bay growth. Practical bonding, fast.",
+    context:
+      "Vallejo combines a working waterfront and the ongoing Mare Island redevelopment with some of the most affordable housing growth in the North Bay. We bond local contractors quickly, credit challenges included.",
+    communities: ["Benicia", "American Canyon", "Fairfield", "Crockett"],
+    geo: { lat: 38.1041, lng: -122.2566 },
+  },
+  {
+    slug: "fairfield",
+    name: "Fairfield",
+    region: "Solano County",
+    blurb:
+      "Midway between Sacramento and San Francisco, anchored by Travis AFB. Fast license and contract bonds.",
+    context:
+      "Fairfield sits midway between Sacramento and the Bay Area, with Travis Air Force Base and steady industrial and residential construction. We give Solano County contractors fast license bonds and real contract-bond help.",
+    communities: ["Suisun City", "Vacaville", "Travis AFB", "Cordelia", "Green Valley"],
+    geo: { lat: 38.2494, lng: -122.04 },
+  },
+  {
+    slug: "merced",
+    name: "Merced",
+    region: "Merced County & the Central Valley",
+    blurb:
+      "UC Merced growth plus agriculture. Fast bonds from people who pick up the phone.",
+    context:
+      "Merced is growing around UC Merced and a strong agricultural base, with new residential and institutional construction. We give Central Valley contractors fast license bonds and human help with contract bonds.",
+    communities: ["Atwater", "Los Banos", "Livingston", "Winton", "Gustine"],
+    geo: { lat: 37.3022, lng: -120.483 },
+  },
+  {
+    slug: "chico",
+    name: "Chico",
+    region: "Butte County & the North Valley",
+    blurb:
+      "A college town and North Valley hub still rebuilding nearby. Practical, fast bonding.",
+    context:
+      "Chico anchors the North Valley with Chico State, agriculture, and significant rebuilding across Butte County after recent wildfires. We bond local contractors fast and place the credit-challenged and newer operators others pass on.",
+    communities: ["Paradise", "Oroville", "Durham", "Hamilton City", "Gridley"],
+    geo: { lat: 39.7285, lng: -121.8375 },
+  },
+  {
+    slug: "hanford",
+    name: "Hanford",
+    region: "Kings County & the Central Valley",
+    blurb:
+      "Kings County agriculture and NAS Lemoore. Bonding that fits how the Valley builds.",
+    context:
+      "Hanford and Kings County pair productive agriculture with the activity around Naval Air Station Lemoore. We give local contractors fast license bonds and real contract-bond help, credit challenges welcome.",
+    communities: ["Lemoore", "Visalia", "Corcoran", "Armona", "Stratford"],
+    geo: { lat: 36.3275, lng: -119.6457 },
+  },
+  {
+    slug: "escondido",
+    name: "Escondido",
+    region: "San Diego County, North County inland",
+    blurb:
+      "North County inland's hub, from residential to commercial. Get bonded without the wait.",
+    context:
+      "Escondido anchors inland North County San Diego with steady residential and commercial construction. We move the routine license bonds fast and help local contractors build contract-bond capacity.",
+    communities: ["San Marcos", "Vista", "Valley Center", "Rancho Bernardo", "Poway"],
+    geo: { lat: 33.1192, lng: -117.0864 },
+  },
+  {
+    slug: "carlsbad",
+    name: "Carlsbad",
+    region: "San Diego County, North County coastal",
+    blurb:
+      "Coastal, biotech, and upscale residential. A bond should be the simplest item on the list.",
+    context:
+      "Carlsbad blends North County coastal living with biotech, tourism, and upscale residential construction. We give local contractors fast license bonds and quote credit challenges honestly.",
+    communities: ["Oceanside", "Vista", "Encinitas", "San Marcos", "Cardiff"],
+    geo: { lat: 33.1581, lng: -117.3506 },
+  },
+  {
+    slug: "el-cajon",
+    name: "El Cajon",
+    region: "San Diego County, East County",
+    blurb:
+      "East County's hub, diverse and busy. Fast license bonds and contract-bond help.",
+    context:
+      "El Cajon anchors East County San Diego with a diverse economy and steady residential and commercial work. We bond local contractors fast and place the tougher files other brokers skip.",
+    communities: ["La Mesa", "Santee", "Lakeside", "Spring Valley", "Lemon Grove"],
+    geo: { lat: 32.7948, lng: -116.9625 },
+  },
+  {
+    slug: "irvine",
+    name: "Irvine",
+    region: "Orange County",
+    blurb:
+      "Master-planned, business-driven, and high-value. We build the bonding capacity bigger work needs.",
+    context:
+      "Irvine is one of the most carefully master-planned cities in the country, with a deep business and tech base and high-value commercial and residential work. We do more than issue a license bond here: we build contract-bond programs sized for the work.",
+    communities: ["Tustin", "Lake Forest", "Newport Beach", "Costa Mesa", "Laguna Hills"],
+    geo: { lat: 33.6846, lng: -117.8265 },
+  },
+  {
+    slug: "santa-ana",
+    name: "Santa Ana",
+    region: "Orange County",
+    blurb:
+      "The OC county seat, dense and diverse. Fast license bonds, tough cases welcome.",
+    context:
+      "Santa Ana is the Orange County seat, a dense and diverse city with constant commercial and residential construction. We give local contractors fast license bonds and work the credit-challenged files automated sites decline.",
+    communities: ["Garden Grove", "Tustin", "Orange", "Fountain Valley", "Costa Mesa"],
+    geo: { lat: 33.7455, lng: -117.8677 },
+  },
+  {
+    slug: "huntington-beach",
+    name: "Huntington Beach",
+    region: "Orange County",
+    blurb:
+      "Surf City coastal living, residential and commercial. Get bonded without the wait.",
+    context:
+      "Huntington Beach pairs Surf City coastal residential with steady commercial work along the Orange County coast. We move the routine license bonds fast and help local contractors with contract bonds.",
+    communities: ["Fountain Valley", "Westminster", "Costa Mesa", "Seal Beach", "Newport Beach"],
+    geo: { lat: 33.6595, lng: -117.9988 },
+  },
+  {
+    slug: "hesperia",
+    name: "Hesperia",
+    region: "Victor Valley & the High Desert",
+    blurb:
+      "Affordable High Desert growth in the Victor Valley. Practical bonding from people who answer.",
+    context:
+      "Hesperia is one of the Victor Valley's fast-growing High Desert cities, built on affordable residential and the commercial work that follows. We give local contractors fast license bonds and place the tougher files other brokers pass on.",
+    communities: ["Victorville", "Apple Valley", "Oak Hills", "Phelan", "Adelanto"],
+    geo: { lat: 34.4264, lng: -117.3009 },
+  },
+  {
+    slug: "apple-valley",
+    name: "Apple Valley",
+    region: "Victor Valley & the High Desert",
+    blurb:
+      "A High Desert town with steady residential growth. Fast license bonds, real contract-bond help.",
+    context:
+      "Apple Valley anchors the High Desert alongside Victorville, with steady residential growth and commercial construction. We bond local contractors quickly, credit challenges included.",
+    communities: ["Victorville", "Hesperia", "Lucerne Valley", "Spring Valley Lake", "Adelanto"],
+    geo: { lat: 34.5008, lng: -117.1858 },
+  },
 ];
 
 export function getMetro(slug: string): Metro | undefined {

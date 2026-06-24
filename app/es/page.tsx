@@ -178,11 +178,7 @@ export default function Page() {
               </p>
             </Reveal>
             <Reveal delay={80} className="shrink-0">
-              {/*
-                Enlaza por ahora a la página en inglés de casos difíciles.
-                Una versión en español es una página futura.
-              */}
-              <Button href="/hard-to-place-surety-bonds" variant="white" size="lg">
+              <Button href="/es/fianzas-mal-credito" variant="white" size="lg">
                 Coloque mi caso difícil
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Button>

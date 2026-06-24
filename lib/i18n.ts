@@ -17,6 +17,7 @@ export const localePairs: LocalePair[] = [
   { en: "/contractor-license-bond", es: "/es/fianza-de-contratista" },
   { en: "/contract-bonds/bid-bond", es: "/es/fianza-de-licitacion" },
   { en: "/contract-bonds/performance-bond", es: "/es/fianza-de-cumplimiento" },
+  { en: "/hard-to-place-surety-bonds", es: "/es/fianzas-mal-credito" },
 ];
 
 function normalize(pathname: string): string {
