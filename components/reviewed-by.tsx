@@ -1,0 +1,49 @@
+import Link from "next/link";
+import { BadgeCheck } from "lucide-react";
+import { site } from "@/lib/site";
+import { REGULATORY_REVIEWED } from "@/lib/regulatory";
+import { cn } from "@/lib/utils";
+
+/**
+ * E-E-A-T byline. A named, licensed producer reviewed this page. Links to
+ * /about (where the license and bio live), carries a real "Updated" date, and
+ * surfaces the DOI license number. This is the trust signal the aggregators
+ * fake; here it is real and consistent on every guide.
+ */
+export function ReviewedBy({ className }: { className?: string }) {
+  return (
+    <aside
+      className={cn(
+        "flex flex-col gap-3 rounded-2xl border border-ink-200 bg-surface px-5 py-4 sm:flex-row sm:items-center sm:gap-4",
+        className,
+      )}
+    >
+      <span
+        aria-hidden="true"
+        className="grid size-11 shrink-0 place-items-center rounded-full bg-navy-900 font-display text-sm font-bold tracking-tight text-azure-300"
+      >
+        MM
+      </span>
+      <div className="text-sm leading-snug">
+        <p className="text-muted">
+          Reviewed by{" "}
+          <Link href="/about" className="font-semibold text-navy-900 underline-offset-2 hover:underline">
+            {site.founder.name}
+          </Link>
+          , {site.founder.title}
+        </p>
+        <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-muted">
+          <span className="inline-flex items-center gap-1 font-medium text-success">
+            <BadgeCheck className="size-3.5" aria-hidden="true" />
+            CA DOI License
+          </span>
+          <span className="font-mono text-xs text-navy-700">#{site.doiLicense}</span>
+          <span className="text-ink-300">/</span>
+          <span>
+            Updated <time dateTime={REGULATORY_REVIEWED.iso}>{REGULATORY_REVIEWED.label}</time>
+          </span>
+        </p>
+      </div>
+    </aside>
+  );
+}
