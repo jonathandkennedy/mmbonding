@@ -140,6 +140,59 @@ export const commercialBonds: CommercialBond[] = [
       },
     ],
   },
+  {
+    slug: "freight-broker-bond",
+    name: "Freight Broker Bond (BMC-84)",
+    shortName: "Freight Broker Bond",
+    intro:
+      "Freight brokers and forwarders must file a $75,000 BMC-84 surety bond with the FMCSA to get and keep their operating authority. We place them, credit challenges included.",
+    amountLabel: "$75,000",
+    authority: "FMCSA (federal)",
+    statute: "49 U.S.C. §13906",
+    whatItIs:
+      "The BMC-84 bond guarantees that a freight broker or forwarder meets its financial obligations to the motor carriers and shippers it works with. The FMCSA requires it to issue and maintain broker or forwarder authority. It protects the parties you broker for, not you.",
+    whoNeedsIt: [
+      "New freight brokers applying for FMCSA authority",
+      "Freight forwarders required to file financial security",
+      "Brokers renewing or replacing an existing BMC-84",
+    ],
+    faqs: [
+      {
+        q: "How much does a freight broker bond cost?",
+        a: "You pay a premium that is a percentage of the $75,000, set by underwriting and driven mostly by credit. Strong credit pays the least; we shop markets to find your best rate, including for newer brokers.",
+      },
+      {
+        q: "Can I get a BMC-84 with bad credit?",
+        a: "Often, yes. Credit affects the rate, not your eligibility outright. We work the markets that write credit-challenged brokers rather than declining at the door. Underwriting still applies.",
+      },
+    ],
+  },
+  {
+    slug: "fidelity-bond",
+    name: "Fidelity Bond (Employee Dishonesty)",
+    shortName: "Fidelity Bond",
+    intro:
+      "A fidelity bond protects your business from losses caused by employee theft or fraud. Contracts and clients sometimes require it, and many businesses carry it by choice. We place them fast.",
+    amountLabel: "Set by your coverage level",
+    authority: "Required by contracts, or carried voluntarily",
+    whatItIs:
+      "A fidelity bond (also called an employee dishonesty bond) reimburses your business if a covered employee steals money, property, or commits fraud against you. Unlike a business service bond, which protects your clients, a fidelity bond protects you, the employer.",
+    whoNeedsIt: [
+      "Businesses whose employees handle cash, payments, or client funds",
+      "Companies a contract or client requires to carry employee-dishonesty coverage",
+      "Owners who want to protect the business against internal theft",
+    ],
+    faqs: [
+      {
+        q: "What is the difference between a fidelity bond and a business service bond?",
+        a: "A fidelity bond protects your business against your own employees' theft. A business service (janitorial) bond protects your clients if your employee steals from them. Many service businesses consider both.",
+      },
+      {
+        q: "How much fidelity coverage do I need?",
+        a: "There is no fixed amount. You choose a coverage level based on your exposure or what a contract requires. We will help you size it and quote it.",
+      },
+    ],
+  },
 ];
 
 export function getCommercialBond(slug: string): CommercialBond | undefined {

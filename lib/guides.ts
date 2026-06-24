@@ -86,6 +86,34 @@ export const guides: Guide[] = [
     category: "Licensing",
     keyword: "contractor bond claim",
   },
+  {
+    slug: "how-to-get-bonded-as-a-new-contractor",
+    title: "How to Get Bonded as a New Contractor",
+    excerpt: "No track record yet? The realistic path to getting bonded when you are just starting out.",
+    category: "How-To",
+    keyword: "how to get bonded new contractor",
+  },
+  {
+    slug: "sba-surety-bond-eligibility",
+    title: "SBA Surety Bond Eligibility: Do You Qualify?",
+    excerpt: "Who qualifies for the SBA Surety Bond Guarantee program, and what it takes to apply.",
+    category: "How-To",
+    keyword: "sba surety bond eligibility",
+  },
+  {
+    slug: "how-to-bid-public-works-in-california",
+    title: "How to Bid Public Works in California",
+    excerpt: "Finding bids, registering with the DIR, and the bonds you need to compete for public work.",
+    category: "How-To",
+    keyword: "how to bid public works california",
+  },
+  {
+    slug: "dir-registration-for-contractors",
+    title: "DIR Registration for California Contractors",
+    excerpt: "What DIR registration is, who needs it for public works, and how it connects to bonding.",
+    category: "Licensing",
+    keyword: "dir registration contractors",
+  },
 ];
 
 export function guideHref(slug: string) {
