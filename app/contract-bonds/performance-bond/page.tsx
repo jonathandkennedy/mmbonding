@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose, Bullet } from "@/components/prose";
 import { bonds } from "@/lib/regulatory";
+import { hreflangFor } from "@/lib/i18n";
 
 const bond = bonds["performance-bond"];
 const parent = { name: "Contract Bonds", href: "/contract-bonds" };
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
   title: "Performance Bond",
   description:
     "California performance bonds for construction. Guarantee project completion. Rates driven by contract size, credit, and experience. Hard-to-place capacity from a licensed broker, CA DOI #6009105.",
-  alternates: { canonical: bond.href },
+  alternates: {
+    canonical: bond.href,
+    languages: hreflangFor("/contract-bonds/performance-bond", "/es/fianza-de-cumplimiento"),
+  },
 };
 
 const faqs = [

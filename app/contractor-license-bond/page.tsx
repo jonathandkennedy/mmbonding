@@ -4,13 +4,17 @@ import { BondPage } from "@/components/bond-page";
 import { Prose, Bullet } from "@/components/prose";
 import { bonds, facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
+import { hreflangFor } from "@/lib/i18n";
 
 const bond = bonds["contractor-license-bond"];
 
 export const metadata: Metadata = {
   title: "California Contractor License Bond",
   description: `The ${usd(facts.licenseBondAmount)} California contractor license bond, required under ${facts.licenseBondStatute}. Fast quotes, bad credit welcome. Licensed broker, CA DOI #6009105.`,
-  alternates: { canonical: bond.href },
+  alternates: {
+    canonical: bond.href,
+    languages: hreflangFor("/contractor-license-bond", "/es/fianza-de-contratista"),
+  },
 };
 
 const faqs = [

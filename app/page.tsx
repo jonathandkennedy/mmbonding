@@ -23,6 +23,12 @@ import { JsonLd, faqSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { bonds, facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
+import type { Metadata } from "next";
+import { hreflangFor } from "@/lib/i18n";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/", languages: hreflangFor("/", "/es") },
+};
 
 const homeFaqs = [
   {

@@ -10,7 +10,19 @@ import { cn } from "@/lib/utils";
  * surfaces the DOI license number. This is the trust signal the aggregators
  * fake; here it is real and consistent on every guide.
  */
-export function ReviewedBy({ className }: { className?: string }) {
+const strings = {
+  en: { by: "Reviewed by", license: "CA DOI License", updated: "Updated", aboutHref: "/about" },
+  es: { by: "Revisado por", license: "Licencia CA DOI", updated: "Actualizado", aboutHref: "/about" },
+} as const;
+
+export function ReviewedBy({
+  className,
+  lang = "en",
+}: {
+  className?: string;
+  lang?: "en" | "es";
+}) {
+  const t = strings[lang];
   return (
     <aside
       className={cn(
@@ -26,8 +38,8 @@ export function ReviewedBy({ className }: { className?: string }) {
       </span>
       <div className="text-sm leading-snug">
         <p className="text-muted">
-          Reviewed by{" "}
-          <Link href="/about" className="font-semibold text-navy-900 underline-offset-2 hover:underline">
+          {t.by}{" "}
+          <Link href={t.aboutHref} className="font-semibold text-navy-900 underline-offset-2 hover:underline">
             {site.founder.name}
           </Link>
           , {site.founder.title}
@@ -35,12 +47,12 @@ export function ReviewedBy({ className }: { className?: string }) {
         <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-muted">
           <span className="inline-flex items-center gap-1 font-medium text-success">
             <BadgeCheck className="size-3.5" aria-hidden="true" />
-            CA DOI License
+            {t.license}
           </span>
           <span className="font-mono text-xs text-navy-700">#{site.doiLicense}</span>
           <span className="text-ink-300">/</span>
           <span>
-            Updated <time dateTime={REGULATORY_REVIEWED.iso}>{REGULATORY_REVIEWED.label}</time>
+            {t.updated} <time dateTime={REGULATORY_REVIEWED.iso}>{REGULATORY_REVIEWED.label}</time>
           </span>
         </p>
       </div>

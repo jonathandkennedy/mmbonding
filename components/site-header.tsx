@@ -3,17 +3,24 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Globe } from "lucide-react";
 import { Wordmark } from "./wordmark";
 import { Button } from "./ui/button";
 import { Container } from "./ui/container";
 import { primaryNav, site } from "@/lib/site";
+import { alternateFor, isSpanish } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  const alt = alternateFor(pathname);
+  const inEs = isSpanish(pathname);
+  const switchHref = alt ? alt.href : inEs ? "/" : "/es";
+  const switchLabel = inEs ? "English" : "Español";
+  const switchLang = inEs ? "en" : "es";
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -62,16 +69,25 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <Link
+              href={switchHref}
+              hrefLang={switchLang}
+              aria-label={inEs ? "Switch to English" : "Cambiar a Español"}
+              className="hidden items-center gap-1.5 rounded-lg px-2.5 py-2 text-sm font-medium text-navy-800 transition-colors hover:bg-ink-100 md:inline-flex"
+            >
+              <Globe className="size-4 text-azure-500" aria-hidden="true" />
+              {switchLabel}
+            </Link>
             <a
               href={site.phone.href}
               data-callrail="phone"
-              className="hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-azure-50 md:inline-flex"
+              className="hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-azure-50 lg:inline-flex"
             >
               <Phone className="size-4 text-azure-500" aria-hidden="true" />
               <span className="tabular">{site.phone.display}</span>
             </a>
             <Button href="/get-a-quote" size="sm" className="hidden sm:inline-flex">
-              Get a Quote
+              {inEs ? "Cotizar" : "Get a Quote"}
             </Button>
             <button
               type="button"
@@ -86,7 +102,7 @@ export function SiteHeader() {
         </div>
       </Container>
 
-      {open && <MobileMenu />}
+      {open && <MobileMenu switchHref={switchHref} switchLabel={switchLabel} switchLang={switchLang} />}
     </header>
   );
 }
@@ -123,11 +139,27 @@ function BondsMenu() {
   );
 }
 
-function MobileMenu() {
+function MobileMenu({
+  switchHref,
+  switchLabel,
+  switchLang,
+}: {
+  switchHref: string;
+  switchLabel: string;
+  switchLang: string;
+}) {
   return (
     <div className="lg:hidden">
       <Container size="wide">
         <div className="space-y-1 border-t border-ink-200 py-4">
+          <Link
+            href={switchHref}
+            hrefLang={switchLang}
+            className="mb-1 inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-azure-700 hover:bg-ink-100"
+          >
+            <Globe className="size-4" aria-hidden="true" />
+            {switchLabel}
+          </Link>
           {primaryNav.map((item) => (
             <div key={item.label}>
               <Link

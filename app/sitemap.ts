@@ -5,6 +5,7 @@ import { metros } from "@/lib/locations";
 import { insuranceProducts } from "@/lib/insurance";
 import { guides } from "@/lib/guides";
 import { commercialBonds } from "@/lib/commercial-bonds";
+import { localePairs } from "@/lib/i18n";
 
 type Freq = MetadataRoute.Sitemap[number]["changeFrequency"];
 
@@ -63,6 +64,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     freq: "monthly" as Freq,
   }));
 
+  // Spanish pages (hreflang relationships are declared in each page's <head>).
+  const esPaths = localePairs.map((p) => ({
+    path: p.es,
+    priority: p.es === "/es" ? 0.8 : 0.7,
+    freq: "monthly" as Freq,
+  }));
+
   return [
     ...staticPaths,
     ...bondPaths,
@@ -70,6 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...insurancePaths,
     ...guidePaths,
     ...commercialPaths,
+    ...esPaths,
   ].map((entry) => ({
     url: `${site.url}${entry.path}`,
     lastModified: now,

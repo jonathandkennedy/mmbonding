@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose, Bullet } from "@/components/prose";
 import { bonds } from "@/lib/regulatory";
+import { hreflangFor } from "@/lib/i18n";
 
 const bond = bonds["bid-bond"];
 const parent = { name: "Contract Bonds", href: "/contract-bonds" };
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
   title: "Bid Bond",
   description:
     "California bid bonds for public and private construction. Guarantee your bid fast, often at no separate premium as part of your bonding program. Licensed broker, CA DOI #6009105.",
-  alternates: { canonical: bond.href },
+  alternates: {
+    canonical: bond.href,
+    languages: hreflangFor("/contract-bonds/bid-bond", "/es/fianza-de-licitacion"),
+  },
 };
 
 const faqs = [
