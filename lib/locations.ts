@@ -282,6 +282,72 @@ export const metros: Metro[] = [
     communities: ["Monterey", "Seaside", "Marina", "Soledad", "Gonzales", "Greenfield", "King City"],
     geo: { lat: 36.6777, lng: -121.6555 },
   },
+  {
+    slug: "riverside",
+    name: "Riverside",
+    region: "Riverside County",
+    blurb:
+      "The county seat, from historic downtown to new residential. Fast license bonds and real contract-bond help.",
+    context:
+      "Riverside anchors its county with a mix of institutional, commercial, and residential construction, from the historic core around the Mission Inn to fast-growing suburbs. We bond Riverside contractors quickly and place the tougher files other brokers turn away.",
+    communities: ["Moreno Valley", "Jurupa Valley", "Eastvale", "Norco", "Rubidoux", "Woodcrest"],
+    geo: { lat: 33.9533, lng: -117.3962 },
+  },
+  {
+    slug: "san-bernardino",
+    name: "San Bernardino",
+    region: "San Bernardino County",
+    blurb:
+      "A logistics and warehousing powerhouse near the Cajon Pass. We keep your bonds from slowing the build.",
+    context:
+      "San Bernardino sits at the heart of the largest county in the lower 48 and one of the busiest logistics corridors in the country. Warehouse, industrial, and residential work keep contractors busy, and we give them fast license bonds plus contract-bond capacity for bigger jobs.",
+    communities: ["Highland", "Rialto", "Colton", "Loma Linda", "Redlands", "Grand Terrace"],
+    geo: { lat: 34.1083, lng: -117.2898 },
+  },
+  {
+    slug: "corona",
+    name: "Corona",
+    region: "Riverside County",
+    blurb:
+      "The Circle City on the Orange County line. Manufacturing, industry, and steady residential growth.",
+    context:
+      "Corona blends a strong manufacturing and industrial base with heavy commuter-driven residential growth on the Riverside and Orange County border. We bond Corona contractors fast and build the contract-bond programs growing firms need.",
+    communities: ["Norco", "Eastvale", "Jurupa Valley", "El Cerrito", "Home Gardens"],
+    geo: { lat: 33.8753, lng: -117.5664 },
+  },
+  {
+    slug: "temecula",
+    name: "Temecula",
+    region: "Southwest Riverside County",
+    blurb:
+      "Wine country, tourism, and master-planned residential. A bond should be the easy part, and here it is.",
+    context:
+      "Temecula pairs the Temecula Valley wine country and its tourism economy with fast-growing master-planned residential and hospitality construction. We move the routine license bonds quickly and help Southwest Riverside contractors build contract-bond capacity.",
+    communities: ["Murrieta", "Wildomar", "Wine Country", "Vail Ranch", "Redhawk"],
+    geo: { lat: 33.4936, lng: -117.1484 },
+  },
+  {
+    slug: "menifee",
+    name: "Menifee",
+    region: "Southwest Riverside County",
+    blurb:
+      "One of California's fastest-growing cities. New construction is everywhere, and we bond the builders.",
+    context:
+      "Menifee is among the fastest-growing cities in California, a young city built on wave after wave of new master-planned residential and the commercial work that follows it. Newer and growing contractors get declined by vending-machine bond sites; we build programs for exactly that.",
+    communities: ["Sun City", "Romoland", "Quail Valley", "Paloma Valley", "Menifee Lakes"],
+    geo: { lat: 33.6971, lng: -117.185 },
+  },
+  {
+    slug: "lake-elsinore",
+    name: "Lake Elsinore",
+    region: "Southwest Riverside County",
+    blurb:
+      "Lakefront recreation and fast residential growth. Practical bonding from people who pick up the phone.",
+    context:
+      "Built around Southern California's largest natural lake, Lake Elsinore combines outdoor recreation with rapid residential growth across Southwest Riverside County. We give local contractors fast license bonds and human help with contract bonds, credit challenges welcome.",
+    communities: ["Wildomar", "Canyon Lake", "Lakeland Village", "Horsethief Canyon"],
+    geo: { lat: 33.6681, lng: -117.3273 },
+  },
 ];
 
 export function getMetro(slug: string): Metro | undefined {
