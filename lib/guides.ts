@@ -1,0 +1,71 @@
+/**
+ * Resource guides registry. Powers the /resources hub, sitemap, and
+ * cross-links. The body of each guide lives in its page file (bespoke,
+ * E-E-A-T-rich prose); this registry is the listing metadata.
+ *
+ * These pages target the informational keyword gap from the plan (cost guides,
+ * how-to guides, licensing guides) and feed the money pages.
+ */
+
+export type GuideCategory = "Bond Costs" | "How-To" | "Licensing";
+
+export type Guide = {
+  slug: string;
+  /** Card/title used on the hub and in cross-links. */
+  title: string;
+  /** One-line listing excerpt. */
+  excerpt: string;
+  category: GuideCategory;
+  /** Primary keyword target (for internal notes / intent). */
+  keyword: string;
+};
+
+export const guides: Guide[] = [
+  {
+    slug: "contractor-license-bond-cost",
+    title: "How Much Does a Contractor License Bond Cost?",
+    excerpt:
+      "What you actually pay for the $25,000 California license bond, and how credit moves the premium.",
+    category: "Bond Costs",
+    keyword: "contractor license bond cost",
+  },
+  {
+    slug: "how-to-get-a-contractor-license-bond",
+    title: "How to Get a Contractor License Bond in California",
+    excerpt: "The step-by-step path to getting bonded for your CSLB license, fast.",
+    category: "How-To",
+    keyword: "how to get a contractor license bond",
+  },
+  {
+    slug: "how-to-get-a-performance-bond",
+    title: "How to Get a Performance Bond",
+    excerpt:
+      "What underwriters look at, what it costs, and where to get a performance bond for your project.",
+    category: "How-To",
+    keyword: "how to get a performance bond",
+  },
+  {
+    slug: "reactivate-cslb-license",
+    title: "How to Reactivate an Inactive CSLB License",
+    excerpt: "Reactivating a California contractor license, and the bond you need to do it.",
+    category: "Licensing",
+    keyword: "reactivate cslb license",
+  },
+  {
+    slug: "surety-bonds-with-bad-credit",
+    title: "Can You Get a Surety Bond with Bad Credit?",
+    excerpt: "Yes, usually. How bad-credit surety bonds work, what they cost, and how to get placed.",
+    category: "Bond Costs",
+    keyword: "surety bond bad credit",
+  },
+];
+
+export function guideHref(slug: string) {
+  return `/resources/${slug}`;
+}
+
+export function getGuide(slug: string): Guide | undefined {
+  return guides.find((g) => g.slug === slug);
+}
+
+export const guideCategories: GuideCategory[] = ["Bond Costs", "How-To", "Licensing"];

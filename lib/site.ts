@@ -86,6 +86,10 @@ export const primaryNav: NavItem[] = [
     href: "/surety-bonds",
   },
   {
+    label: "Resources",
+    href: "/resources",
+  },
+  {
     label: "About",
     href: "/about",
   },

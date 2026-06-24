@@ -39,6 +39,7 @@ const footerCols: { heading: string; links: { label: string; href: string }[] }[
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Guides", href: "/resources" },
       { label: "Get a Quote", href: "/get-a-quote" },
       { label: "Contact", href: "/contact" },
     ],

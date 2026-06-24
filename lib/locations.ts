@@ -172,6 +172,61 @@ export const metros: Metro[] = [
     ],
     geo: { lat: 36.7378, lng: -119.7871 },
   },
+  {
+    slug: "bakersfield",
+    name: "Bakersfield",
+    region: "Kern County",
+    blurb:
+      "Energy, agriculture, and steady residential growth. Practical bonding without the runaround.",
+    context:
+      "Kern County construction spans energy and oil-field work, large-scale agriculture, and a growing residential base around Bakersfield. We give Kern contractors fast license bonds and real help with contract bonds, including the credit-challenged and newer operators other brokers wave off.",
+    communities: ["Delano", "Wasco", "Shafter", "Arvin", "Tehachapi", "Ridgecrest", "Taft", "McFarland"],
+    geo: { lat: 35.3733, lng: -119.0187 },
+  },
+  {
+    slug: "stockton",
+    name: "Stockton",
+    region: "San Joaquin County",
+    blurb:
+      "Port logistics and housing growth are driving demand. We keep your bonds from slowing the build.",
+    context:
+      "San Joaquin County pairs Northern California's logistics and port activity with fast residential growth around Stockton, Tracy, and Manteca. We bond Valley contractors quickly and build the contract-bond capacity that warehouse and public work calls for.",
+    communities: ["Tracy", "Manteca", "Lodi", "Lathrop", "Ripon", "Escalon"],
+    geo: { lat: 37.9577, lng: -121.2908 },
+  },
+  {
+    slug: "modesto",
+    name: "Modesto",
+    region: "Stanislaus County",
+    blurb:
+      "The ag heartland builds, too. Fast license bonds and contract bonds from people who answer the phone.",
+    context:
+      "Stanislaus County construction runs alongside one of the most productive agricultural regions in the country. Modesto-area contractors get the same thing from us as the big-city ones: fast license bonds, real contract-bond help, and a yes on tough credit when it is possible.",
+    communities: ["Turlock", "Ceres", "Riverbank", "Oakdale", "Patterson", "Newman"],
+    geo: { lat: 37.6391, lng: -120.9969 },
+  },
+  {
+    slug: "ventura-county",
+    name: "Ventura County",
+    region: "Ventura County",
+    blurb:
+      "Coastal residential, agriculture, and tight permitting. Get bonded without adding delay.",
+    context:
+      "From the Oxnard plain to Thousand Oaks, Ventura County mixes coastal residential, commercial, and agricultural construction under demanding local permitting. We move the routine license bonds fast and help county contractors build contract-bond capacity for larger work.",
+    communities: ["Oxnard", "Thousand Oaks", "Simi Valley", "Camarillo", "Ventura", "Moorpark", "Santa Paula"],
+    geo: { lat: 34.2746, lng: -119.229 },
+  },
+  {
+    slug: "santa-barbara",
+    name: "Santa Barbara",
+    region: "Santa Barbara County & the Central Coast",
+    blurb:
+      "High-end coastal work and strict permitting. A bond should be the easy part, and with us it is.",
+    context:
+      "Santa Barbara and the Central Coast are known for high-end residential, hospitality, and careful permitting. Contractors here need to show they are licensed and bonded to win work, and we make the bond the simplest item on the list, credit challenges included.",
+    communities: ["Santa Maria", "Goleta", "Carpinteria", "Lompoc", "Montecito", "Buellton"],
+    geo: { lat: 34.4208, lng: -119.6982 },
+  },
 ];
 
 export function getMetro(slug: string): Metro | undefined {
