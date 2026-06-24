@@ -10,8 +10,17 @@
 export const commercialReviewNote =
   "Bond amounts and requirements are general guidance and can change. Confirm the current requirement with the listed agency before you file. We will quote your exact bond.";
 
+export type CommercialCategory = "Permit & Site Improvement" | "Commercial & Specialty";
+
+export const commercialCategories: CommercialCategory[] = [
+  "Permit & Site Improvement",
+  "Commercial & Specialty",
+];
+
 export type CommercialBond = {
   slug: string;
+  /** Defaults to "Commercial & Specialty" when omitted. */
+  category?: CommercialCategory;
   name: string;
   shortName: string;
   intro: string;
@@ -190,6 +199,111 @@ export const commercialBonds: CommercialBond[] = [
       {
         q: "How much fidelity coverage do I need?",
         a: "There is no fixed amount. You choose a coverage level based on your exposure or what a contract requires. We will help you size it and quote it.",
+      },
+    ],
+  },
+  {
+    slug: "subdivision-bond",
+    category: "Permit & Site Improvement",
+    name: "Subdivision & Site Improvement Bond",
+    shortName: "Subdivision Bond",
+    intro:
+      "Cities and counties require a subdivision (site improvement) bond to guarantee the public improvements in your development get built. We place them for developers and site contractors.",
+    amountLabel: "Set by the public agency",
+    authority: "Required by the city or county",
+    whatItIs:
+      "When you develop land, the local agency requires a bond guaranteeing you will complete the required public improvements (streets, curbs, gutters, sewers, drainage) to standard. If the work is not finished, the agency can draw on the bond to complete it. The amount is set by the agency from the engineer's estimate.",
+    whoNeedsIt: [
+      "Developers and subdividers recording a map",
+      "Contractors building the public improvements in a subdivision",
+      "Anyone an agency requires to bond site improvements before approval",
+    ],
+    faqs: [
+      {
+        q: "How much is a subdivision bond?",
+        a: "The bond amount equals the agency's approved cost estimate for the required improvements, so it varies by project. You pay a premium that is a percentage of that amount, set by underwriting.",
+      },
+      {
+        q: "Can a newer developer or builder get one?",
+        a: "Often, yes, though larger improvement bonds are underwritten on financials and capacity. We build the program and shop markets, including for credit-challenged and growing builders.",
+      },
+    ],
+  },
+  {
+    slug: "encroachment-bond",
+    category: "Permit & Site Improvement",
+    name: "Encroachment Permit Bond",
+    shortName: "Encroachment Bond",
+    intro:
+      "Working in the public right-of-way? Cities, counties, and Caltrans require an encroachment permit bond guaranteeing you restore the area and meet permit conditions. We issue them fast.",
+    amountLabel: "Set by the permit",
+    authority: "Required by the city, county, or Caltrans",
+    whatItIs:
+      "An encroachment bond guarantees that work you perform in the public right-of-way (sidewalks, streets, utility cuts) is completed to standard and the area is restored. The permitting agency sets the bond amount as a condition of the encroachment permit.",
+    whoNeedsIt: [
+      "Contractors and utilities working in the public right-of-way",
+      "Anyone pulling an encroachment permit from a city, county, or Caltrans",
+    ],
+    faqs: [
+      {
+        q: "How much is an encroachment bond?",
+        a: "The agency sets the amount with the permit, based on the scope and the cost to restore the right-of-way. We quote the premium once you have the required amount.",
+      },
+      {
+        q: "How fast can I get one?",
+        a: "Encroachment bonds are usually small and quick. Tell us the agency, the amount, and your business details, and we can often turn it around the same day.",
+      },
+    ],
+  },
+  {
+    slug: "street-improvement-bond",
+    category: "Permit & Site Improvement",
+    name: "Street Improvement & Grading Bond",
+    shortName: "Street Improvement Bond",
+    intro:
+      "Grading, paving, and street-improvement permits often require a bond guaranteeing the work and any required restoration. We place them for site and grading contractors.",
+    amountLabel: "Set by the permit estimate",
+    authority: "Required by the local agency",
+    whatItIs:
+      "These bonds guarantee that permitted grading, paving, or street-improvement work is completed to the agency's standards, including erosion control and restoration. The amount follows the permit's engineer estimate.",
+    whoNeedsIt: [
+      "Grading, paving, and site-work contractors pulling agency permits",
+      "Contractors required to bond improvements as a permit condition",
+    ],
+    faqs: [
+      {
+        q: "Is this different from a subdivision bond?",
+        a: "They are close cousins. A subdivision bond covers the full set of improvements in a development; a street improvement or grading bond covers the specific permitted work. Both guarantee completion to the agency's standard.",
+      },
+      {
+        q: "How much does it cost?",
+        a: "You pay a premium that is a percentage of the bonded amount, set by underwriting. We shop markets for your best rate, newer and credit-challenged contractors included.",
+      },
+    ],
+  },
+  {
+    slug: "cannabis-bond",
+    name: "California Cannabis Surety Bond",
+    shortName: "Cannabis Bond",
+    intro:
+      "Every California cannabis licensee must file a $5,000 surety bond payable to the state. It is a small, fast bond, and we place it for licensees of every type.",
+    amountLabel: "$5,000",
+    authority: "California Department of Cannabis Control",
+    whatItIs:
+      "California requires each cannabis license to carry a $5,000 surety bond payable to the state, which covers the cost of destroying cannabis goods if that becomes necessary. It is required to obtain and maintain your license with the Department of Cannabis Control.",
+    whoNeedsIt: [
+      "Cannabis cultivators, manufacturers, and distributors",
+      "Cannabis retailers and microbusinesses",
+      "Any California cannabis licensee maintaining a state license",
+    ],
+    faqs: [
+      {
+        q: "How much does a cannabis bond cost?",
+        a: "The bond amount is $5,000, and you pay only a small annual premium, not the full amount. It is one of the most affordable bonds we place.",
+      },
+      {
+        q: "Do I need a separate bond for each license?",
+        a: "Generally each license must carry its own bond. Tell us how many licenses you hold and we will quote them together.",
       },
     ],
   },

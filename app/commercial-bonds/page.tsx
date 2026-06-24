@@ -5,12 +5,12 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
-import { commercialBonds } from "@/lib/commercial-bonds";
+import { commercialBonds, commercialCategories } from "@/lib/commercial-bonds";
 
 export const metadata: Metadata = {
-  title: "Commercial & Specialty Surety Bonds",
+  title: "Commercial, Permit & Specialty Surety Bonds",
   description:
-    "California commercial and specialty surety bonds: notary, auto dealer, immigration consultant, and business service bonds. Licensed broker, CA DOI #6009105.",
+    "California commercial, permit, and specialty surety bonds: subdivision and encroachment permit bonds, notary, auto dealer, cannabis, freight broker, and more. Licensed broker, CA DOI #6009105.",
   alternates: { canonical: "/commercial-bonds" },
 };
 
@@ -53,29 +53,42 @@ export default function Page() {
       </section>
 
       <section className="py-16">
-        <Container size="wide">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {commercialBonds.map((b, i) => (
-              <Reveal as="div" key={b.slug} delay={(i % 3) * 60}>
-                <Link
-                  href={`/commercial-bonds/${b.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-ink-200 bg-white p-6 transition-[box-shadow,border-color] duration-200 hover:border-azure-300 hover:shadow-md"
-                >
-                  <h2 className="font-display text-xl font-bold tracking-tight text-navy-900">
-                    {b.shortName}
-                  </h2>
-                  <p className="mt-2 flex-1 text-sm text-muted">{b.intro}</p>
-                  <span className="mt-4 font-mono text-sm font-semibold text-azure-700">
-                    {b.amountLabel}
-                  </span>
-                  <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-azure-600 transition-transform duration-200 ease-out group-hover:translate-x-1">
-                    Learn more
-                    <ArrowRight className="size-4" aria-hidden="true" />
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+        <Container size="wide" className="space-y-14">
+          {commercialCategories.map((cat) => {
+            const inCat = commercialBonds.filter(
+              (b) => (b.category ?? "Commercial & Specialty") === cat,
+            );
+            if (inCat.length === 0) return null;
+            return (
+              <div key={cat}>
+                <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
+                  {cat}
+                </h2>
+                <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {inCat.map((b, i) => (
+                    <Reveal as="div" key={b.slug} delay={(i % 3) * 60}>
+                      <Link
+                        href={`/commercial-bonds/${b.slug}`}
+                        className="group flex h-full flex-col rounded-2xl border border-ink-200 bg-white p-6 transition-[box-shadow,border-color] duration-200 hover:border-azure-300 hover:shadow-md"
+                      >
+                        <h3 className="font-display text-xl font-bold tracking-tight text-navy-900">
+                          {b.shortName}
+                        </h3>
+                        <p className="mt-2 flex-1 text-sm text-muted">{b.intro}</p>
+                        <span className="mt-4 font-mono text-sm font-semibold text-azure-700">
+                          {b.amountLabel}
+                        </span>
+                        <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-azure-600 transition-transform duration-200 ease-out group-hover:translate-x-1">
+                          Learn more
+                          <ArrowRight className="size-4" aria-hidden="true" />
+                        </span>
+                      </Link>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </Container>
       </section>
     </>

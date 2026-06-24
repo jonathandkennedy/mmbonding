@@ -114,6 +114,13 @@ export const guides: Guide[] = [
     category: "Licensing",
     keyword: "dir registration contractors",
   },
+  {
+    slug: "contractor-license-bond-renewal",
+    title: "Contractor License Bond Renewal in California",
+    excerpt: "Why the license bond renews yearly, what changes at renewal, and how to keep your license active.",
+    category: "Licensing",
+    keyword: "contractor license bond renewal",
+  },
 ];
 
 export function guideHref(slug: string) {
