@@ -61,8 +61,23 @@ These are marked `TODO` in `lib/site.ts` and noted on-page where relevant:
 - A **headshot/bio** for Michael (the About page uses an initials avatar placeholder)
 - The **insurance referral partner(s)** for routing GL / workers' comp leads
 
-## Not yet wired (next phase)
+## Forms
 
-The quote and contact forms are complete, validated UI but **do not persist leads yet**. Next:
-Supabase tables + server actions + CallRail/UTM capture + Slack/email notifications (plan §7),
-then Tier 2 (city pages + GBP, insurance referral pages, carriers).
+The quote and contact forms deliver leads via **Formspree** (the launch backend: no server code,
+works on Vercel, emails leads instantly). To turn it on, create a form at
+[formspree.io](https://formspree.io) and set the hashid in an env var (see `.env.example`):
+
+```bash
+NEXT_PUBLIC_FORMSPREE_FORM_ID=abcdwxyz   # shared, or use the quote/contact-specific vars
+```
+
+Until that's set, the forms show their success state but mark themselves a preview (no email sent).
+The submit handler (`lib/forms.ts`) already captures UTM params + `gclid` for attribution, flags
+hard-to-place leads with a priority subject, and includes a honeypot. It's deliberately swappable:
+when the richer **Supabase** pipeline lands (structured `leads` / `insurance_referrals` tables, RLS,
+CallRail integration, Slack/email webhooks, renewal reminders — plan §7), point `submitLead()` at a
+server action and the form components don't change.
+
+## Next phase
+
+Supabase lead pipeline (plan §7), then Tier 2 (city pages + GBP, insurance referral pages, carriers).
