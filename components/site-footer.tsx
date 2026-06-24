@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Phone, Clock, MapPin } from "lucide-react";
 import { Wordmark } from "./wordmark";
 import { Container } from "./ui/container";
-import { site, primaryNav } from "@/lib/site";
+import { site } from "@/lib/site";
 import { bonds } from "@/lib/regulatory";
+import { metros } from "@/lib/locations";
+import { insuranceProducts } from "@/lib/insurance";
 
 const footerCols: { heading: string; links: { label: string; href: string }[] }[] = [
   {
@@ -11,24 +13,34 @@ const footerCols: { heading: string; links: { label: string; href: string }[] }[
     links: [
       { label: bonds["contractor-license-bond"].name, href: bonds["contractor-license-bond"].href },
       { label: "Contract Bonds", href: "/contract-bonds" },
-      { label: bonds["bond-of-qualifying-individual"].name, href: bonds["bond-of-qualifying-individual"].href },
       { label: bonds["llc-employee-worker-bond"].name, href: bonds["llc-employee-worker-bond"].href },
       { label: bonds["disciplinary-bond"].name, href: bonds["disciplinary-bond"].href },
+      { label: "Hard-to-Place", href: "/hard-to-place-surety-bonds" },
     ],
   },
   {
-    heading: "Hard-to-Place",
+    heading: "Locations",
     links: [
-      { label: "Bad Credit & Tough Cases", href: "/hard-to-place-surety-bonds" },
-      { label: "No-Credit-Check Bond", href: "/hard-to-place-surety-bonds/no-credit-check-contractor-bond" },
+      ...metros.slice(0, 4).map((m) => ({
+        label: m.name.replace(/^the /, ""),
+        href: `/surety-bonds/${m.slug}`,
+      })),
+      { label: "All locations", href: "/surety-bonds" },
+    ],
+  },
+  {
+    heading: "Insurance",
+    links: [
+      ...insuranceProducts.map((p) => ({ label: p.shortName, href: `/insurance/${p.slug}` })),
+      { label: "Bonding vs Insurance", href: "/bonding-vs-insurance" },
     ],
   },
   {
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
       { label: "Get a Quote", href: "/get-a-quote" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
@@ -37,7 +49,7 @@ export function SiteFooter() {
   return (
     <footer className="mt-24 bg-navy-950 text-navy-100">
       <Container size="wide" className="py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
           <div>
             <Wordmark tone="onDark" withTagline />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-200">

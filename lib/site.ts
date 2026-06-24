@@ -82,8 +82,8 @@ export const primaryNav: NavItem[] = [
     href: "/hard-to-place-surety-bonds",
   },
   {
-    label: "How It Works",
-    href: "/#how-it-works",
+    label: "Locations",
+    href: "/surety-bonds",
   },
   {
     label: "About",
