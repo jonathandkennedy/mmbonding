@@ -10,10 +10,14 @@
 export const commercialReviewNote =
   "Bond amounts and requirements are general guidance and can change. Confirm the current requirement with the listed agency before you file. We will quote your exact bond.";
 
-export type CommercialCategory = "Permit & Site Improvement" | "Commercial & Specialty";
+export type CommercialCategory =
+  | "Permit & Site Improvement"
+  | "Court & Probate"
+  | "Commercial & Specialty";
 
 export const commercialCategories: CommercialCategory[] = [
   "Permit & Site Improvement",
+  "Court & Probate",
   "Commercial & Specialty",
 ];
 
@@ -457,6 +461,173 @@ export const commercialBonds: CommercialBond[] = [
       {
         q: "Can a farm labor contractor with thin credit get bonded?",
         a: "Often, yes. Ag and seasonal businesses are squarely in our hard-to-place wheelhouse. We shop markets that write credit-challenged files rather than declining at the door.",
+      },
+    ],
+  },
+  {
+    slug: "probate-bond",
+    category: "Court & Probate",
+    name: "California Probate Bond (Executor & Administrator)",
+    shortName: "Probate Bond",
+    intro:
+      "Appointed to handle an estate? The probate court often requires a probate bond (executor, administrator, or fiduciary bond) guaranteeing you manage it honestly. We place them fast for court deadlines.",
+    amountLabel: "Set by the court",
+    authority: "Required by the probate court",
+    whatItIs:
+      "A probate bond guarantees that the personal representative of an estate, an executor named in a will or a court-appointed administrator, performs their duties faithfully and protects the heirs and creditors. The court sets the amount, usually based on the value of the estate.",
+    whoNeedsIt: [
+      "Executors named in a will",
+      "Court-appointed estate administrators",
+      "Anyone the probate court orders to post a bond",
+    ],
+    faqs: [
+      {
+        q: "How much is a probate bond?",
+        a: "The court sets the amount, typically based on the value of the estate's personal property and income. You pay a premium that is a small percentage of that, set by underwriting.",
+      },
+      {
+        q: "I have a court deadline. How fast can you issue it?",
+        a: "Quickly. Probate bonds are common and we can often turn them around the same day once we have the court order and the required amount.",
+      },
+    ],
+  },
+  {
+    slug: "guardianship-bond",
+    category: "Court & Probate",
+    name: "California Guardianship Bond",
+    shortName: "Guardianship Bond",
+    intro:
+      "Appointed guardian of a minor's estate? The court requires a guardianship bond protecting the child's assets. We issue them fast.",
+    amountLabel: "Set by the court",
+    authority: "Required by the court",
+    whatItIs:
+      "A guardianship bond guarantees that a guardian manages a minor's money and property honestly and in the child's best interest. The court sets the amount based on the assets under guardianship.",
+    whoNeedsIt: [
+      "Court-appointed guardians of a minor's estate",
+      "Anyone the court orders to bond a guardianship",
+    ],
+    faqs: [
+      {
+        q: "Who requires the guardianship bond?",
+        a: "The probate court, as a condition of appointing you guardian of the estate. The amount is set by the court based on the assets you will manage.",
+      },
+    ],
+  },
+  {
+    slug: "conservatorship-bond",
+    category: "Court & Probate",
+    name: "California Conservatorship Bond",
+    shortName: "Conservatorship Bond",
+    intro:
+      "Named conservator for an adult who cannot manage their own affairs? The court requires a conservatorship bond. We place them quickly.",
+    amountLabel: "Set by the court",
+    authority: "Required by the court",
+    whatItIs:
+      "A conservatorship bond guarantees that a conservator manages the finances of an adult conservatee honestly and responsibly. The court sets the amount based on the estate under management.",
+    whoNeedsIt: [
+      "Court-appointed conservators of an adult's estate",
+      "Anyone the court orders to bond a conservatorship",
+    ],
+    faqs: [
+      {
+        q: "How is the conservatorship bond amount decided?",
+        a: "The court sets it based on the value of the conservatee's estate and income. You pay a premium that is a small percentage of that amount.",
+      },
+    ],
+  },
+  {
+    slug: "appeal-bond",
+    category: "Court & Probate",
+    name: "California Appeal Bond (Supersedeas)",
+    shortName: "Appeal Bond",
+    intro:
+      "Appealing a money judgment and need to pause enforcement? Courts require an appeal (supersedeas) bond. We place them, including larger amounts.",
+    amountLabel: "Set by the court, often the judgment plus costs",
+    authority: "Required by the appellate court",
+    whatItIs:
+      "An appeal bond, also called a supersedeas bond, lets you appeal a money judgment while staying its enforcement. It guarantees you will pay the judgment if the appeal fails. The court sets the amount, commonly the judgment plus interest and costs.",
+    whoNeedsIt: [
+      "Parties appealing a money judgment who need to stay enforcement",
+    ],
+    faqs: [
+      {
+        q: "How much does an appeal bond cost?",
+        a: "The bond amount is set by the court, often the judgment plus a margin for interest and costs. Because these can be large, underwriting may require collateral. We will tell you what your specific bond takes.",
+      },
+    ],
+  },
+  {
+    slug: "bonded-title-bond",
+    name: "California Bonded Title (DMV Title Bond)",
+    shortName: "Bonded Title",
+    intro:
+      "Cannot prove ownership of a vehicle? A DMV title bond, also called a bonded title, lets you register and title it. We issue them fast and inexpensively.",
+    amountLabel: "Set by the DMV, based on vehicle value",
+    authority: "California DMV",
+    whatItIs:
+      "A title bond lets you obtain a California title for a vehicle when you cannot provide the normal proof of ownership. It protects previous owners and lienholders if a valid claim arises. The DMV sets the bond amount based on the vehicle's value.",
+    whoNeedsIt: [
+      "Vehicle owners with a missing, lost, or defective title",
+      "Buyers who received a vehicle without a proper title",
+    ],
+    faqs: [
+      {
+        q: "How much does a bonded title cost?",
+        a: "The bond amount is based on the vehicle's value, and you pay only a small premium on that amount. For most vehicles it is one of the cheaper bonds we place.",
+      },
+      {
+        q: "How fast can I get one?",
+        a: "Often the same day. Give us the required bond amount from the DMV and your details, and we move quickly.",
+      },
+    ],
+  },
+  {
+    slug: "tax-preparer-bond",
+    name: "California Tax Preparer Bond (CTEC)",
+    shortName: "Tax Preparer Bond",
+    intro:
+      "California registered tax preparers must file a $5,000 surety bond with CTEC. It is one of the cheapest bonds we place, and we issue it fast.",
+    amountLabel: "$5,000",
+    authority: "CTEC (California Tax Education Council)",
+    whatItIs:
+      "California requires registered tax preparers (CRTPs) to maintain a $5,000 surety bond that protects their clients. You file it with CTEC to register and to renew your registration each year.",
+    whoNeedsIt: [
+      "New California registered tax preparers (CRTPs)",
+      "CRTPs renewing their CTEC registration each year",
+    ],
+    faqs: [
+      {
+        q: "How much does the CTEC tax preparer bond cost?",
+        a: "The bond amount is $5,000, and you pay only a small annual premium, often a low flat rate. It is one of the most affordable bonds there is.",
+      },
+      {
+        q: "Is the tax preparer bond required every year?",
+        a: "Yes. You must keep an active $5,000 bond on file with CTEC to register and to renew your tax preparer registration annually.",
+      },
+    ],
+  },
+  {
+    slug: "erisa-bond",
+    name: "ERISA Fidelity Bond (401k)",
+    shortName: "ERISA Bond",
+    intro:
+      "Sponsor a 401(k) or other retirement plan? Federal ERISA law requires a fidelity bond protecting the plan. We place them fast and inexpensively.",
+    amountLabel: "10% of plan funds, $1,000 to $500,000",
+    authority: "Federal (ERISA / U.S. Department of Labor)",
+    whatItIs:
+      "An ERISA fidelity bond protects a retirement plan against losses from fraud or dishonesty by the people who handle its funds. ERISA generally requires coverage of at least 10% of plan funds, with a $1,000 minimum and a $500,000 maximum, or up to $1,000,000 for plans that hold employer securities.",
+    whoNeedsIt: [
+      "Employers who sponsor a 401(k) or other ERISA retirement plan",
+      "Plan fiduciaries and anyone who handles plan funds",
+    ],
+    faqs: [
+      {
+        q: "How much ERISA bond coverage do I need?",
+        a: "Generally at least 10% of the plan funds handled, with a $1,000 minimum and a $500,000 cap, or up to $1,000,000 if the plan holds employer securities. We will size it to your plan and quote it.",
+      },
+      {
+        q: "Is an ERISA bond the same as fiduciary liability insurance?",
+        a: "No. The ERISA bond protects the plan against theft and is legally required. Fiduciary liability insurance protects you, the fiduciary, and is optional. Many sponsors carry both.",
       },
     ],
   },

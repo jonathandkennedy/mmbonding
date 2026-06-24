@@ -43,6 +43,7 @@ const footerCols: { heading: string; links: { label: string; href: string }[] }[
     links: [
       { label: "About", href: "/about" },
       { label: "Guides", href: "/resources" },
+      { label: "Cost Calculator", href: "/surety-bond-cost-calculator" },
       { label: "Get Licensed", href: "/contractor-license-school" },
       { label: "Why a Broker", href: "/why-use-a-surety-broker" },
       { label: "Get a Quote", href: "/get-a-quote" },
