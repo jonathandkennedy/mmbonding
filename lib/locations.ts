@@ -711,6 +711,204 @@ export const metros: Metro[] = [
     communities: ["Victorville", "Hesperia", "Lucerne Valley", "Spring Valley Lake", "Adelanto"],
     geo: { lat: 34.5008, lng: -117.1858 },
   },
+  {
+    slug: "glendale",
+    name: "Glendale",
+    region: "Los Angeles County",
+    blurb:
+      "Dense residential and commercial near the studios. Fast license bonds, real contract-bond help.",
+    context:
+      "Glendale blends a busy commercial core around Americana and Brand with dense residential and proximity to the LA media economy. We bond Glendale-area contractors fast and place the tougher files other brokers turn away.",
+    communities: ["Burbank", "Pasadena", "La Cañada Flintridge", "Eagle Rock", "Montrose", "La Crescenta"],
+    geo: { lat: 34.1425, lng: -118.2551 },
+  },
+  {
+    slug: "burbank",
+    name: "Burbank",
+    region: "Los Angeles County",
+    blurb:
+      "The media capital, with studios, industry, and residential. A bond should be the easy part.",
+    context:
+      "Burbank pairs the major studios with a strong industrial base and steady residential work. We move the routine license bonds fast and help Burbank contractors with contract bonds for larger projects.",
+    communities: ["Glendale", "North Hollywood", "Toluca Lake", "Sun Valley", "Studio City"],
+    geo: { lat: 34.1808, lng: -118.309 },
+  },
+  {
+    slug: "pomona",
+    name: "Pomona",
+    region: "Los Angeles County, Pomona Valley",
+    blurb:
+      "The Pomona Valley's hub, industrial and residential. Get bonded without the wait.",
+    context:
+      "Pomona anchors the Pomona Valley with the Fairplex, Cal Poly Pomona, and a deep industrial and residential base. We give local contractors fast license bonds and place the credit-challenged files automated sites decline.",
+    communities: ["Claremont", "La Verne", "San Dimas", "Diamond Bar", "Walnut", "Chino"],
+    geo: { lat: 34.0552, lng: -117.7499 },
+  },
+  {
+    slug: "torrance",
+    name: "Torrance",
+    region: "Los Angeles County, South Bay",
+    blurb:
+      "South Bay aerospace and industry plus coastal residential. Fast, practical bonding.",
+    context:
+      "Torrance is a South Bay center for aerospace, manufacturing, and corporate headquarters, with steady coastal-adjacent residential work. We bond Torrance contractors fast and build contract-bond capacity for bigger jobs.",
+    communities: ["Redondo Beach", "Gardena", "Carson", "Lomita", "Hawthorne", "Palos Verdes"],
+    geo: { lat: 33.8358, lng: -118.3406 },
+  },
+  {
+    slug: "downey",
+    name: "Downey",
+    region: "Los Angeles County, Gateway Cities",
+    blurb:
+      "Gateway Cities residential and commercial with an aerospace heritage. Fast license bonds.",
+    context:
+      "Downey anchors the Gateway Cities with dense residential, commercial corridors, and a proud aerospace history. We give local contractors fast license bonds and human help with contract bonds.",
+    communities: ["Norwalk", "Bellflower", "Paramount", "South Gate", "Pico Rivera", "Bell Gardens"],
+    geo: { lat: 33.9401, lng: -118.1332 },
+  },
+  {
+    slug: "fullerton",
+    name: "Fullerton",
+    region: "Orange County",
+    blurb:
+      "North OC with a historic downtown and university base. Fast bonds, tough cases welcome.",
+    context:
+      "Fullerton blends Cal State Fullerton, a historic downtown, and steady North Orange County residential and commercial construction. We bond local contractors fast and place the files other brokers skip.",
+    communities: ["Brea", "Placentia", "Anaheim", "Buena Park", "La Habra", "Yorba Linda"],
+    geo: { lat: 33.8704, lng: -117.9242 },
+  },
+  {
+    slug: "costa-mesa",
+    name: "Costa Mesa",
+    region: "Orange County",
+    blurb:
+      "Business, retail, and the arts at the heart of OC. Get bonded without the wait.",
+    context:
+      "Costa Mesa pairs South Coast Plaza and a strong business and arts economy with steady commercial and residential work. We move the routine license bonds fast and help local contractors with contract bonds.",
+    communities: ["Newport Beach", "Santa Ana", "Huntington Beach", "Fountain Valley", "Irvine"],
+    geo: { lat: 33.6411, lng: -117.9187 },
+  },
+  {
+    slug: "mission-viejo",
+    name: "Mission Viejo",
+    region: "Orange County, South County",
+    blurb:
+      "Master-planned South OC, affluent and residential. A bond should be the simplest item.",
+    context:
+      "Mission Viejo is a model master-planned community in South Orange County, with upscale residential and supporting commercial work. We give local contractors fast license bonds and quote credit challenges honestly.",
+    communities: ["Lake Forest", "Laguna Hills", "Aliso Viejo", "Rancho Santa Margarita", "Laguna Niguel"],
+    geo: { lat: 33.6, lng: -117.672 },
+  },
+  {
+    slug: "garden-grove",
+    name: "Garden Grove",
+    region: "Orange County",
+    blurb:
+      "Dense, diverse, and busy in central OC. Fast license bonds and contract-bond help.",
+    context:
+      "Garden Grove is a dense, diverse central Orange County city with constant residential and commercial construction. We bond local contractors fast and work the credit-challenged files automated sites decline.",
+    communities: ["Westminster", "Santa Ana", "Anaheim", "Stanton", "Fountain Valley"],
+    geo: { lat: 33.7739, lng: -117.9414 },
+  },
+  {
+    slug: "oakland",
+    name: "Oakland",
+    region: "Alameda County, East Bay",
+    blurb:
+      "Port city and urban core, high-value work. We build the bonding capacity it needs.",
+    context:
+      "Oakland combines the Port of Oakland, a dense urban core, and high-value commercial and residential construction. We do more than issue a license bond here: we build contract-bond programs sized for the work.",
+    communities: ["Berkeley", "Alameda", "Emeryville", "San Leandro", "Piedmont"],
+    geo: { lat: 37.8044, lng: -122.2712 },
+  },
+  {
+    slug: "fremont",
+    name: "Fremont",
+    region: "Alameda County, East Bay",
+    blurb:
+      "Tech, manufacturing, and large residential. Keep your bonds from slowing the build.",
+    context:
+      "Fremont anchors the East Bay's tech and advanced-manufacturing economy, with the Tesla factory and large residential growth. We give local contractors fast license bonds and contract-bond capacity for bigger jobs.",
+    communities: ["Union City", "Newark", "Hayward", "Milpitas", "Pleasanton"],
+    geo: { lat: 37.5485, lng: -121.9886 },
+  },
+  {
+    slug: "berkeley",
+    name: "Berkeley",
+    region: "Alameda County, East Bay",
+    blurb:
+      "University town with historic homes and strict permitting. We make the bond the easy part.",
+    context:
+      "Berkeley pairs UC Berkeley with historic residential neighborhoods and careful, seismic-aware permitting. We move the routine license bonds fast and place the tougher files other brokers pass on.",
+    communities: ["Oakland", "Albany", "Emeryville", "El Cerrito", "Kensington"],
+    geo: { lat: 37.8715, lng: -122.273 },
+  },
+  {
+    slug: "sunnyvale",
+    name: "Sunnyvale",
+    region: "Santa Clara County, Silicon Valley",
+    blurb:
+      "Silicon Valley campuses and high-value residential. Bonding capacity that matters here.",
+    context:
+      "Sunnyvale sits in the heart of Silicon Valley, where tech-campus and high-value residential contracts put bonding capacity front and center. We build performance and payment bond programs sized for the work.",
+    communities: ["Mountain View", "Santa Clara", "Cupertino", "Milpitas", "Los Altos"],
+    geo: { lat: 37.3688, lng: -122.0363 },
+  },
+  {
+    slug: "vista",
+    name: "Vista",
+    region: "San Diego County, North County",
+    blurb:
+      "North County business parks and residential. Fast license bonds, real contract-bond help.",
+    context:
+      "Vista blends North County San Diego business parks with steady residential construction between the coast and inland. We bond local contractors quickly, credit challenges included.",
+    communities: ["Oceanside", "Carlsbad", "San Marcos", "Escondido", "Bonsall"],
+    geo: { lat: 33.2, lng: -117.2425 },
+  },
+  {
+    slug: "san-marcos",
+    name: "San Marcos",
+    region: "San Diego County, North County",
+    blurb:
+      "A fast-growing university town in North County. Get bonded without the wait.",
+    context:
+      "San Marcos is growing around CSU San Marcos with strong residential and commercial construction in inland North County. We give local contractors fast license bonds and help with contract bonds.",
+    communities: ["Escondido", "Vista", "Carlsbad", "Encinitas", "Rancho Bernardo"],
+    geo: { lat: 33.1434, lng: -117.1661 },
+  },
+  {
+    slug: "hemet",
+    name: "Hemet",
+    region: "Riverside County, San Jacinto Valley",
+    blurb:
+      "Affordable San Jacinto Valley growth. Practical bonding from people who pick up the phone.",
+    context:
+      "Hemet and the San Jacinto Valley are growing on affordable residential development for new families and retirees. We give local contractors fast license bonds and place the credit-challenged and newer operators others pass on.",
+    communities: ["San Jacinto", "Menifee", "Perris", "Beaumont", "Winchester"],
+    geo: { lat: 33.7475, lng: -116.9719 },
+  },
+  {
+    slug: "tracy",
+    name: "Tracy",
+    region: "San Joaquin County, Central Valley",
+    blurb:
+      "A logistics hub and commuter boomtown. New construction everywhere, and we bond it.",
+    context:
+      "Tracy has boomed as a logistics and distribution center and a Bay Area commuter community, driving heavy warehouse and residential construction. Newer and growing contractors get declined elsewhere; we build programs for exactly that.",
+    communities: ["Mountain House", "Manteca", "Lathrop", "Stockton", "Livermore"],
+    geo: { lat: 37.7397, lng: -121.4252 },
+  },
+  {
+    slug: "turlock",
+    name: "Turlock",
+    region: "Stanislaus County, Central Valley",
+    blurb:
+      "Agriculture, food processing, and a university. Fast bonds from people who answer.",
+    context:
+      "Turlock combines dairy and food processing, a strong agricultural base, and CSU Stanislaus, with steady residential construction. We give Central Valley contractors fast license bonds and human help with contract bonds.",
+    communities: ["Modesto", "Ceres", "Hughson", "Denair", "Hilmar"],
+    geo: { lat: 37.4947, lng: -120.8466 },
+  },
 ];
 
 export function getMetro(slug: string): Metro | undefined {

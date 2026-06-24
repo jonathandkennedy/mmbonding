@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose } from "@/components/prose";
 import { bonds } from "@/lib/regulatory";
+import { hreflangFor } from "@/lib/i18n";
 
 const bond = bonds["payment-bond"];
 const parent = { name: "Contract Bonds", href: "/contract-bonds" };
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
   title: "Payment Bond",
   description:
     "California labor and material payment bonds. Guarantee that subcontractors and suppliers are paid. Usually paired with a performance bond. Licensed broker, CA DOI #6009105.",
-  alternates: { canonical: bond.href },
+  alternates: {
+    canonical: bond.href,
+    languages: hreflangFor("/contract-bonds/payment-bond", "/es/fianza-de-pago"),
+  },
 };
 
 const faqs = [

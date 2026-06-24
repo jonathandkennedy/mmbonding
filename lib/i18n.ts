@@ -18,6 +18,9 @@ export const localePairs: LocalePair[] = [
   { en: "/contract-bonds/bid-bond", es: "/es/fianza-de-licitacion" },
   { en: "/contract-bonds/performance-bond", es: "/es/fianza-de-cumplimiento" },
   { en: "/hard-to-place-surety-bonds", es: "/es/fianzas-mal-credito" },
+  { en: "/contract-bonds", es: "/es/fianzas-de-contrato" },
+  { en: "/contract-bonds/payment-bond", es: "/es/fianza-de-pago" },
+  { en: "/sba-surety-bonds", es: "/es/fianzas-sba" },
 ];
 
 function normalize(pathname: string): string {

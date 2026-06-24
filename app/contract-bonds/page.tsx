@@ -11,12 +11,16 @@ import { ReviewedBy } from "@/components/reviewed-by";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { bonds, contractBondKeys } from "@/lib/regulatory";
+import { hreflangFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Contract Bonds (Bid, Performance & Payment)",
   description:
     "California contract surety bonds for public and private construction: bid, performance, and payment bonds. Capacity built by a broker, including hard-to-place. CA DOI #6009105.",
-  alternates: { canonical: "/contract-bonds" },
+  alternates: {
+    canonical: "/contract-bonds",
+    languages: hreflangFor("/contract-bonds", "/es/fianzas-de-contrato"),
+  },
 };
 
 const children = contractBondKeys.map((k) => bonds[k]);
