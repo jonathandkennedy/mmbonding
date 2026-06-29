@@ -19,6 +19,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import {
   JsonLd,
   serviceSchema,
@@ -225,6 +226,11 @@ export default function Page() {
         <section className="py-16 lg:py-20">
           <Container size="wide" className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <Reveal>
+              <TldrCard
+                lang="es"
+                text={`El programa de Garantía de Fianzas de la SBA respalda a las afianzadoras para que los contratistas pequeños, nuevos o con mal crédito obtengan fianzas de hasta ${limitM} por contrato, o ${federalM} en contratos federales. La evaluación de crédito sigue aplicando y no garantizamos la aprobación.`}
+                className="mb-10 max-w-3xl"
+              />
               <Eyebrow>Cómo funciona</Eyebrow>
               <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
                 Un respaldo federal que afianza a los contratistas pequeños.

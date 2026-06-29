@@ -19,6 +19,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { sba } from "@/lib/regulatory";
@@ -171,6 +172,10 @@ export default function Page() {
       {/* What it is */}
       <section className="py-16 lg:py-20">
         <Container size="wide" className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <TldrCard
+            className="mb-10 max-w-3xl lg:col-span-2"
+            text={`The SBA Surety Bond Guarantee program backs sureties so small, new, and credit-challenged contractors can get bid, performance, and payment bonds. It covers contracts up to ${usd(sba.contractLimit)}, and up to ${usd(sba.federalContractLimit)} on federal work when the contracting officer certifies the need. Underwriting still applies.`}
+          />
           <Reveal>
             <Eyebrow>How it works</Eyebrow>
             <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">

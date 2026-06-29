@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { guides, guideHref, guideCategories } from "@/lib/guides";
 
@@ -53,6 +54,10 @@ export default function Page() {
 
       <section className="py-16">
         <Container size="wide" className="space-y-14">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text="This resources section is a library of plain-English guides on California contractor bonds: what they cost, how to get bonded, and licensing. Each guide is written and reviewed by a licensed California surety broker, with real numbers kept current. Pick a topic below to dig in."
+          />
           {guideCategories.map((cat) => {
             const inCat = guides.filter((g) => g.category === cat);
             if (inCat.length === 0) return null;

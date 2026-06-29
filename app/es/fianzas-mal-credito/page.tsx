@@ -171,6 +171,11 @@ export default function Page() {
         {/* Lo que colocamos */}
         <section className="py-16">
           <Container size="wide">
+            <TldrCard
+              lang="es"
+              text="¿Puede obtener una fianza con mal crédito? Casi siempre, sí. El crédito sube su tarifa, no su elegibilidad. Como corredores consultamos varios mercados, incluidos los que se especializan en casos difíciles. La evaluación de crédito sigue aplicando y no garantizamos la aprobación."
+              className="mb-10 max-w-3xl"
+            />
             <Reveal className="max-w-2xl">
               <h2 className="font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
                 Lo que colocamos cuando otros no

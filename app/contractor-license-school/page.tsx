@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { LicenseSchoolReferralForm } from "@/components/license-school-referral-form";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { facts } from "@/lib/regulatory";
 import { site } from "@/lib/site";
@@ -101,6 +102,10 @@ export default function Page() {
       {/* Body + form */}
       <section className="py-16">
         <Container size="wide" className="grid gap-12 lg:grid-cols-[1fr_24rem]">
+          <TldrCard
+            className="mb-10 max-w-3xl lg:col-span-2"
+            text={`To get a California contractor license, you document the required trade experience, pass the Law and Business exam plus your trade exam, and submit your application to the CSLB. We connect you with a trusted exam-prep partner, then handle the ${usd(facts.licenseBondAmount)} contractor license bond you will need once you pass.`}
+          />
           <div className="max-w-[64ch]">
             <Reveal>
               <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">

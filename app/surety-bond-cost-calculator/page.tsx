@@ -7,6 +7,7 @@ import { Reveal } from "@/components/reveal";
 import { Prose } from "@/components/prose";
 import { Faq } from "@/components/faq";
 import { BondCostCalculator } from "@/components/bond-cost-calculator";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
@@ -83,6 +84,10 @@ export default function Page() {
 
       <section className="py-16">
         <Container size="wide" className="grid gap-12 lg:grid-cols-[1fr_0.8fr]">
+          <TldrCard
+            className="mb-10 max-w-3xl lg:col-span-2"
+            text={`You never pay a bond's full face value. You pay a premium, a percentage of the bond amount driven mostly by your credit, typically about ${facts.licensePremiumRange.lowPct}% to ${facts.licensePremiumRange.highPct}% a year for license and commercial bonds. Estimate yours with the calculator above, then get an exact rate from a broker.`}
+          />
           <Prose>
             <h2>How surety bond pricing works</h2>
             <p>

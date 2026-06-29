@@ -4,8 +4,10 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { commercialBonds, commercialCategories } from "@/lib/commercial-bonds";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Commercial, Permit & Specialty Surety Bonds",
@@ -54,6 +56,10 @@ export default function Page() {
 
       <section className="py-16">
         <Container size="wide" className="space-y-14">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text={`MM Bonding places California commercial, permit, and specialty bonds: notary, auto dealer, court and probate, municipal permit bonds, and more. As a licensed California surety broker (CA DOI #${site.doiLicense}), we write them across the board, including the hard-to-place cases other brokers turn away.`}
+          />
           {commercialCategories.map((cat) => {
             const inCat = commercialBonds.filter(
               (b) => (b.category ?? "Commercial & Specialty") === cat,

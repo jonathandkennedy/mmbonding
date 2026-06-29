@@ -4,6 +4,7 @@ import { ArrowRight, MapPin, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { metros } from "@/lib/locations";
 import { site } from "@/lib/site";
@@ -54,6 +55,10 @@ export default function Page() {
 
       <section className="py-16">
         <Container size="wide">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text={`MM Bonding serves contractors statewide across ${site.areaServed}, with local pages for each major metro. Pick your market below, from Los Angeles, Orange County, and the Inland Empire to San Diego, the Bay Area, Sacramento, and Fresno, or get a quote from anywhere in the state.`}
+          />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {metros.map((m, i) => (
               <Reveal as="div" key={m.slug} delay={(i % 3) * 60}>

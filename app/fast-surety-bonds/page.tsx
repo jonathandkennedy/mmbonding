@@ -18,6 +18,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts } from "@/lib/regulatory";
@@ -177,6 +178,10 @@ export default function Page() {
       {/* What we can issue same-day */}
       <section className="py-16 lg:py-20">
         <Container size="wide">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text={`How fast? Qualifying license, permit, and small commercial bonds are often issued the same business day once we have your details and payment. CSLB filings typically post within ${facts.filingWindow}. Contract bonds need a short underwriting review, so they are fast but not instant.`}
+          />
           <Reveal className="max-w-2xl">
             <Eyebrow>Same-day bonds</Eyebrow>
             <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
