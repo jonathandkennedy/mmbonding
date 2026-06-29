@@ -106,11 +106,19 @@ export function SiteFooter() {
             DOI sources. Underwriting applies to every bond. Insurance products are routed to
             licensed partner agencies; {site.shortName} does not underwrite insurance.
           </p>
-          <div className="mt-5 flex flex-col gap-3 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-5 flex flex-col gap-4 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
             <p>
               © {new Date().getFullYear()} {site.name}. All rights reserved.
             </p>
-            <p className="font-mono">{site.tagline}</p>
+            <nav aria-label="Legal" className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              <Link href="/privacy-policy" className="transition-colors hover:text-azure-300">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="transition-colors hover:text-azure-300">
+                Terms of Service
+              </Link>
+              <span className="font-mono text-navy-400">{site.tagline}</span>
+            </nav>
           </div>
         </div>
       </Container>

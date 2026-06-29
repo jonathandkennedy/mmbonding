@@ -33,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/get-a-quote", priority: 0.8, freq: "monthly" },
     { path: "/about", priority: 0.6, freq: "yearly" },
     { path: "/contact", priority: 0.6, freq: "yearly" },
+    { path: "/privacy-policy", priority: 0.3, freq: "yearly" },
+    { path: "/terms-of-service", priority: 0.3, freq: "yearly" },
   ];
 
   const seen = new Set(staticPaths.map((s) => s.path));

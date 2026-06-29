@@ -172,6 +172,57 @@ p {
   transform: none;
 }
 
+/* =============================================================================
+   Legal prose (privacy, terms): readable long-form, scoped so it never leaks
+   ============================================================================= */
+.legal-prose {
+  color: var(--color-ink-700);
+  line-height: 1.72;
+}
+.legal-prose > * + * {
+  margin-top: 0.95rem;
+}
+.legal-prose h3 {
+  margin-top: 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-navy-900);
+}
+.legal-prose ul {
+  list-style: none;
+  padding-left: 0;
+}
+.legal-prose ul > li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+.legal-prose ul > li + li {
+  margin-top: 0.5rem;
+}
+.legal-prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.66em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: var(--color-azure-500);
+}
+.legal-prose a {
+  color: var(--color-azure-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-prose a:hover {
+  color: var(--color-azure-700);
+}
+.legal-prose strong {
+  color: var(--color-navy-900);
+  font-weight: 600;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
