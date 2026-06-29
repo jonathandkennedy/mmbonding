@@ -7,6 +7,7 @@ import { Slashes } from "./slashes";
 import { Reveal } from "./reveal";
 import { Faq } from "./faq";
 import { ReviewedBy } from "./reviewed-by";
+import { TldrCard } from "./tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema, type FaqItem } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
@@ -18,6 +19,7 @@ export function GuidePage({
   children,
   faqs,
   related,
+  tldr,
 }: {
   guide: Guide;
   intro: string;
@@ -25,7 +27,10 @@ export function GuidePage({
   faqs: FaqItem[];
   /** Money-page links for the sidebar. */
   related?: { label: string; href: string }[];
+  /** Answer-first TL;DR (under 60 words). Falls back to the registry excerpt. */
+  tldr?: string;
 }) {
+  const tldrText = tldr ?? guide.excerpt;
   const href = guideHref(guide.slug);
   const crumbs = [
     { name: "Home", url: "/" },
@@ -88,7 +93,9 @@ export function GuidePage({
 
       {/* Body + sidebar */}
       <section className="py-16">
-        <Container size="wide" className="grid gap-12 lg:grid-cols-[1fr_20rem]">
+        <Container size="wide">
+          <TldrCard text={tldrText} className="mb-10 max-w-3xl" />
+          <div className="grid gap-12 lg:grid-cols-[1fr_20rem]">
           <article>{children}</article>
 
           <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
@@ -151,6 +158,7 @@ export function GuidePage({
               </ul>
             </div>
           </aside>
+          </div>
         </Container>
       </section>
 

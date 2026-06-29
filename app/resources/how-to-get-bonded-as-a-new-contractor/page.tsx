@@ -32,6 +32,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr="Start with the contractor license bond. It is very placeable even with no track record or thin credit, so it gets you licensed and working. For bid, performance, and payment bonds, a broker uses the SBA Surety Bond Guarantee program and builds your capacity over time. No honest broker guarantees approval, but we work the file."
       intro="Brand new and need bonds to win work, but feel like you need work to get bonded? Here is the realistic path: start with the license bond, then build contract bonding from there."
       faqs={faqs}
       related={[

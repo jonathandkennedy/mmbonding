@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
+import { TldrCard } from "@/components/tldr-card";
 import { InsuranceReferralForm } from "@/components/insurance-referral-form";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { insuranceProducts, getInsuranceProduct, insuranceDisclaimer } from "@/lib/insurance";
@@ -40,6 +41,8 @@ export default async function Page({ params }: { params: Promise<{ type: string 
     { name: "Insurance", url: "/bonding-vs-insurance" },
     { name: p.shortName, url: `/insurance/${p.slug}` },
   ];
+
+  const tldrText = `Need ${p.shortName.toLowerCase()} in California? ${site.shortName} connects contractors with a licensed insurance partner to get covered. We are a surety broker and referral, not the insurer, and there is no cost to be connected.`;
 
   return (
     <>
@@ -83,7 +86,9 @@ export default async function Page({ params }: { params: Promise<{ type: string 
 
       {/* Body + form */}
       <section className="py-16">
-        <Container size="wide" className="grid gap-12 lg:grid-cols-[1fr_24rem]">
+        <Container size="wide">
+          <TldrCard text={tldrText} className="mb-10 max-w-3xl" />
+          <div className="grid gap-12 lg:grid-cols-[1fr_24rem]">
           <div className="max-w-[64ch]">
             <Reveal>
               <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
@@ -134,6 +139,7 @@ export default async function Page({ params }: { params: Promise<{ type: string 
 
           <div className="lg:sticky lg:top-24 lg:self-start">
             <InsuranceReferralForm coverageName={p.shortName} coverageSlug={p.slug} />
+          </div>
           </div>
         </Container>
       </section>

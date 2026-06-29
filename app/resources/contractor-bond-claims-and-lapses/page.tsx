@@ -34,6 +34,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`When a claim is filed, the surety investigates and, if it is valid, pays up to the ${usd(facts.licenseBondAmount)} bond amount, then you reimburse the surety in full. If your bond lapses, the CSLB can suspend your license until it is reinstated. Renew on time and keep coverage continuous to stay protected.`}
       intro={`A claim or a lapsed bond can put your license at risk. Here is what the surety does when a claim is filed, what the CSLB does if your bond lapses, and how to protect your license.`}
       faqs={faqs}
       related={[

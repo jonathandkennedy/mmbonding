@@ -3,6 +3,7 @@ import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { ContactForm } from "@/components/contact-form";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, organizationSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 
@@ -48,6 +49,10 @@ export default function Page() {
 
       <section className="py-16">
         <Container size="wide" className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
+          <TldrCard
+            className="mb-10 max-w-3xl lg:col-span-2"
+            text={`Reach MM Bonding by phone at ${site.phone.display}, ${site.hours}. Call or text a real, licensed California surety broker, or send the form below. We serve contractors statewide across ${site.areaServed}.`}
+          />
           <div>
             <ul className="grid gap-4 sm:grid-cols-2">
               {methods.map((m) => {

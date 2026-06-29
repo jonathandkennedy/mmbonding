@@ -33,6 +33,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`A California LLC contractor needs two bonds: the ${usd(facts.licenseBondAmount)} contractor license bond every contractor carries, plus the ${usd(facts.llcWorkerBondAmount)} LLC employee/worker bond under ${facts.llcWorkerBondStatute} that protects employee wages and benefits. Most LLC contractors also carry general liability insurance. We can place all three together.`}
       intro={`A California LLC contractor needs more than the standard license bond. You carry the ${usd(facts.licenseBondAmount)} bond plus a ${usd(facts.llcWorkerBondAmount)} employee/worker bond, and typically general liability insurance. Here is how the pieces fit.`}
       faqs={faqs}
       related={[

@@ -32,6 +32,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr="Yes, you can usually get a surety bond with bad credit. Credit raises your rate, not your eligibility. A broker shops the markets that write credit-challenged files, including poor, thin, or no credit. Underwriting still applies and no honest broker guarantees approval."
       intro="Bad credit is the number one reason contractors get declined online, and the number one thing we fix. Here is how bad-credit surety bonds actually work."
       faqs={faqs}
       related={[

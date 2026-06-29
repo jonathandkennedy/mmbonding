@@ -8,6 +8,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import {
   JsonLd,
   serviceSchema,
@@ -121,6 +122,11 @@ export default function Page() {
         <section className="py-16 lg:py-20">
           <Container size="wide" className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
             <Reveal className="max-w-2xl space-y-10">
+              <TldrCard
+                lang="es"
+                text="La fianza de licitación garantiza que usted respaldará su oferta y entregará las fianzas de cumplimiento y de pago si gana la obra. Por lo general no lleva una prima aparte: se emite como parte de su programa de afianzamiento. Configuramos ese programa para que cada oferta salga rápido."
+                className="mb-10 max-w-3xl"
+              />
               <div>
                 <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900 sm:text-3xl">
                   Qué hace una fianza de licitación

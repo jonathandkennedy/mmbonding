@@ -33,6 +33,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`You likely qualify for the SBA Surety Bond Guarantee program if you are a small business that meets SBA size standards and cannot get standard surety credit, including new and credit-challenged contractors. The SBA backs ${sba.guaranteeLowPct}% to ${sba.guaranteeHighPct}% of the surety&apos;s loss on contracts up to ${usd(sba.contractLimit)}, or ${usd(sba.federalContractLimit)} on certified federal contracts.`}
       intro="The SBA Surety Bond Guarantee program exists so small contractors who cannot get standard bonding still can. Here is who qualifies, the limits, and what it takes to apply."
       faqs={faqs}
       related={[

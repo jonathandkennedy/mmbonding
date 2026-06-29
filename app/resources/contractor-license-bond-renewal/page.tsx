@@ -34,6 +34,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`The California contractor license bond renews every year, because the CSLB requires continuous coverage to keep your license active. The amount stays ${usd(facts.licenseBondAmount)}, but your premium can change with your credit. A lapse can get your license suspended, so renew on time. As a broker we can re-shop your rate at renewal.`}
       intro={`The ${usd(facts.licenseBondAmount)} contractor license bond is not a one-time purchase. It renews every year, and a missed renewal can put your license at risk. Here is how to stay ahead of it.`}
       faqs={faqs}
       related={[

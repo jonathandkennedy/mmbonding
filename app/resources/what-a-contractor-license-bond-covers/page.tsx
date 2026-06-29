@@ -33,6 +33,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`A California contractor license bond protects consumers, your employees, and the public, not you. A valid claim under ${facts.licenseBondStatute} can cover willful or fraudulent violations of contractor law, unpaid employee wages, and consumer damages from a code violation, up to ${usd(facts.licenseBondAmount)}. It is not insurance, so you reimburse the surety for any claim it pays.`}
       intro={`The ${usd(facts.licenseBondAmount)} contractor license bond protects consumers, your employees, and the public, not you. Here is what a valid claim can cover, and what it cannot.`}
       faqs={faqs}
       related={[

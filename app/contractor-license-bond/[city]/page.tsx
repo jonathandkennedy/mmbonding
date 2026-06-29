@@ -9,6 +9,7 @@ import { Slashes } from "@/components/slashes";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { getMetro } from "@/lib/locations";
@@ -185,6 +186,10 @@ export default async function Page({ params }: { params: Promise<{ city: string 
       {/* Body */}
       <section className="py-16">
         <Container size="wide" className="max-w-3xl">
+          <TldrCard
+            text={`How much is the contractor license bond in ${m.name}? It is a ${usd(facts.licenseBondAmount)} bond (${facts.licenseBondStatute}) every CSLB-licensed contractor must carry. You pay a small annual premium based on credit, not the full amount. We quote ${m.name} contractors fast, bad credit welcome.`}
+            className="mb-10"
+          />
           <Reveal>
             <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
               The license bond, for {m.name} contractors

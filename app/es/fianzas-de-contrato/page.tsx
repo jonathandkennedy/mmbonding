@@ -8,6 +8,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import {
   JsonLd,
   serviceSchema,
@@ -156,6 +157,11 @@ export default function Page() {
         {/* The three bonds */}
         <section className="py-16 lg:py-20">
           <Container size="wide">
+            <TldrCard
+              lang="es"
+              text="Las fianzas de contrato son tres garantías: licitación, cumplimiento y pago, para obra pública y privada. La de licitación respalda su oferta, la de cumplimiento garantiza la terminación y la de pago protege a subcontratistas y proveedores. Como corredores, construimos y hacemos crecer su capacidad de afianzamiento."
+              className="mb-10 max-w-3xl"
+            />
             <Reveal className="max-w-2xl">
               <h2 className="font-display text-3xl font-extrabold tracking-tight text-navy-900">
                 Las tres fianzas de contrato

@@ -32,6 +32,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr="You get a performance bond through a surety broker, who places it with a surety company. It is underwritten on your financials, experience, credit, and work on hand, not sold off a shelf. The premium is a small percentage of the contract value. New or credit-challenged contractors can often qualify with the right market."
       intro="A performance bond is not something you buy off a shelf. It is underwritten. Here is what that involves, what it costs, and how to get one placed for your project."
       faqs={faqs}
       related={[

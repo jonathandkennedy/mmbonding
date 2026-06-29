@@ -8,6 +8,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { bonds, contractBondKeys } from "@/lib/regulatory";
@@ -110,6 +111,10 @@ export default function Page() {
       {/* The three bonds */}
       <section className="py-16">
         <Container size="wide">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text="Contract bonds guarantee a construction job on public or private work. A bid bond backs your proposal, a performance bond guarantees you finish, and a payment bond guarantees your subs and suppliers get paid. A broker builds and grows your bonding capacity across multiple markets."
+          />
           <Reveal className="max-w-2xl">
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-navy-900">
               The three contract bonds

@@ -8,6 +8,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Slashes } from "@/components/slashes";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { commercialBonds, getCommercialBond, commercialReviewNote } from "@/lib/commercial-bonds";
 import { site } from "@/lib/site";
@@ -47,6 +48,11 @@ export default async function Page({ params }: { params: Promise<{ type: string 
     { label: "Authority", value: b.authority },
     ...(b.statute ? [{ label: "Statute", value: b.statute }] : []),
   ];
+
+  const amountClause = b.amountLabel.trim().startsWith("$")
+    ? `is a ${b.amountLabel} surety bond`
+    : `is a surety bond whose amount is ${b.amountLabel.toLowerCase()}`;
+  const tldrText = `The ${b.shortName} ${amountClause}. ${b.whoNeedsIt[0]} need it. You pay a small premium, not the full amount, and we place it fast, credit challenges included.`;
 
   return (
     <>
@@ -129,6 +135,7 @@ export default async function Page({ params }: { params: Promise<{ type: string 
       {/* Body */}
       <section className="py-16">
         <Container size="wide">
+          <TldrCard text={tldrText} className="mb-10 max-w-3xl" />
           <div className="max-w-[64ch]">
             <Reveal>
               <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">

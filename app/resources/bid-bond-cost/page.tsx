@@ -34,6 +34,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr="Most bid bonds carry no separate premium. Sureties issue them as part of your surety program because a bid bond only obligates you to honor your bid. The real cost lives in the performance and payment bonds you furnish if you win, priced on your finances, experience, and credit."
       intro="Most bid bonds carry no separate premium. They are issued as part of your overall surety program, and what underwriters really price is whether they would bond the full contract if you win."
       faqs={faqs}
       related={[

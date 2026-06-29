@@ -7,6 +7,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts, REGULATORY_REVIEWED } from "@/lib/regulatory";
@@ -132,6 +133,10 @@ export default function Page() {
       {/* Core comparison */}
       <section className="py-16">
         <Container size="wide">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text="The difference: a surety bond protects your customers and the public, while insurance protects your own business against covered losses. They do opposite jobs, so most California contractors need both. Bonded is not insured: the contractor license bond covers your clients, not you."
+          />
           <Reveal className="max-w-2xl">
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
               One protects your customers. One protects you.

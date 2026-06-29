@@ -33,6 +33,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`To get a California contractor license bond: request a quote, accept it, pay the annual premium, and your surety e-files the ${usd(facts.licenseBondAmount)} bond with the CSLB on Form ${facts.licenseBondForm}. Filings typically post within ${facts.filingWindow}, so most qualifying applicants finish the same business day. Good credit is not required to qualify.`}
       intro="Getting bonded for your CSLB license is faster than most contractors expect. Here is the whole process, and how to do it the same day."
       faqs={faqs}
       related={[

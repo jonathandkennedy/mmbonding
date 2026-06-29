@@ -19,6 +19,7 @@ import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
@@ -131,6 +132,10 @@ export default function Page() {
       {/* What we place */}
       <section className="py-16">
         <Container size="wide">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text="Yes, you can usually get bonded with bad credit or after a decline. As a licensed broker we shop multiple surety markets, including ones built for credit challenges, prior claims, new businesses, and high-risk classes. Underwriting still applies, and we never promise guaranteed approval."
+          />
           <Reveal className="max-w-2xl">
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
               What we place that others won&apos;t

@@ -6,6 +6,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { Slashes } from "@/components/slashes";
 import { Prose, Bullet } from "@/components/prose";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, personSchema, organizationSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts } from "@/lib/regulatory";
@@ -50,6 +51,10 @@ export default function Page() {
       {/* Founder */}
       <section className="py-16 lg:py-20">
         <Container size="wide" className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <TldrCard
+            className="mb-10 max-w-3xl lg:col-span-2"
+            text={`MM Bonding is a licensed California surety broker (CA DOI #${site.doiLicense}), led by Michael Melshenker. We represent you, not one carrier, shopping multiple top-rated markets to place hard-to-place bonds: bad credit, prior claims, new businesses, and high-risk classes. No guaranteed approval; underwriting always applies.`}
+          />
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl bg-navy-900 p-8 text-white lg:sticky lg:top-24">
               <Slashes tone="white" size="lg" className="absolute right-6 top-6 opacity-20" />

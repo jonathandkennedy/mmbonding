@@ -9,6 +9,7 @@ import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
 import { BondPathCards } from "@/components/bond-path-cards";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { metros, getMetro } from "@/lib/locations";
@@ -125,6 +126,10 @@ export default async function Page({ params }: { params: Promise<{ metro: string
       {/* Local context + paths */}
       <section className="py-16">
         <Container size="wide">
+          <TldrCard
+            text={`Need a surety bond in ${m.name}? ${site.shortName} is a licensed California broker (CA DOI #${site.doiLicense}) placing contractor license, bid, performance, and hard-to-place bonds for ${m.region} contractors. Fast quotes, bad credit welcome, often same-day filing.`}
+            className="mb-10 max-w-3xl"
+          />
           <Reveal className="max-w-3xl">
             <p className="text-lg leading-relaxed text-ink-700">{m.context}</p>
           </Reveal>

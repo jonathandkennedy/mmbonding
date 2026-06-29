@@ -37,6 +37,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`A California contractor license bond costs an annual premium, not the full ${usd(facts.licenseBondAmount)}. Expect roughly ${facts.licensePremiumRange.lowPct}% to ${facts.licensePremiumRange.highPct}% of the bond amount, driven mostly by credit. Strong credit can start in the low hundreds per year; tougher credit costs more. We quote your exact rate fast.`}
       intro={`The California contractor license bond has a fixed ${usd(facts.licenseBondAmount)} face amount, but that is not what you pay. Here is how the premium actually works and what moves it.`}
       faqs={faqs}
       related={[

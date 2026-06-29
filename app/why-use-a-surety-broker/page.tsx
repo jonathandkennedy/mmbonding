@@ -16,6 +16,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
@@ -156,6 +157,10 @@ export default function Page() {
       {/* Core comparison */}
       <section className="py-16">
         <Container size="wide" className="grid items-center gap-12 lg:grid-cols-2">
+          <TldrCard
+            className="mb-10 max-w-3xl lg:col-span-2"
+            text="Use a broker because we shop multiple surety markets for your best placement, place tough credit and prior claims, and build bonding capacity for bigger contracts. An instant-issue site runs one program and declines anything outside it. Underwriting still applies; we never promise guaranteed approval."
+          />
           <Reveal>
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
               A broker works for you. A site works one program.

@@ -32,6 +32,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr="DIR registration is registering with California&apos;s Department of Industrial Relations. Under Labor Code §1725.5, it is required for any contractor or subcontractor that bids or works on public works, and you register before you bid. It is an annual registration with an annual fee, and it does not replace your bid, performance, or payment bonds."
       intro="If you want public works in California, DIR registration comes before the bid. Here is what it is, who needs it, and how it sits next to the bonds you still have to carry."
       faqs={faqs}
       related={[

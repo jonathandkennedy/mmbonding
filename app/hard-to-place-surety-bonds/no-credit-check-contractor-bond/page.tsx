@@ -8,6 +8,7 @@ import { Reveal } from "@/components/reveal";
 import { Prose, Bullet } from "@/components/prose";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts } from "@/lib/regulatory";
@@ -104,6 +105,10 @@ export default function Page() {
 
       <section className="py-16">
         <Container size="wide">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text="Yes, no-credit-check contractor bonds exist for some smaller, standard license bonds, often at a flat rate set for the risk rather than your score. It means credit is not the deciding factor, not that approval is guaranteed. Other underwriting still applies."
+          />
           <Prose>
             <h2>What &quot;no credit check&quot; actually means</h2>
             <p>

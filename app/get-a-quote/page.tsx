@@ -3,6 +3,7 @@ import { Phone, ShieldCheck, Zap, HeartHandshake, BadgeCheck } from "lucide-reac
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { QuoteForm } from "@/components/quote/quote-form";
+import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 
@@ -54,6 +55,10 @@ export default async function Page({
       />
       <section className="bg-surface">
         <Container size="wide" className="py-12 lg:py-16">
+          <TldrCard
+            className="mb-10 max-w-3xl"
+            text="To get a surety bond quote, pick a path below: license, contract, or hard-to-place. It takes about two minutes and never asks for a card or Social Security number. A real, licensed California underwriter then shops your file across multiple markets."
+          />
           <div className="grid gap-10 lg:grid-cols-[1.4fr_0.85fr] lg:gap-14">
             <div>
               <Eyebrow>Get a quote</Eyebrow>

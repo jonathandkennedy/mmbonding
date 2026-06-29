@@ -7,6 +7,7 @@ import { Slashes } from "./slashes";
 import { Reveal } from "./reveal";
 import { Faq } from "./faq";
 import { ReviewedBy } from "./reviewed-by";
+import { TldrCard } from "./tldr-card";
 import {
   JsonLd,
   serviceSchema,
@@ -28,6 +29,8 @@ export type BondPageProps = {
   faqs: FaqItem[];
   related?: BondKey[];
   showHardToPlace?: boolean;
+  /** Override the auto-derived TL;DR answer. */
+  tldr?: string;
   /** Extra breadcrumb between Home and this page, e.g. Contract Bonds hub. */
   parent?: { name: string; href: string };
 };
@@ -42,8 +45,14 @@ export function BondPage({
   faqs,
   related,
   showHardToPlace = true,
+  tldr,
   parent,
 }: BondPageProps) {
+  const tldrText =
+    tldr ??
+    `${bond.summary} You pay a small annual premium based on your credit, not the full ${
+      bond.amount ? usd(bond.amount) : "bond amount"
+    }, and we place bad credit, prior claims, and new contractors.`;
   const crumbs = [
     { name: "Home", url: "/" },
     ...(parent ? [{ name: parent.name, url: parent.href }] : []),
@@ -123,9 +132,12 @@ export function BondPage({
 
       {/* Body + sidebar */}
       <section className="py-16">
-        <Container size="wide" className="grid gap-12 lg:grid-cols-[1fr_20rem]">
-          <article>{children}</article>
-          <Sidebar bond={bond} related={related} />
+        <Container size="wide">
+          <TldrCard text={tldrText} className="mb-10 max-w-3xl" />
+          <div className="grid gap-12 lg:grid-cols-[1fr_20rem]">
+            <article>{children}</article>
+            <Sidebar bond={bond} related={related} />
+          </div>
         </Container>
       </section>
 

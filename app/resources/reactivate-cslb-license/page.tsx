@@ -33,6 +33,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr={`To reactivate an inactive California license, file a reactivation request with the CSLB and put an active ${usd(facts.licenseBondAmount)} contractor license bond on file. The bond is the fast part: once quoted and paid, your surety e-files within ${facts.filingWindow}. A disciplined license may need a disciplinary bond instead.`}
       intro="Letting a license go inactive is common. Bringing it back is straightforward, and the bond is the fast part. Here is what reactivation takes."
       faqs={faqs}
       related={[

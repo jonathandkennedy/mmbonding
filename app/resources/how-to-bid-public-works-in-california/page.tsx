@@ -32,6 +32,7 @@ export default function Page() {
   return (
     <GuidePage
       guide={guide}
+      tldr="To bid public works in California: register with the DIR first, then find bids on the DIR public works database, Cal eProcure, and local agency sites. You need a bid bond to submit a bid, plus performance and payment bonds if you win. Prevailing wage and certified payroll also apply."
       intro="Public works can be steady, repeatable work, but the process has its own rules. Here is how to find bids in California, what you have to do before you bid, and the bonds you need to compete."
       faqs={faqs}
       related={[
