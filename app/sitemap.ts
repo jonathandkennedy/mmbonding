@@ -5,6 +5,7 @@ import { metros } from "@/lib/locations";
 import { insuranceProducts } from "@/lib/insurance";
 import { guides } from "@/lib/guides";
 import { commercialBonds } from "@/lib/commercial-bonds";
+import { trades } from "@/lib/trades";
 import { localePairs } from "@/lib/i18n";
 
 type Freq = MetadataRoute.Sitemap[number]["changeFrequency"];
@@ -28,6 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources", priority: 0.7, freq: "monthly" },
     { path: "/commercial-bonds", priority: 0.7, freq: "monthly" },
     { path: "/surety-bond-cost-calculator", priority: 0.7, freq: "monthly" },
+    { path: "/how-surety-bonds-work", priority: 0.7, freq: "monthly" },
+    { path: "/surety-bond-glossary", priority: 0.6, freq: "monthly" },
+    { path: "/contractor-license-bond/trades", priority: 0.7, freq: "monthly" },
     { path: "/why-use-a-surety-broker", priority: 0.7, freq: "monthly" },
     { path: "/contractor-license-school", priority: 0.6, freq: "monthly" },
     { path: "/get-a-quote", priority: 0.8, freq: "monthly" },
@@ -67,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     freq: "monthly" as Freq,
   }));
 
+  const tradePaths = trades.map((t) => ({
+    path: `/contractor-license-bond/trades/${t.slug}`,
+    priority: 0.6,
+    freq: "monthly" as Freq,
+  }));
+
   // Spanish pages (hreflang relationships are declared in each page's <head>).
   const esPaths = localePairs.map((p) => ({
     path: p.es,
@@ -81,6 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...insurancePaths,
     ...guidePaths,
     ...commercialPaths,
+    ...tradePaths,
     ...esPaths,
   ].map((entry) => ({
     url: `${site.url}${entry.path}`,

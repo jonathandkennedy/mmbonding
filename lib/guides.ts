@@ -7,7 +7,7 @@
  * how-to guides, licensing guides) and feed the money pages.
  */
 
-export type GuideCategory = "Bond Costs" | "How-To" | "Licensing";
+export type GuideCategory = "Bond Costs" | "How-To" | "Licensing" | "Underwriting";
 
 export type Guide = {
   slug: string;
@@ -121,6 +121,110 @@ export const guides: Guide[] = [
     category: "Licensing",
     keyword: "contractor license bond renewal",
   },
+  {
+    slug: "surety-bond-vs-cslb-cash-deposit",
+    title: "Surety Bond vs. the CSLB Cash Deposit",
+    excerpt:
+      "The $25,000 cash deposit most contractors never hear about, and why almost everyone picks the bond instead.",
+    category: "Licensing",
+    keyword: "cslb cash deposit vs bond",
+  },
+  {
+    slug: "california-contractor-license-classifications",
+    title: "California Contractor License Classifications (A, B & C)",
+    excerpt:
+      "What the A, B, and C-## classifications mean, and which bonds each class of contractor needs.",
+    category: "Licensing",
+    keyword: "california contractor license classifications",
+  },
+  {
+    slug: "how-to-get-a-california-contractor-license",
+    title: "How to Get a California Contractor License",
+    excerpt:
+      "The full path to a CSLB license: experience, the exam, fees, and the bond that finishes it.",
+    category: "How-To",
+    keyword: "how to get a california contractor license",
+  },
+  {
+    slug: "california-permit-bond-requirements",
+    title: "California Permit Bond Requirements by City & County",
+    excerpt:
+      "When cities, counties, and Caltrans require permit and encroachment bonds, and how to get them fast.",
+    category: "Licensing",
+    keyword: "california permit bond requirements",
+  },
+  {
+    slug: "how-much-surety-bond-do-i-need",
+    title: "How Much Surety Bond Do I Need?",
+    excerpt:
+      "How to size the right bond by license type and trade, with a quick premium estimate.",
+    category: "How-To",
+    keyword: "how much surety bond do i need",
+  },
+  {
+    slug: "surety-bond-refunds-and-cancellations",
+    title: "Surety Bond Refunds & Cancellations",
+    excerpt:
+      "When a bond premium is refundable, how cancellation works, and what a prorated return looks like.",
+    category: "Bond Costs",
+    keyword: "surety bond refund cancellation",
+  },
+  {
+    slug: "how-surety-bond-credit-checks-work",
+    title: "How Surety Bond Credit Checks Work",
+    excerpt:
+      "Soft pull vs. hard pull, what underwriters actually look at, and how credit sets your rate.",
+    category: "Underwriting",
+    keyword: "surety bond credit check",
+  },
+  {
+    slug: "surety-bond-indemnity-agreement",
+    title: "The Surety Bond Indemnity Agreement, Explained",
+    excerpt:
+      "What you sign, what a personal guarantee means, and who is on the hook if a claim is paid.",
+    category: "Underwriting",
+    keyword: "surety bond indemnity agreement",
+  },
+  {
+    slug: "surety-bond-capacity",
+    title: "Surety Bonding Capacity: Single & Aggregate Limits",
+    excerpt:
+      "How sureties set your bonding capacity, and the practical steps to increase it.",
+    category: "Underwriting",
+    keyword: "surety bonding capacity",
+  },
+  {
+    slug: "funds-control-for-contractors",
+    title: "Funds Control: Getting Bonded When Credit Won't",
+    excerpt:
+      "How funds control, also called funds administration, can unlock a bond when credit alone can't.",
+    category: "Underwriting",
+    keyword: "funds control surety bond",
+  },
+  {
+    slug: "how-to-get-bonded-with-a-new-business",
+    title: "How to Get Bonded with a Brand-New Business",
+    excerpt:
+      "No financials yet? The realistic path to a first surety bond for a brand-new company.",
+    category: "How-To",
+    keyword: "get bonded new business no financials",
+  },
+  {
+    slug: "surety-bonds-after-bankruptcy-or-tax-lien",
+    title: "Surety Bonds After a Bankruptcy, Tax Lien, or Claim",
+    excerpt:
+      "Still placeable. How sureties view a bankruptcy, lien, or prior claim, and how to get bonded anyway.",
+    category: "Bond Costs",
+    keyword: "surety bond after bankruptcy",
+  },
+  {
+    slug: "surety-bond-collateral",
+    title: "Surety Bond Collateral: When It's Required & How to Get It Back",
+    excerpt:
+      "When a surety asks for collateral, what forms it takes, and how to reduce or recover it.",
+    category: "Underwriting",
+    keyword: "surety bond collateral",
+  },
 ];
 
 export function guideHref(slug: string) {
@@ -131,4 +235,9 @@ export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
 }
 
-export const guideCategories: GuideCategory[] = ["Bond Costs", "How-To", "Licensing"];
+export const guideCategories: GuideCategory[] = [
+  "Bond Costs",
+  "How-To",
+  "Licensing",
+  "Underwriting",
+];

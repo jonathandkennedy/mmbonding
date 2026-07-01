@@ -88,6 +88,52 @@ export default function Page() {
               </div>
             );
           })}
+
+          <div>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
+              Tools &amp; references
+            </h2>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  title: "How Surety Bonds Work",
+                  desc: "The three-party guarantee in one diagram, plus how a claim actually works.",
+                  href: "/how-surety-bonds-work",
+                },
+                {
+                  title: "Surety Bond Glossary",
+                  desc: "Principal, obligee, indemnity, penal sum, and the rest, in plain English.",
+                  href: "/surety-bond-glossary",
+                },
+                {
+                  title: "Contractor Bonds by Trade",
+                  desc: "Which bonds each CSLB classification needs, from C-10 electrical to Class A.",
+                  href: "/contractor-license-bond/trades",
+                },
+                {
+                  title: "Surety Bond Cost Calculator",
+                  desc: "Estimate your annual premium from the bond amount and your credit tier.",
+                  href: "/surety-bond-cost-calculator",
+                },
+              ].map((t, i) => (
+                <Reveal as="div" key={t.href} delay={(i % 3) * 60}>
+                  <Link
+                    href={t.href}
+                    className="group flex h-full flex-col rounded-2xl border border-ink-200 bg-white p-6 transition-[box-shadow,border-color] duration-200 hover:border-azure-300 hover:shadow-md"
+                  >
+                    <h3 className="font-display text-lg font-bold leading-snug tracking-tight text-navy-900">
+                      {t.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-sm text-muted">{t.desc}</p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-azure-600 transition-transform duration-200 ease-out group-hover:translate-x-1">
+                      Open
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </Container>
       </section>
     </>

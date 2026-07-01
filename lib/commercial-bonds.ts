@@ -631,6 +631,184 @@ export const commercialBonds: CommercialBond[] = [
       },
     ],
   },
+  {
+    slug: "lease-guarantee-bond",
+    name: "Commercial Lease Guarantee Bond",
+    shortName: "Lease Guarantee Bond",
+    intro:
+      "A lease guarantee bond can stand in for a large cash security deposit on a commercial lease, freeing your capital while assuring the landlord the rent gets paid. We place them for growing businesses.",
+    amountLabel: "Set by the lease",
+    authority: "Required by the landlord or lease",
+    whatItIs:
+      "A commercial lease guarantee bond guarantees your obligations under a commercial lease, chiefly the rent, up to a set amount. Instead of tying up months of cash in a security deposit, you post a bond. If you default, the landlord can claim on it and you reimburse the surety. It protects the landlord, not you, and keeps your working capital in the business.",
+    whoNeedsIt: [
+      "Tenants signing a commercial lease who want to avoid a large cash deposit",
+      "Growing businesses that would rather keep capital working",
+      "Startups a landlord asks to secure the lease",
+    ],
+    faqs: [
+      {
+        q: "How much does a lease guarantee bond cost?",
+        a: "You pay a premium that is a percentage of the bonded amount, set by underwriting and driven mostly by your credit and financials. It is usually far less than the cash a deposit would tie up.",
+      },
+      {
+        q: "Will my landlord accept a bond instead of a deposit?",
+        a: "Many will, since the bond gives them a guaranteed source to recover unpaid rent. Confirm the amount and form your landlord wants, and we will place it.",
+      },
+    ],
+  },
+  {
+    slug: "money-transmitter-bond",
+    name: "California Money Transmitter Bond",
+    shortName: "Money Transmitter Bond",
+    intro:
+      "California money transmitters licensed by the DFPI must post a surety bond that scales with transaction volume. We place these large financial bonds, including for growing fintechs.",
+    amountLabel: "Set by the DFPI, $250,000 to $7 million",
+    authority: "California DFPI",
+    statute: "Money Transmission Act",
+    whatItIs:
+      "Under California's Money Transmission Act, a licensed money transmitter must maintain a surety bond that protects its customers. The Department of Financial Protection and Innovation sets the amount on a sliding scale tied to transaction volume, commonly from $250,000 up to $7 million. It is required to obtain and keep your license.",
+    whoNeedsIt: [
+      "Money transmitters and payment companies licensing with the DFPI",
+      "Fintechs and businesses that move customer funds in California",
+      "Licensees renewing under the Money Transmission Act",
+    ],
+    faqs: [
+      {
+        q: "Why is the money transmitter bond so large?",
+        a: "The amount reflects the customer funds you handle, so the DFPI ties it to your transaction volume. You do not pay the full amount; you pay a premium on it, set by underwriting.",
+      },
+      {
+        q: "Can a newer company qualify for one?",
+        a: "Often, yes. Larger financial bonds are underwritten on financials and may involve collateral, which is exactly the kind of file a broker shops across markets. Underwriting still applies.",
+      },
+    ],
+  },
+  {
+    slug: "wage-welfare-bond",
+    name: "Wage & Welfare Bond (Union Fringe Benefits)",
+    shortName: "Wage & Welfare Bond",
+    intro:
+      "Union contractors are often required by their collective bargaining agreement to post a wage and welfare bond guaranteeing fringe-benefit contributions to the trust funds. We place them for signatory contractors.",
+    amountLabel: "Set by the collective bargaining agreement",
+    authority: "Required by the union trust funds",
+    whatItIs:
+      "A wage and welfare bond, also called a union fringe benefit bond, guarantees that a signatory contractor pays the wages and benefit-fund contributions required by its collective bargaining agreement. The union trust funds are the beneficiary, and the agreement or trust sets the amount. It protects the funds and the workers, not the contractor.",
+    whoNeedsIt: [
+      "Union signatory contractors required to bond fringe contributions",
+      "Contractors joining a union or trade agreement",
+      "Employers a trust fund requires to post a wage and welfare bond",
+    ],
+    faqs: [
+      {
+        q: "How is the wage and welfare bond amount set?",
+        a: "The collective bargaining agreement or trust fund sets it, often based on your workforce and monthly contributions. We quote the premium once you have the required amount.",
+      },
+      {
+        q: "Can a smaller union contractor get one?",
+        a: "Usually, yes. These are common bonds, and we shop markets that write them, including for newer and credit-challenged signatory contractors. Underwriting still applies.",
+      },
+    ],
+  },
+  {
+    slug: "health-studio-bond",
+    name: "California Health Studio Bond",
+    shortName: "Health Studio Bond",
+    intro:
+      "California gyms and health studios that sell prepaid memberships must post a health studio bond protecting their members. We place them for new and established clubs.",
+    amountLabel: "Set by California health studio law",
+    authority: "California (health studio contract law)",
+    statute: "Civil Code §1812.80 et seq.",
+    whatItIs:
+      "California's health studio law protects members who pay in advance for gym or studio contracts. Studios that take prepaid memberships must post a surety bond so members can recover if the studio closes or fails to deliver. The required amount is set by the statute based on your prepaid obligations.",
+    whoNeedsIt: [
+      "Gyms, fitness studios, and health clubs selling prepaid memberships",
+      "New studios registering to sell membership contracts",
+      "Operators required to bond prepaid memberships",
+    ],
+    faqs: [
+      {
+        q: "Do all gyms need a health studio bond?",
+        a: "It applies to studios that sell prepaid memberships or contracts. If you take money in advance for future services, the law generally requires the bond. Tell us your setup and we will confirm.",
+      },
+      {
+        q: "How much does it cost?",
+        a: "You pay a premium that is a percentage of the bonded amount, set by underwriting. These are usually affordable, and we place them fast.",
+      },
+    ],
+  },
+  {
+    slug: "process-server-bond",
+    name: "California Process Server Bond",
+    shortName: "Process Server Bond",
+    intro:
+      "California registered process servers must file a $2,000 bond with the county before serving legal papers. It is a small, fast bond, and we can issue it the same day.",
+    amountLabel: "$2,000",
+    authority: "California county (registered process servers)",
+    statute: "BPC §22350",
+    whatItIs:
+      "California registered process servers must file a $2,000 surety bond with the county clerk to register. The bond protects the public against improper service or misconduct. It is required to register and to renew your registration.",
+    whoNeedsIt: [
+      "Registered process servers filing with a county clerk",
+      "Legal support and courier businesses that serve process",
+      "Anyone renewing a process server registration",
+    ],
+    faqs: [
+      {
+        q: "How much is a California process server bond?",
+        a: "The bond amount is $2,000, and you pay only a small one-time premium, not the full amount. It is one of the cheapest bonds we place.",
+      },
+      {
+        q: "How fast can I get one?",
+        a: "Usually the same day. Give us your details and the county you are registering in, and we turn it around quickly.",
+      },
+    ],
+  },
+  {
+    slug: "ticket-seller-bond",
+    name: "California Ticket Seller Bond",
+    shortName: "Ticket Seller Bond",
+    intro:
+      "California ticket sellers and resellers may be required to post a surety bond that protects buyers. We place them fast for event and resale businesses.",
+    amountLabel: "Set by the requirement",
+    authority: "California (ticket seller law)",
+    whatItIs:
+      "California regulates the sale and resale of event tickets to protect buyers. Where a bond is required, it guarantees honest dealing and refunds when the law requires them. The amount is set by the applicable requirement, and we confirm and quote your exact bond.",
+    whoNeedsIt: [
+      "Ticket resellers and secondary-market sellers",
+      "Event, box-office, and resale businesses",
+      "Sellers a venue, platform, or requirement asks to bond",
+    ],
+    faqs: [
+      {
+        q: "Do I need a ticket seller bond?",
+        a: "It depends on how and what you sell, and on the specific requirement you are meeting. Tell us your situation and we will confirm whether a bond applies and quote it.",
+      },
+    ],
+  },
+  {
+    slug: "telephonic-seller-bond",
+    name: "California Telephonic Seller Bond",
+    shortName: "Telephonic Seller Bond",
+    intro:
+      "California telephonic sellers register with the Attorney General and may be required to post a surety bond that protects buyers. We place them for outbound sales businesses.",
+    amountLabel: "Set by California telephonic seller law",
+    authority: "California Department of Justice (Attorney General)",
+    statute: "BPC §17511 et seq.",
+    whatItIs:
+      "California requires businesses that sell by telephone to register with the Attorney General, and the law can require a surety bond that protects consumers who buy over the phone. The required amount is set by the applicable requirement. It is part of registering to operate as a telephonic seller.",
+    whoNeedsIt: [
+      "Businesses that sell goods or services by outbound telephone",
+      "Telemarketing operations registering with the Attorney General",
+      "Sellers required to post a consumer-protection bond",
+    ],
+    faqs: [
+      {
+        q: "How much is the telephonic seller bond?",
+        a: "The amount is set by the applicable requirement rather than a single flat figure. Tell us your registration details and we will confirm the amount and quote the premium.",
+      },
+    ],
+  },
 ];
 
 export function getCommercialBond(slug: string): CommercialBond | undefined {
