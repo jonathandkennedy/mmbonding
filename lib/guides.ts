@@ -7,7 +7,13 @@
  * how-to guides, licensing guides) and feed the money pages.
  */
 
-export type GuideCategory = "Bond Costs" | "How-To" | "Licensing" | "Underwriting";
+export type GuideCategory =
+  | "Bond Costs"
+  | "How-To"
+  | "Licensing"
+  | "Underwriting"
+  | "Public Works"
+  | "For Homeowners";
 
 export type Guide = {
   slug: string;
@@ -225,6 +231,166 @@ export const guides: Guide[] = [
     category: "Underwriting",
     keyword: "surety bond collateral",
   },
+  {
+    slug: "instant-online-bond-vs-broker",
+    title: "Instant Online Bond vs. a Surety Broker",
+    excerpt:
+      "When the buy-it-now button works, and when an automated decline means you need a broker who shops the market.",
+    category: "Underwriting",
+    keyword: "instant surety bond vs broker",
+  },
+  {
+    slug: "why-was-my-surety-bond-declined",
+    title: "Why Was My Surety Bond Declined?",
+    excerpt:
+      "The real reasons an online bond gets rejected, and how a broker places the file the robots turned down.",
+    category: "Underwriting",
+    keyword: "surety bond declined",
+  },
+  {
+    slug: "why-contract-bonds-are-not-instant",
+    title: "Why Contract & Performance Bonds Can't Be Bought Instantly",
+    excerpt:
+      "What underwriters review on a contract bond, and why real bonding capacity beats a checkout button.",
+    category: "Underwriting",
+    keyword: "how contract bond underwriting works",
+  },
+  {
+    slug: "how-a-surety-broker-shops-the-market",
+    title: "How a Surety Broker Shops the Market for Your Bond",
+    excerpt:
+      "Why one online quote isn't your best rate, and how a broker works multiple markets to place and price your bond.",
+    category: "Underwriting",
+    keyword: "how surety broker shops markets",
+  },
+  {
+    slug: "get-bonded-with-a-disciplinary-history",
+    title: "Getting Bonded with a CSLB Complaint or Disciplinary History",
+    excerpt:
+      "How a prior complaint, discipline, or claim affects bonding, and how we still place the file.",
+    category: "Underwriting",
+    keyword: "surety bond with disciplinary history",
+  },
+  {
+    slug: "surety-bond-premium-financing",
+    title: "Surety Bond Premium Financing: Is a Payment Plan Worth It?",
+    excerpt:
+      "When financing a bond premium makes sense, when paying annually is cheaper, and what to watch for.",
+    category: "Bond Costs",
+    keyword: "surety bond premium financing",
+  },
+  {
+    slug: "is-a-surety-bond-tax-deductible",
+    title: "Is a Surety Bond Premium Tax-Deductible?",
+    excerpt:
+      "How the premium is generally treated as a business expense, and what to confirm with your accountant.",
+    category: "Bond Costs",
+    keyword: "is surety bond tax deductible",
+  },
+  {
+    slug: "surety-bond-cost-by-credit-score",
+    title: "Surety Bond Cost by Credit Score",
+    excerpt:
+      "How each credit tier maps to your premium on the $25,000 license bond, with no fake teaser rates.",
+    category: "Bond Costs",
+    keyword: "surety bond cost by credit score",
+  },
+  {
+    slug: "california-contractor-bond-requirements-by-city",
+    title: "California Contractor Bond Requirements by City",
+    excerpt:
+      "The statewide $25,000 license bond, plus the local permit and encroachment bonds your city may add.",
+    category: "Licensing",
+    keyword: "contractor bond requirements by city california",
+  },
+  {
+    slug: "rmo-vs-rme-california-license",
+    title: "RMO vs. RME: Qualifying a California Contractor License",
+    excerpt:
+      "The difference between a Responsible Managing Officer and Employee, and the bond a qualifier needs.",
+    category: "Licensing",
+    keyword: "rmo vs rme california",
+  },
+  {
+    slug: "used-car-dealer-bond-by-type",
+    title: "California Used Car Dealer Bonds by Type",
+    excerpt:
+      "How the DMV motor vehicle dealer bond works for retail, wholesale, motorcycle, and other dealer types.",
+    category: "Licensing",
+    keyword: "california dealer bond by type",
+  },
+  {
+    slug: "california-contractor-bond-stack",
+    title: "The California Contractor Bond Stack: What You Need Together",
+    excerpt:
+      "License bond, LLC worker bond, workers' comp, and contract bonds: which ones your business actually needs.",
+    category: "Licensing",
+    keyword: "california contractor bond requirements list",
+  },
+  {
+    slug: "surety-bond-with-itin-or-thin-credit",
+    title: "Getting Bonded with an ITIN or Thin U.S. Credit",
+    excerpt:
+      "How new-to-the-country and thin-credit contractors get a surety bond, and the paths that work.",
+    category: "How-To",
+    keyword: "surety bond with itin",
+  },
+  {
+    slug: "california-cannabis-bond-local-permits",
+    title: "California Cannabis Bonds: The State $5,000, Plus Local Permits",
+    excerpt:
+      "The $5,000 state cannabis bond, plus the local permit bonds cities like Los Angeles and Oakland can require.",
+    category: "How-To",
+    keyword: "california cannabis bond local",
+  },
+  {
+    slug: "surety-bond-application-checklist",
+    title: "Surety Bond Application Checklist: What You Need",
+    excerpt:
+      "The documents and details that get you quoted and bonded fast, gathered in one place.",
+    category: "How-To",
+    keyword: "surety bond application requirements",
+  },
+  {
+    slug: "california-public-works-bonds-by-obligee",
+    title: "California Public Works Bonds by Obligee: Caltrans, DGS & LA",
+    excerpt:
+      "The bid, performance, and payment bonds major California public agencies require, and how they set the amounts.",
+    category: "Public Works",
+    keyword: "california public works bond requirements",
+  },
+  {
+    slug: "dbe-sbe-dvbe-bonding-california",
+    title: "DBE, SBE & DVBE Bonding for California Public Contracts",
+    excerpt:
+      "How certified disadvantaged, small, and disabled-veteran firms get bonded for public work, and the programs that help.",
+    category: "Public Works",
+    keyword: "dbe dvbe bonding california",
+  },
+  {
+    slug: "how-to-verify-a-contractor-is-bonded",
+    title: "How to Verify a Contractor Is Licensed & Bonded",
+    excerpt:
+      "How to check a California contractor's CSLB license and bond before you sign, in a few minutes.",
+    category: "For Homeowners",
+    keyword: "verify contractor bonded california",
+  },
+  {
+    slug: "how-to-file-a-claim-against-a-contractor-bond",
+    title: "How to File a Claim Against a Contractor's License Bond",
+    excerpt:
+      "The step-by-step way a homeowner files a claim on a California contractor's $25,000 license bond.",
+    category: "For Homeowners",
+    keyword: "file claim contractor license bond",
+  },
+  {
+    slug: "what-a-contractor-bond-pays-a-homeowner",
+    title: "What a Contractor's $25,000 Bond Actually Pays a Homeowner",
+    excerpt:
+      "What the license bond covers for consumers, its limits, and when insurance or the CSLB is the better path.",
+    category: "For Homeowners",
+    keyword: "what does contractor bond pay homeowner",
+  },
 ];
 
 export function guideHref(slug: string) {
@@ -240,4 +406,6 @@ export const guideCategories: GuideCategory[] = [
   "How-To",
   "Licensing",
   "Underwriting",
+  "Public Works",
+  "For Homeowners",
 ];
