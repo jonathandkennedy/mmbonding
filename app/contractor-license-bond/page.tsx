@@ -59,6 +59,13 @@ export default function Page() {
         "llc-employee-worker-bond",
         "disciplinary-bond",
       ]}
+      relatedGuideSlugs={[
+        "contractor-license-bond-cost",
+        "how-to-get-a-contractor-license-bond",
+        "california-contractor-license-classifications",
+        "california-contractor-bond-requirements-by-city",
+        "surety-bond-cost-by-credit-score",
+      ]}
     >
       <Prose>
         <h2>What the contractor license bond is</h2>

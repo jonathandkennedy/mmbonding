@@ -43,6 +43,7 @@ export default function Page() {
       intro="A bid bond guarantees you will stand behind your bid and furnish the contract bonds if you win. We set up your bonding program so individual bids issue fast, often at no separate premium."
       faqs={faqs}
       related={["performance-bond", "payment-bond", "contractor-license-bond"]}
+      relatedGuideSlugs={["bid-bond-cost", "how-to-get-a-performance-bond", "why-contract-bonds-are-not-instant", "california-public-works-bonds-by-obligee"]}
     >
       <Prose>
         <h2>What a bid bond does</h2>

@@ -37,7 +37,15 @@ export function GuidePage({
     { name: "Resources", url: "/resources" },
     { name: guide.title, url: href },
   ];
-  const moreGuides = guides.filter((g) => g.slug !== guide.slug).slice(0, 3);
+  // Prefer guides in the same category so the "More guides" sidebar is
+  // topically tight, then fill with others.
+  const sameCategory = guides.filter(
+    (g) => g.slug !== guide.slug && g.category === guide.category,
+  );
+  const otherGuides = guides.filter(
+    (g) => g.slug !== guide.slug && g.category !== guide.category,
+  );
+  const moreGuides = [...sameCategory, ...otherGuides].slice(0, 4);
 
   return (
     <>

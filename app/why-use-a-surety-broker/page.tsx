@@ -17,6 +17,7 @@ import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
 import { TldrCard } from "@/components/tldr-card";
+import { RelatedGuides } from "@/components/related-guides";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
@@ -348,6 +349,8 @@ export default function Page() {
           </Reveal>
         </Container>
       </section>
+
+      <RelatedGuides slugs={["instant-online-bond-vs-broker", "how-a-surety-broker-shops-the-market", "why-was-my-surety-bond-declined", "surety-bond-cost-by-credit-score"]} />
 
       {/* Closing CTA */}
       <section className="pb-4 pt-16">

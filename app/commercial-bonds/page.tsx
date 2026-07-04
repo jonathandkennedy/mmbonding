@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
+import { RelatedGuides } from "@/components/related-guides";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { commercialBonds, commercialCategories } from "@/lib/commercial-bonds";
 import { site } from "@/lib/site";
@@ -97,6 +98,8 @@ export default function Page() {
           })}
         </Container>
       </section>
+
+      <RelatedGuides slugs={["surety-bond-application-checklist", "surety-bond-cost-by-credit-score", "how-surety-bond-credit-checks-work", "is-a-surety-bond-tax-deductible"]} />
     </>
   );
 }

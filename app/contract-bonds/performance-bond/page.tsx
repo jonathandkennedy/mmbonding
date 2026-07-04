@@ -43,6 +43,7 @@ export default function Page() {
       intro="A performance bond guarantees the owner that your project gets finished per the contract. We quote your specific job and build capacity for growth, including tougher credit and newer contractors."
       faqs={faqs}
       related={["bid-bond", "payment-bond", "contractor-license-bond"]}
+      relatedGuideSlugs={["how-to-get-a-performance-bond", "why-contract-bonds-are-not-instant", "surety-bond-capacity", "california-public-works-bonds-by-obligee"]}
     >
       <Prose>
         <h2>What a performance bond does</h2>

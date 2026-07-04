@@ -20,6 +20,7 @@ import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
 import { TldrCard } from "@/components/tldr-card";
+import { RelatedGuides } from "@/components/related-guides";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
@@ -229,6 +230,8 @@ export default function Page() {
           </Reveal>
         </Container>
       </section>
+
+      <RelatedGuides slugs={["why-was-my-surety-bond-declined", "surety-bonds-with-bad-credit", "surety-bonds-after-bankruptcy-or-tax-lien", "surety-bond-with-itin-or-thin-credit", "get-bonded-with-a-disciplinary-history", "funds-control-for-contractors"]} />
 
       {/* CTA */}
       <section className="pb-16">

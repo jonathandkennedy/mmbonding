@@ -43,6 +43,7 @@ export default function Page() {
       intro="A payment bond guarantees your subcontractors and suppliers are paid. It is usually paired with a performance bond and is standard on California public works."
       faqs={faqs}
       related={["performance-bond", "bid-bond", "contractor-license-bond"]}
+      relatedGuideSlugs={["how-to-get-a-performance-bond", "surety-bond-capacity", "california-public-works-bonds-by-obligee", "how-to-bid-public-works-in-california"]}
     >
       <Prose>
         <h2>What a payment bond does</h2>

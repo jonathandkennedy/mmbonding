@@ -9,6 +9,7 @@ import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
 import { TldrCard } from "@/components/tldr-card";
+import { RelatedGuides } from "@/components/related-guides";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { bonds, contractBondKeys } from "@/lib/regulatory";
@@ -181,6 +182,8 @@ export default function Page() {
           </Reveal>
         </Container>
       </section>
+
+      <RelatedGuides slugs={["why-contract-bonds-are-not-instant", "how-to-get-a-performance-bond", "surety-bond-capacity", "california-public-works-bonds-by-obligee", "bid-bond-cost", "how-to-bid-public-works-in-california"]} />
     </>
   );
 }

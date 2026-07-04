@@ -20,6 +20,7 @@ import { Slashes } from "@/components/slashes";
 import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
 import { TldrCard } from "@/components/tldr-card";
+import { RelatedGuides } from "@/components/related-guides";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { sba } from "@/lib/regulatory";
@@ -308,6 +309,8 @@ export default function Page() {
           </Reveal>
         </Container>
       </section>
+
+      <RelatedGuides slugs={["sba-surety-bond-eligibility", "dbe-sbe-dvbe-bonding-california", "surety-bond-capacity", "funds-control-for-contractors", "how-to-get-bonded-with-a-new-business"]} />
 
       {/* CTA */}
       <section className="py-16">

@@ -17,6 +17,7 @@ import {
 } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { bonds, type BondDef, type BondKey } from "@/lib/regulatory";
+import { getGuide, guideHref, type Guide } from "@/lib/guides";
 import { usd } from "@/lib/utils";
 
 export type BondPageProps = {
@@ -28,6 +29,8 @@ export type BondPageProps = {
   children: React.ReactNode;
   faqs: FaqItem[];
   related?: BondKey[];
+  /** Resource-guide slugs to surface in the sidebar for internal linking. */
+  relatedGuideSlugs?: string[];
   showHardToPlace?: boolean;
   /** Override the auto-derived TL;DR answer. */
   tldr?: string;
@@ -44,6 +47,7 @@ export function BondPage({
   children,
   faqs,
   related,
+  relatedGuideSlugs,
   showHardToPlace = true,
   tldr,
   parent,
@@ -136,7 +140,7 @@ export function BondPage({
           <TldrCard text={tldrText} className="mb-10 max-w-3xl" />
           <div className="grid gap-12 lg:grid-cols-[1fr_20rem]">
             <article>{children}</article>
-            <Sidebar bond={bond} related={related} />
+            <Sidebar bond={bond} related={related} guideSlugs={relatedGuideSlugs} />
           </div>
         </Container>
       </section>
@@ -190,8 +194,19 @@ function Breadcrumbs({ crumbs }: { crumbs: { name: string; url: string }[] }) {
   );
 }
 
-function Sidebar({ bond, related }: { bond: BondDef; related?: BondKey[] }) {
+function Sidebar({
+  bond,
+  related,
+  guideSlugs,
+}: {
+  bond: BondDef;
+  related?: BondKey[];
+  guideSlugs?: string[];
+}) {
   const rel = (related ?? []).map((k) => bonds[k]).filter((b) => b.key !== bond.key);
+  const relGuides = (guideSlugs ?? [])
+    .map((s) => getGuide(s))
+    .filter((g): g is Guide => Boolean(g));
   return (
     <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
       <div className="overflow-hidden rounded-2xl bg-navy-900 p-6 text-white">
@@ -230,6 +245,27 @@ function Sidebar({ bond, related }: { bond: BondDef; related?: BondKey[] }) {
                   className="group flex items-center justify-between gap-3 rounded-lg px-2 py-2 text-sm transition-colors hover:bg-surface"
                 >
                   <span className="font-medium text-navy-800">{b.name}</span>
+                  <ArrowRight className="size-4 shrink-0 text-ink-300 transition-transform group-hover:translate-x-0.5 group-hover:text-azure-500" aria-hidden="true" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {relGuides.length > 0 && (
+        <div className="rounded-2xl border border-ink-200 bg-white p-6">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-navy-900">
+            Related guides
+          </h2>
+          <ul className="mt-4 space-y-1">
+            {relGuides.map((g) => (
+              <li key={g.slug}>
+                <Link
+                  href={guideHref(g.slug)}
+                  className="group flex items-center justify-between gap-3 rounded-lg px-2 py-2 text-sm transition-colors hover:bg-surface"
+                >
+                  <span className="font-medium text-navy-800">{g.title}</span>
                   <ArrowRight className="size-4 shrink-0 text-ink-300 transition-transform group-hover:translate-x-0.5 group-hover:text-azure-500" aria-hidden="true" />
                 </Link>
               </li>
