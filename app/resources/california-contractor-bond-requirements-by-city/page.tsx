@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `Contractor bond rules don't change by California city: the ${usd(facts.licenseBondAmount)} CSLB license bond is statewide. Local permit and encroachment bonds are what vary.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

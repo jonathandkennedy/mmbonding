@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "Every California cannabis licensee posts a $5,000 state surety bond. Cities like Los Angeles and Oakland can add local permit bonds. Placed fast.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

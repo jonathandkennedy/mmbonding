@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "A surety bond premium is generally a deductible business expense. How the deduction works, what is treated differently, and why to confirm with your CPA.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

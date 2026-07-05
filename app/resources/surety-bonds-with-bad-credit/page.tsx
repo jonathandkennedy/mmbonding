@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "Yes, you can usually get a surety bond with bad credit. How bad-credit surety bonds work, what they cost, and how a broker places credit-challenged files. CA DOI #6009105.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

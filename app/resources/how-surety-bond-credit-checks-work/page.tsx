@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "Does a surety bond hurt your credit? Almost never. Most bond quotes use a soft pull that does not affect your score. Reviewed by a licensed broker.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

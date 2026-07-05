@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `A California LLC contractor needs the ${usd(facts.licenseBondAmount)} license bond plus the ${usd(facts.llcWorkerBondAmount)} LLC employee/worker bond, and typically general liability insurance. Reviewed by a licensed broker.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

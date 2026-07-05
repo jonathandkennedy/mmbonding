@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `What the A, B, and C-## CSLB classifications mean, and why every class carries the same ${usd(facts.licenseBondAmount)} license bond. What changes by trade is the project and permit bonds.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

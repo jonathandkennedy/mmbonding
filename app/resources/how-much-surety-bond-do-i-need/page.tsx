@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `How much surety bond you need depends on the type: the CA license bond is a fixed ${usd(facts.licenseBondAmount)}, contract bonds run up to 100% of the contract, and permit and court amounts are set for you.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, ArrowRight, Phone, BookOpen } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -8,10 +9,11 @@ import { Reveal } from "./reveal";
 import { Faq } from "./faq";
 import { ReviewedBy } from "./reviewed-by";
 import { TldrCard } from "./tldr-card";
+import { PreferredSource } from "./preferred-source";
 import { JsonLd, faqSchema, breadcrumbSchema, type FaqItem } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
-import { guides, guideHref, type Guide } from "@/lib/guides";
+import { guides, guideHref, guideHero, guideImageAlt, type Guide } from "@/lib/guides";
 
 export function GuidePage({
   guide,
@@ -96,6 +98,17 @@ export function GuidePage({
             <p className="mt-5 text-lg leading-relaxed text-muted">{intro}</p>
           </div>
           <ReviewedBy className="mt-10 max-w-2xl" />
+          <div className="mt-10 overflow-hidden rounded-2xl border border-ink-200 bg-white">
+            <Image
+              src={guideHero(guide.slug)}
+              alt={guideImageAlt(guide)}
+              width={1200}
+              height={675}
+              priority
+              sizes="(min-width: 1024px) 1024px, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
         </Container>
       </section>
 
@@ -185,6 +198,13 @@ export function GuidePage({
           <Reveal delay={80}>
             <Faq items={faqs} />
           </Reveal>
+        </Container>
+      </section>
+
+      {/* Preferred Source CTA */}
+      <section className="pb-16">
+        <Container size="wide">
+          <PreferredSource className="max-w-3xl" />
         </Container>
       </section>
     </>

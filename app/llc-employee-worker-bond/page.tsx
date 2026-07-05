@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   title: "LLC Employee/Worker Bond ($100,000)",
   description: `The ${usd(facts.llcWorkerBondAmount)} employee/worker bond required of California LLC contractors, in addition to the license bond. Fast quotes from a licensed broker, CA DOI #6009105.`,
   alternates: { canonical: bond.href },
+  openGraph: {
+    images: [
+      {
+        url: `/images/bonds/${bond.key}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for the ${bond.name}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/bonds/${bond.key}-hero.webp`],
+  },
 };
 
 const faqs = [

@@ -15,6 +15,20 @@ export const metadata: Metadata = {
     canonical: bond.href,
     languages: hreflangFor("/contractor-license-bond", "/es/fianza-de-contratista"),
   },
+  openGraph: {
+    images: [
+      {
+        url: `/images/bonds/${bond.key}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for the ${bond.name}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/bonds/${bond.key}-hero.webp`],
+  },
 };
 
 const faqs = [

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, ChevronRight, ShieldCheck } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -16,7 +17,7 @@ import {
   type FaqItem,
 } from "@/lib/jsonld";
 import { site } from "@/lib/site";
-import { bonds, type BondDef, type BondKey } from "@/lib/regulatory";
+import { bonds, bondHero, bondImageAlt, type BondDef, type BondKey } from "@/lib/regulatory";
 import { getGuide, guideHref, type Guide } from "@/lib/guides";
 import { usd } from "@/lib/utils";
 
@@ -131,6 +132,17 @@ export function BondPage({
             )}
           </div>
           <ReviewedBy className="mt-10 max-w-2xl" />
+          <div className="mt-10 overflow-hidden rounded-2xl border border-ink-200 bg-white">
+            <Image
+              src={bondHero(bond.key)}
+              alt={bondImageAlt(bond)}
+              width={1200}
+              height={675}
+              priority
+              sizes="(min-width: 1024px) 1024px, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
         </Container>
       </section>
 

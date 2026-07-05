@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   description:
     "Sometimes. Many filed contractor license bonds are fully earned and non-refundable once issued, while others allow a prorated refund on mid-term cancellation.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

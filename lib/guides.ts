@@ -397,6 +397,21 @@ export function guideHref(slug: string) {
   return `/resources/${slug}`;
 }
 
+/** Featured (hero) image path for a guide. 1200x675 WebP in /public. */
+export function guideHero(slug: string) {
+  return `/images/guides/${slug}-hero.webp`;
+}
+
+/** Thumbnail image path for a guide. 640x640 WebP in /public. */
+export function guideThumb(slug: string) {
+  return `/images/guides/${slug}-thumb.webp`;
+}
+
+/** Descriptive, under-125-char alt text for a guide's illustration. */
+export function guideImageAlt(guide: Guide) {
+  return `Illustration for the guide: ${guide.title}`;
+}
+
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
 }

@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `The full path to a CSLB license: four years of experience, the CSLB application, the law and trade exams, fingerprinting and fees, then the ${usd(facts.licenseBondAmount)} license bond that finishes it.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

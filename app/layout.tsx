@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import { JsonLd, organizationSchema } from "@/lib/jsonld";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <CookieConsent />
       </body>
     </html>
   );
