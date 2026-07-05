@@ -24,8 +24,10 @@ export function organizationSchema() {
     areaServed: { "@type": "State", name: "California" },
     address: {
       "@type": "PostalAddress",
+      streetAddress: site.address.street,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
+      postalCode: site.address.postalCode,
       addressCountry: site.address.country,
     },
     knowsAbout: [

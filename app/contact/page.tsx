@@ -88,9 +88,12 @@ export default function Page() {
 
             <div className="mt-6 rounded-2xl border border-ink-200 bg-surface p-5 text-sm leading-relaxed text-muted">
               <p>
+                <strong className="text-navy-900">Office:</strong> {site.address.street},{" "}
+                {site.address.locality}, {site.address.region} {site.address.postalCode}
+              </p>
+              <p className="mt-2">
                 <strong className="text-navy-900">Licensing:</strong> {site.name}, CA DOI License #
-                {site.doiLicense}. A confirmed street address and Google Business Profile are being
-                finalized and will appear here at launch.
+                {site.doiLicense}.
               </p>
             </div>
           </div>
