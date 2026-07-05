@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
+import { PreferredSource } from "@/components/preferred-source";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { guides, guideHref, guideThumb, guideImageAlt, guideCategories } from "@/lib/guides";
 
@@ -145,6 +146,12 @@ export default function Page() {
               ))}
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section className="pb-16">
+        <Container size="wide">
+          <PreferredSource className="max-w-3xl" />
         </Container>
       </section>
     </>

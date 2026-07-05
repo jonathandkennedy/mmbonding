@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Phone, Clock, MapPin } from "lucide-react";
 import { Wordmark } from "./wordmark";
 import { Container } from "./ui/container";
+import { PreferredSource } from "./preferred-source";
 import { site } from "@/lib/site";
 import { bonds } from "@/lib/regulatory";
 import { metros } from "@/lib/locations";
@@ -108,6 +109,10 @@ export function SiteFooter() {
             statutes, and premiums shown are for general guidance and verified against CSLB and CA
             DOI sources. Underwriting applies to every bond. Insurance products are routed to
             licensed partner agencies; {site.shortName} does not underwrite insurance.
+          </p>
+          <p className="mt-4 text-xs text-navy-300">
+            <PreferredSource variant="inline" className="font-medium text-navy-100" /> to keep our
+            guides showing up for you in Google&apos;s AI results.
           </p>
           <div className="mt-5 flex flex-col gap-4 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
             <p>

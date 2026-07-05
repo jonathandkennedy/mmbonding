@@ -9,6 +9,7 @@ import { Reveal } from "./reveal";
 import { Faq } from "./faq";
 import { ReviewedBy } from "./reviewed-by";
 import { TldrCard } from "./tldr-card";
+import { PreferredSource } from "./preferred-source";
 import { JsonLd, faqSchema, breadcrumbSchema, type FaqItem } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
@@ -197,6 +198,13 @@ export function GuidePage({
           <Reveal delay={80}>
             <Faq items={faqs} />
           </Reveal>
+        </Container>
+      </section>
+
+      {/* Preferred Source CTA */}
+      <section className="pb-16">
+        <Container size="wide">
+          <PreferredSource className="max-w-3xl" />
         </Container>
       </section>
     </>
