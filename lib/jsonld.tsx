@@ -54,6 +54,7 @@ export function personSchema() {
     "@type": "Person",
     "@id": `${site.url}/about#michael-melshenker`,
     name: site.founder.name,
+    image: `${site.url}/images/team/michael-melshenker.webp`,
     jobTitle: `${site.founder.title}, ${site.name}`,
     worksFor: { "@id": ORG_ID },
     knowsAbout: ["Surety bonding", "California contractor licensing", "Hard-to-place underwriting"],

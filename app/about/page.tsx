@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Phone, Linkedin, BadgeCheck, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -58,13 +59,14 @@ export default function Page() {
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl bg-navy-900 p-8 text-white lg:sticky lg:top-24">
               <Slashes tone="white" size="lg" className="absolute right-6 top-6 opacity-20" />
-              {/* TODO: replace initials avatar with Michael's headshot when provided */}
-              <span
-                aria-hidden="true"
-                className="grid size-20 place-items-center rounded-2xl bg-azure-500 font-display text-2xl font-extrabold tracking-tight text-white"
-              >
-                MM
-              </span>
+              <Image
+                src="/images/team/michael-melshenker.webp"
+                alt={`${site.founder.name}, ${site.founder.title} of ${site.shortName}`}
+                width={172}
+                height={172}
+                priority
+                className="size-20 rounded-2xl object-cover ring-1 ring-white/20"
+              />
               <h2 className="mt-6 font-display text-2xl font-extrabold tracking-tight">
                 {site.founder.name}
               </h2>

@@ -97,8 +97,9 @@ shows a "general guidance, confirm with the agency" note.
 
 ## 6. Brand assets
 
-- [ ] **Michael's headshot** — for the about page and the author / reviewer byline
-  (boosts trust and E-E-A-T).
+- [x] **Michael's headshot** — live on the about page, the reviewer byline
+  site-wide, and Michael's Person schema. Note: the supplied file is only
+  172px; a ~800px original would render crisper if available.
 - [ ] **Insurance referral partner** — the general-liability and workers'
   compensation pages route leads to a licensed partner agency. Confirm the
   partner so we name them correctly, or we keep it generic.

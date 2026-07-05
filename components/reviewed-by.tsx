@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BadgeCheck } from "lucide-react";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
@@ -30,12 +31,13 @@ export function ReviewedBy({
         className,
       )}
     >
-      <span
-        aria-hidden="true"
-        className="grid size-11 shrink-0 place-items-center rounded-full bg-navy-900 font-display text-sm font-bold tracking-tight text-azure-300"
-      >
-        MM
-      </span>
+      <Image
+        src="/images/team/michael-melshenker.webp"
+        alt={site.founder.name}
+        width={172}
+        height={172}
+        className="size-11 shrink-0 rounded-full object-cover"
+      />
       <div className="text-sm leading-snug">
         <p className="text-muted">
           {t.by}{" "}
