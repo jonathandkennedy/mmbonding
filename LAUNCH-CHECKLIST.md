@@ -12,14 +12,15 @@ reads. Inconsistency hurts local SEO.
 
 - [x] **Published phone number** — confirmed: **(805) 752-8600**. (Swap for a
   CallRail tracking number later if you want call attribution.)
-- [ ] **Email** — currently **info@mmbonding.com**. Confirm it is correct and
-  actively monitored (leads and replies land here).
+- [x] **Email** — confirmed: **letstalk@mmbonding.com**. Live on the contact page
+  and in the Organization schema.
 - [x] **Street address + suite + ZIP** — confirmed: **699 Hampshire Rd Ste 107B,
   Westlake Village, CA 91361**. Live on the contact page, footer, and schema.
-- [ ] **Business hours** — currently **Mon-Sat, 9:00am-5:00pm PT**. Confirm.
+- [x] **Business hours** — confirmed: **Mon-Sat, 9:00am-5:00pm PT**.
 - [ ] **Google Business Profile URL** — send it once live so we can link your
   profile in the site's data.
-- [ ] **Founding year** — for the about page and company schema.
+- [x] **Founding year** — confirmed: **2022**. Shown on the about page and in the
+  company `foundingDate` schema.
 
 ## 2. Lead delivery
 
@@ -34,10 +35,8 @@ the business actually works, but they should be reviewed by counsel before
 launch, since the site collects credit/SSN-level underwriting data and
 phone-contact consent.
 
-- [ ] **Privacy Policy** — especially the California (CCPA) disclosures and the
-  calls/texts (TCPA) consent language.
-- [ ] **Terms of Service** — especially the limitation-of-liability and
-  California governing-law / venue clauses.
+- [x] **Privacy Policy** — reviewed and approved by counsel.
+- [x] **Terms of Service** — reviewed and approved by counsel.
 
 ## 4. Regulatory figures — confirm these are current
 
@@ -55,10 +54,11 @@ shows a "general guidance, confirm with the agency" note.
 
 **Specialty bonds (first batch)**
 
-- [ ] Notary **$15,000** · Auto dealer **$50,000** · Immigration consultant
+- [x] Notary **$15,000** · Auto dealer **$50,000** · Immigration consultant
   **$100,000** · Freight broker BMC-84 **$75,000** · Cannabis **$5,000** · Talent
   agency **$50,000** · Debt collector **$25,000** (DFPI) · CTEC tax preparer
-  **$5,000** · ERISA **10% of plan funds, $1,000 to $500,000**.
+  **$5,000** · ERISA **10% of plan funds, $1,000 to $500,000** (up to $1M with
+  employer securities; higher limits for non-qualified assets). Confirmed.
 
 **Specialty bonds (newest batch — highest priority to confirm)**
 
@@ -78,8 +78,8 @@ shows a "general guidance, confirm with the agency" note.
 
 **SBA program (federal)**
 
-- [ ] Contract limit **$9M** · federal contract limit **$14M** · guarantee share
-  **80% to 90%**.
+- [x] Contract limit **$9M** · federal contract limit **$14M** · guarantee share
+  **80% to 90%**. Confirmed current.
 
 **Bonds-by-trade pages**
 
@@ -90,15 +90,15 @@ shows a "general guidance, confirm with the agency" note.
 
 ## 5. Carrier / appointment claims
 
-- [ ] **Appointed-carrier / surety list** — we deliberately do not name any
-  specific sureties or claim appointments anywhere, to avoid an unverifiable
-  claim on a financial site. If you want a "markets we work with" section, send
-  the confirmed list and we will add it.
+- [x] **Appointed-carrier / surety list** — confirmed direct appointments: **CNA
+  Surety, Merchants Bonding Company, Liberty Mutual Surety, TMHCC Surety**. Now
+  shown in a "Markets we place with" section on the about page.
 
 ## 6. Brand assets
 
-- [ ] **Michael's headshot** — for the about page and the author / reviewer byline
-  (boosts trust and E-E-A-T).
+- [x] **Michael's headshot** — live on the about page, the reviewer byline
+  site-wide, and Michael's Person schema. Note: the supplied file is only
+  172px; a ~800px original would render crisper if available.
 - [ ] **Insurance referral partner** — the general-liability and workers'
   compensation pages route leads to a licensed partner agency. Confirm the
   partner so we name them correctly, or we keep it generic.

@@ -21,7 +21,7 @@ export const site = {
     display: "(805) 752-8600",
     href: "tel:+18057528600",
   },
-  email: "info@mmbonding.com", // TODO: confirm
+  email: "letstalk@mmbonding.com",
   address: {
     street: "699 Hampshire Rd Ste 107B",
     locality: "Westlake Village",
@@ -29,11 +29,19 @@ export const site = {
     postalCode: "91361",
     country: "US",
   },
-  hours: "Mon-Sat, 9:00am-5:00pm PT", // per current site, confirm
+  hours: "Mon-Sat, 9:00am-5:00pm PT",
+  founded: "2022",
   areaServed: "California",
   sameAs: [
     "https://www.linkedin.com/in/mike-melshenker-64869722/",
     // TODO: add GBP profile URL once live
+  ] as string[],
+  /** Confirmed direct surety appointments. Named as a real trust signal. */
+  carriers: [
+    "CNA Surety",
+    "Merchants Bonding Company",
+    "Liberty Mutual Surety",
+    "TMHCC Surety",
   ] as string[],
 } as const;
 
