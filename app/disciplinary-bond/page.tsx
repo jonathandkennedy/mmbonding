@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   description:
     "California CSLB disciplinary bonds to reinstate a suspended or revoked license. Amount set by the Registrar, with a 2-year minimum. Hard-to-place specialists, CA DOI #6009105.",
   alternates: { canonical: bond.href },
+  openGraph: {
+    images: [
+      {
+        url: `/images/bonds/${bond.key}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for the ${bond.name}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/bonds/${bond.key}-hero.webp`],
+  },
 };
 
 const faqs = [

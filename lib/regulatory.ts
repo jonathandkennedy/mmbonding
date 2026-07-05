@@ -171,3 +171,8 @@ export const bonds: Record<BondKey, BondDef> = {
 };
 
 export const contractBondKeys: BondKey[] = ["bid-bond", "performance-bond", "payment-bond"];
+
+/** Illustration paths for a bond (in /public/images/bonds). */
+export const bondHero = (key: string) => `/images/bonds/${key}-hero.webp`;
+export const bondThumb = (key: string) => `/images/bonds/${key}-thumb.webp`;
+export const bondImageAlt = (bond: BondDef) => `Illustration for the ${bond.name}`;

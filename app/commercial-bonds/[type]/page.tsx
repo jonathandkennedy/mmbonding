@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, Phone, ChevronRight, Check, Info } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -10,7 +11,13 @@ import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
-import { commercialBonds, getCommercialBond, commercialReviewNote } from "@/lib/commercial-bonds";
+import {
+  commercialBonds,
+  getCommercialBond,
+  commercialReviewNote,
+  commercialHero,
+  commercialImageAlt,
+} from "@/lib/commercial-bonds";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -29,6 +36,17 @@ export async function generateMetadata({
     title: b.name,
     description: `${b.intro} CA DOI #${site.doiLicense}`,
     alternates: { canonical: `/commercial-bonds/${b.slug}` },
+    openGraph: {
+      images: [
+        {
+          url: commercialHero(b.slug),
+          width: 1200,
+          height: 675,
+          alt: commercialImageAlt(b),
+        },
+      ],
+    },
+    twitter: { card: "summary_large_image", images: [commercialHero(b.slug)] },
   };
 }
 
@@ -135,6 +153,17 @@ export default async function Page({ params }: { params: Promise<{ type: string 
       {/* Body */}
       <section className="py-16">
         <Container size="wide">
+          <div className="mb-10 overflow-hidden rounded-2xl border border-ink-200 bg-white">
+            <Image
+              src={commercialHero(b.slug)}
+              alt={commercialImageAlt(b)}
+              width={1200}
+              height={675}
+              priority
+              sizes="(min-width: 1024px) 1024px, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
           <TldrCard text={tldrText} className="mb-10 max-w-3xl" />
           <div className="max-w-[64ch]">
             <Reveal>

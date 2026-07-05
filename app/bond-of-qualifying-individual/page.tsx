@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   title: "Bond of Qualifying Individual (BQI)",
   description: `The ${usd(facts.bqiAmount)} California Bond of Qualifying Individual, required when a license is qualified by an RME or a minority-owner RMO. Fast quotes from a licensed broker, CA DOI #6009105.`,
   alternates: { canonical: bond.href },
+  openGraph: {
+    images: [
+      {
+        url: `/images/bonds/${bond.key}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for the ${bond.name}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/bonds/${bond.key}-hero.webp`],
+  },
 };
 
 const faqs = [

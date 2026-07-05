@@ -814,3 +814,8 @@ export const commercialBonds: CommercialBond[] = [
 export function getCommercialBond(slug: string): CommercialBond | undefined {
   return commercialBonds.find((b) => b.slug === slug);
 }
+
+/** Illustration paths for a commercial bond (in /public/images/commercial). */
+export const commercialHero = (slug: string) => `/images/commercial/${slug}-hero.webp`;
+export const commercialThumb = (slug: string) => `/images/commercial/${slug}-thumb.webp`;
+export const commercialImageAlt = (bond: CommercialBond) => `Illustration for the ${bond.name}`;

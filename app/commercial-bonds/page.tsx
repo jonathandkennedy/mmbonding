@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -7,7 +8,12 @@ import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
 import { RelatedGuides } from "@/components/related-guides";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
-import { commercialBonds, commercialCategories } from "@/lib/commercial-bonds";
+import {
+  commercialBonds,
+  commercialCategories,
+  commercialThumb,
+  commercialImageAlt,
+} from "@/lib/commercial-bonds";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -78,6 +84,16 @@ export default function Page() {
                         href={`/commercial-bonds/${b.slug}`}
                         className="group flex h-full flex-col rounded-2xl border border-ink-200 bg-white p-6 transition-[box-shadow,border-color] duration-200 hover:border-azure-300 hover:shadow-md"
                       >
+                        <div className="mb-4 overflow-hidden rounded-xl border border-ink-100">
+                          <Image
+                            src={commercialThumb(b.slug)}
+                            alt={commercialImageAlt(b)}
+                            width={640}
+                            height={640}
+                            sizes="(min-width: 1024px) 340px, (min-width: 640px) 45vw, 90vw"
+                            className="aspect-[16/9] w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                          />
+                        </div>
                         <h3 className="font-display text-xl font-bold tracking-tight text-navy-900">
                           {b.shortName}
                         </h3>
