@@ -623,7 +623,7 @@ export const commercialBonds: CommercialBond[] = [
     faqs: [
       {
         q: "How much ERISA bond coverage do I need?",
-        a: "Generally at least 10% of the plan funds handled, with a $1,000 minimum and a $500,000 cap, or up to $1,000,000 if the plan holds employer securities. We will size it to your plan and quote it.",
+        a: "Generally at least 10% of the plan funds handled, with a $1,000 minimum and a $500,000 cap, or up to $1,000,000 if the plan holds employer securities. Plans holding non-qualified assets can require higher limits. We will size it to your plan and quote it.",
       },
       {
         q: "Is an ERISA bond the same as fiduciary liability insurance?",

@@ -81,6 +81,10 @@ export default function Page() {
                   </dd>
                 </div>
                 <div className="flex items-center justify-between gap-4">
+                  <dt className="text-navy-300">Founded</dt>
+                  <dd className="font-semibold text-white">{site.founded}</dd>
+                </div>
+                <div className="flex items-center justify-between gap-4">
                   <dt className="text-navy-300">Focus</dt>
                   <dd className="font-semibold text-white">Hard-to-place surety</dd>
                 </div>
@@ -162,6 +166,39 @@ export default function Page() {
               </Button>
             </div>
           </Reveal>
+        </Container>
+      </section>
+
+      {/* Markets we place with */}
+      <section className="border-t border-ink-100 bg-surface py-16">
+        <Container size="wide">
+          <Reveal className="max-w-2xl">
+            <Eyebrow>Markets we place with</Eyebrow>
+            <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+              Direct appointments with A-rated sureties.
+            </h2>
+            <p className="mt-3 text-lg text-muted">
+              We hold direct appointments with established, A-rated surety companies, so we shop your
+              bond across strong markets instead of running a single program.
+            </p>
+          </Reveal>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {site.carriers.map((c) => (
+              <div
+                key={c}
+                className="flex items-center gap-3 rounded-2xl border border-ink-200 bg-white p-5"
+              >
+                <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-azure-50 text-azure-600">
+                  <BadgeCheck className="size-5" aria-hidden="true" />
+                </span>
+                <span className="font-display font-bold tracking-tight text-navy-900">{c}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 max-w-2xl text-sm text-muted">
+            Financial-strength ratings are set by the rating agencies and can change. We confirm the
+            right market for your specific bond at quote.
+          </p>
         </Container>
       </section>
     </>

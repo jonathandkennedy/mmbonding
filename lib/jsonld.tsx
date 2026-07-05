@@ -19,6 +19,7 @@ export function organizationSchema() {
     url: site.url,
     description: site.description,
     slogan: site.tagline,
+    foundingDate: site.founded,
     telephone: site.phone.href.replace("tel:", ""),
     email: site.email,
     areaServed: { "@type": "State", name: "California" },
