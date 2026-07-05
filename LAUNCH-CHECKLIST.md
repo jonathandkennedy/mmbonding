@@ -10,7 +10,7 @@ _Last updated: July 2026._
 These appear in the footer, the contact page, and the structured data Google
 reads. Inconsistency hurts local SEO.
 
-- [x] **Published phone number** — confirmed: **(858) 201-2899**. (Swap for a
+- [x] **Published phone number** — confirmed: **(805) 752-8600**. (Swap for a
   CallRail tracking number later if you want call attribution.)
 - [ ] **Email** — currently **info@mmbonding.com**. Confirm it is correct and
   actively monitored (leads and replies land here).
