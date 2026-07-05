@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `The California contractor bond stack: the ${usd(facts.licenseBondAmount)} license bond, the ${usd(facts.llcWorkerBondAmount)} LLC worker bond, workers' comp, and contract bonds for your business.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

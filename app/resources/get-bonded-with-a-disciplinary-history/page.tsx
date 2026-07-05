@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   description:
     "Can you get bonded with a CSLB complaint or disciplinary history? Usually yes, though underwriting applies. How a broker still places the file.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

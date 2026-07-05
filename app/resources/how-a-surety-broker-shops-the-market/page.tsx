@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `How does a broker beat one online quote? A single quote is one surety's price. A broker shops your file across markets for a better rate or a yes.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

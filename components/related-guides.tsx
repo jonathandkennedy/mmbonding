@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "./ui/container";
 import { Eyebrow } from "./ui/eyebrow";
 import { Reveal } from "./reveal";
-import { getGuide, guideHref, type Guide } from "@/lib/guides";
+import { getGuide, guideHref, guideThumb, guideImageAlt, type Guide } from "@/lib/guides";
 import { cn } from "@/lib/utils";
 
 /**
@@ -39,6 +40,16 @@ export function RelatedGuides({
                 href={guideHref(g.slug)}
                 className="group flex h-full flex-col rounded-2xl border border-ink-200 bg-white p-6 transition-[box-shadow,border-color] duration-200 hover:border-azure-300 hover:shadow-md"
               >
+                <div className="mb-4 overflow-hidden rounded-xl border border-ink-100">
+                  <Image
+                    src={guideThumb(g.slug)}
+                    alt={guideImageAlt(g)}
+                    width={640}
+                    height={640}
+                    sizes="(min-width: 1024px) 340px, (min-width: 640px) 45vw, 90vw"
+                    className="aspect-[16/9] w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                  />
+                </div>
                 <h3 className="font-display text-lg font-bold leading-snug tracking-tight text-navy-900">
                   {g.title}
                 </h3>

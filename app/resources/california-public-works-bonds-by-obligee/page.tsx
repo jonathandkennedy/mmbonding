@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "What bonds Caltrans, DGS, and California local agencies require: a bid bond to bid, then performance and payment bonds to build. Broker-reviewed.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

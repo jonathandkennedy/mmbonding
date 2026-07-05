@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   description:
     "Most bid bonds carry no separate premium. They are issued as part of your surety program, and what underwriters really price is your full contract capacity. Reviewed by a licensed broker.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "When California cities, counties, and Caltrans require a permit or encroachment bond for public right-of-way work, how the amount is set, and how to get one fast.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

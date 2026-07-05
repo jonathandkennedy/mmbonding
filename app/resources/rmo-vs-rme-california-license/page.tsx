@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `An RMO qualifies a CSLB license as an officer or owner; an RME as an employee. An RME, or an RMO owning under 10%, needs a ${usd(facts.bqiAmount)} BQI bond.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

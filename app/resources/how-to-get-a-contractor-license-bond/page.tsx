@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `How to get a California contractor license bond, step by step: quote, pay the premium, and your surety e-files the ${usd(facts.licenseBondAmount)} bond with the CSLB. Often same-day. Reviewed by a licensed broker.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

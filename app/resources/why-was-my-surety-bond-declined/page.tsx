@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "Why was your surety bond declined? Usually credit, a bankruptcy, a prior claim, or an incomplete form. See how a broker re-markets and places it.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

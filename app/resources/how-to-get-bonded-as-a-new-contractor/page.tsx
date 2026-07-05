@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   description:
     "How to get bonded as a new contractor: start with the very placeable license bond, then build contract bonding through the SBA program and a broker. Reviewed by a licensed broker, CA DOI #6009105.",
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

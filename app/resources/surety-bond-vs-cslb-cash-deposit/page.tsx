@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `California lets contractors post a ${usd(facts.licenseBondAmount)} cash deposit in lieu of the license bond. Here is how it works and why almost everyone chooses the bond instead.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

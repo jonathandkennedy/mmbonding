@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `What the ${usd(facts.licenseBondAmount)} California contractor license bond actually covers: it protects consumers, employees, and the public, not the contractor. Reviewed by a licensed broker.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [

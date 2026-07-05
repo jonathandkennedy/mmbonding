@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: guide.title,
   description: `Can a brand-new business get bonded with no financials? Usually yes. The ${usd(facts.licenseBondAmount)} license bond is underwritten on the owner's personal credit, so new contractors qualify routinely.`,
   alternates: { canonical: `/resources/${guide.slug}` },
+  openGraph: {
+    images: [
+      {
+        url: `/images/guides/${guide.slug}-hero.webp`,
+        width: 1200,
+        height: 675,
+        alt: `Illustration for ${guide.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`/images/guides/${guide.slug}-hero.webp`],
+  },
 };
 
 const faqs = [
