@@ -18,16 +18,15 @@ export const site = {
   },
   // Tracking number is swapped client-side by CallRail; this is the fallback.
   phone: {
-    display: "(818) 422-5360", // TODO: confirm published CallRail number
-    href: "tel:+18184225360",
+    display: "(858) 201-2899",
+    href: "tel:+18582012899",
   },
   email: "info@mmbonding.com", // TODO: confirm
   address: {
-    // TODO: confirm exact address + suite for GBP/NAP consistency
-    street: "",
-    locality: "Los Angeles",
+    street: "699 Hampshire Rd Ste 107B",
+    locality: "Westlake Village",
     region: "CA",
-    postalCode: "",
+    postalCode: "91361",
     country: "US",
   },
   hours: "Mon-Sat, 9:00am-5:00pm PT", // per current site, confirm

@@ -10,14 +10,12 @@ _Last updated: July 2026._
 These appear in the footer, the contact page, and the structured data Google
 reads. Inconsistency hurts local SEO.
 
-- [ ] **Published phone number** — currently a placeholder: **(818) 422-5360**.
-  Confirm the real number (or the CallRail tracking number if we use call
-  tracking).
+- [x] **Published phone number** — confirmed: **(858) 201-2899**. (Swap for a
+  CallRail tracking number later if you want call attribution.)
 - [ ] **Email** — currently **info@mmbonding.com**. Confirm it is correct and
   actively monitored (leads and replies land here).
-- [ ] **Street address + suite + ZIP** — currently blank. Needed for the contact
-  page and Google Business Profile. If you prefer not to publish a street
-  address, say so and we keep it city-level.
+- [x] **Street address + suite + ZIP** — confirmed: **699 Hampshire Rd Ste 107B,
+  Westlake Village, CA 91361**. Live on the contact page, footer, and schema.
 - [ ] **Business hours** — currently **Mon-Sat, 9:00am-5:00pm PT**. Confirm.
 - [ ] **Google Business Profile URL** — send it once live so we can link your
   profile in the site's data.

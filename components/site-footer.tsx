@@ -78,9 +78,13 @@ export function SiteFooter() {
                 <Clock className="size-4 shrink-0 text-azure-400" aria-hidden="true" />
                 {site.hours}
               </li>
-              <li className="flex items-center gap-2.5 text-navy-200">
-                <MapPin className="size-4 shrink-0 text-azure-400" aria-hidden="true" />
-                Serving all of {site.areaServed}
+              <li className="flex items-start gap-2.5 text-navy-200">
+                <MapPin className="mt-0.5 size-4 shrink-0 text-azure-400" aria-hidden="true" />
+                <span>
+                  {site.address.street}, {site.address.locality}, {site.address.region}{" "}
+                  {site.address.postalCode}
+                  <span className="mt-0.5 block text-navy-300">Serving all of {site.areaServed}</span>
+                </span>
               </li>
             </ul>
           </div>
