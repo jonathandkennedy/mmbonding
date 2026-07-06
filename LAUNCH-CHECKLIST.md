@@ -108,6 +108,10 @@ shows a "general guidance, confirm with the agency" note.
 - LinkedIn wired into Michael's profile data
 - Brand colors sampled from the logo
 - Sitemap, robots, structured data, and English/Spanish hreflang
+- IndexNow instant-indexing (Bing, Yandex, Seznam, Naver): key file +
+  `/api/indexnow` endpoint + a daily Vercel cron. It auto-submits the sitemap
+  once the domain is live; run `npm run indexnow` to push a submission sooner
+  after publishing something new.
 - Honest "no guaranteed approval" and "bonded is not insured" copy throughout
 - 74 city pages, 10 bonds-by-trade pages, 30+ guides, a surety glossary, a cost
   calculator, and a visual "how surety bonds work" guide

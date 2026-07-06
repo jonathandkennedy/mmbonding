@@ -80,6 +80,28 @@ when the richer **Supabase** pipeline lands (structured `leads` / `insurance_ref
 CallRail integration, Slack/email webhooks, renewal reminders — plan §7), point `submitLead()` at a
 server action and the form components don't change.
 
+## Search indexing (IndexNow)
+
+The site pings **IndexNow** so Bing, Yandex, Seznam, Naver and other participating
+engines re-crawl the moment content changes (Google does not use IndexNow, but it
+still helps everywhere else). It is wired end to end:
+
+- **Verification key** — a public key lives in `lib/site.ts` (`indexNowKey`) and is
+  served as the required key file at `public/<key>.txt` → `https://mmbonding.com/<key>.txt`.
+- **URL source** — `lib/indexnow.ts` reads the **sitemap**, so IndexNow always
+  submits exactly what we publish. There is no second list to maintain.
+- **Endpoint** — `GET /api/indexnow` submits the full sitemap; `POST /api/indexnow`
+  with `{ "urlList": [...] }` submits a specific set. Off-host URLs are dropped.
+- **Automatic** — `vercel.json` runs a daily Vercel cron against `/api/indexnow`.
+- **Manual** — `npm run indexnow` submits immediately (handy right after publishing
+  a new guide); `npm run indexnow -- <url> <url>` submits just those URLs.
+
+Optional hardening: set `CRON_SECRET` (or `INDEXNOW_TOKEN`) in the environment and
+the route requires `Authorization: Bearer <token>` (or `?token=`). Without it the
+route is open, which is low-risk since it only ever submits our own sitemap URLs.
+IndexNow verifies ownership by fetching the key file, so submissions only take
+effect once the production domain is live.
+
 ## Next phase
 
 Supabase lead pipeline (plan §7), then Tier 2 (city pages + GBP, insurance referral pages, carriers).
