@@ -8,6 +8,9 @@ export const site = {
   shortName: "MM Bonding",
   tagline: "Get The Right Bond Fast",
   url: "https://mmbonding.com",
+  // IndexNow key (Bing, Yandex, Seznam, Naver, ...). Public by design: it is
+  // served at `${url}/${indexNowKey}.txt`. Changing it means renaming that file.
+  indexNowKey: "1e3bbed70cd9e39c61d36b3821068a70",
   description:
     "California surety bond broker. Contractor license bonds, bid, performance and payment bonds, and hard-to-place bonds for bad credit and tough cases. Licensed CA DOI #6009105.",
   doiLicense: "6009105",
