@@ -9,6 +9,46 @@ import { REGULATORY_REVIEWED } from "./regulatory";
 
 const ORG_ID = `${site.url}/#organization`;
 
+/** Major California metros we actively place bonds in (areaServed enrichment). */
+const AREA_CITIES: { name: string; sameAs: string }[] = [
+  { name: "Los Angeles", sameAs: "https://en.wikipedia.org/wiki/Los_Angeles" },
+  { name: "San Diego", sameAs: "https://en.wikipedia.org/wiki/San_Diego" },
+  { name: "San Jose", sameAs: "https://en.wikipedia.org/wiki/San_Jose,_California" },
+  { name: "San Francisco", sameAs: "https://en.wikipedia.org/wiki/San_Francisco" },
+  { name: "Sacramento", sameAs: "https://en.wikipedia.org/wiki/Sacramento,_California" },
+  { name: "Fresno", sameAs: "https://en.wikipedia.org/wiki/Fresno,_California" },
+  { name: "Long Beach", sameAs: "https://en.wikipedia.org/wiki/Long_Beach,_California" },
+  { name: "Anaheim", sameAs: "https://en.wikipedia.org/wiki/Anaheim,_California" },
+  { name: "Riverside", sameAs: "https://en.wikipedia.org/wiki/Riverside,_California" },
+  { name: "Bakersfield", sameAs: "https://en.wikipedia.org/wiki/Bakersfield,_California" },
+];
+
+/** Core service lines for the Organization hasOfferCatalog. */
+const CORE_SERVICES: { name: string; description: string }[] = [
+  {
+    name: "Contractor License Bonds",
+    description:
+      "The $25,000 CSLB bond plus the LLC worker, qualifier, and disciplinary bonds California contractors need.",
+  },
+  {
+    name: "Contract Bonds",
+    description: "Bid, performance, and payment bonds for public and private construction.",
+  },
+  {
+    name: "Hard-to-Place Surety Bonds",
+    description: "Placement for bad credit, prior claims, new businesses, and high-risk classes.",
+  },
+  {
+    name: "SBA Surety Bonds",
+    description: "Bonding through the SBA guarantee program when standard markets decline.",
+  },
+  {
+    name: "Commercial & Specialty Bonds",
+    description:
+      "Notary, auto dealer, freight broker, immigration consultant, and dozens of other license and permit bonds.",
+  },
+];
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
@@ -22,7 +62,10 @@ export function organizationSchema() {
     foundingDate: site.founded,
     telephone: site.phone.href.replace("tel:", ""),
     email: site.email,
-    areaServed: { "@type": "State", name: "California" },
+    areaServed: [
+      { "@type": "State", name: "California", sameAs: "https://en.wikipedia.org/wiki/California" },
+      ...AREA_CITIES.map((c) => ({ "@type": "City", name: c.name, sameAs: c.sameAs })),
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,
@@ -31,6 +74,20 @@ export function organizationSchema() {
       postalCode: site.address.postalCode,
       addressCountry: site.address.country,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: site.geo.latitude,
+      longitude: site.geo.longitude,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: site.hoursSpec.days,
+        opens: site.hoursSpec.opens,
+        closes: site.hoursSpec.closes,
+      },
+    ],
+    priceRange: "Premiums typically 1% to 15% of the bond amount",
     knowsAbout: [
       "Surety bonds",
       "Contractor license bonds",
@@ -45,6 +102,14 @@ export function organizationSchema() {
       value: site.doiLicense,
     },
     founder: { "@type": "Person", name: site.founder.name, jobTitle: site.founder.title },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Surety Bond Services",
+      itemListElement: CORE_SERVICES.map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: s.name, description: s.description },
+      })),
+    },
     sameAs: site.sameAs,
   };
 }

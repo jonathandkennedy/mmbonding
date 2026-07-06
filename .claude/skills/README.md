@@ -19,3 +19,22 @@ into the repo so they travel with it and work in any session.
 > Stack: Next.js 15 + Tailwind v4. Dials: `VARIANCE 6 / MOTION 4 / DENSITY 4`.
 
 Brand colors are sampled directly from `mmbonding.png`: azure `#0090D8`, navy `#002040`.
+
+## Installed local SEO skills
+
+The **Local SEO Skills** pack ([garrettjsmith/localseoskills](https://github.com/garrettjsmith/localseoskills),
+MIT, June 2026) is vendored here so local-search expertise travels with the repo. It adds 47
+skills covering Google Business Profile, citations, local schema, location pages, service-area
+SEO, reviews, AI local search, geogrid analysis, and reporting. License + README + the three
+foundational docs live in [`localseoskills/`](localseoskills/).
+
+Two things to know:
+
+- **On-page vs. operational.** The website-facing skills (`local-schema`, `local-landing-pages`,
+  `service-area-seo`, `entity-authority`) already shaped the site's structured data and location
+  pages. Most of the rest (`gbp-optimization`, `local-citations`, `review-management`,
+  `geogrid-analysis`, `ai-local-search`, reporting, ads) are **post-launch operations** that need a
+  live Google Business Profile and connected data tools (LocalSEOData / GSC / GA4 MCPs) to run.
+- **We applied the schema recommendations.** `local-schema` drove adding `geo`,
+  `openingHoursSpecification`, `hasOfferCatalog`, `priceRange`, and city-level `areaServed` to the
+  Organization JSON-LD in `lib/jsonld.tsx`.

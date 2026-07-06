@@ -33,6 +33,15 @@ export const site = {
     country: "US",
   },
   hours: "Mon-Sat, 9:00am-5:00pm PT",
+  // Structured hours for openingHoursSpecification (24h clock, local time).
+  hoursSpec: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "09:00",
+    closes: "17:00",
+  },
+  // Office coordinates for LocalBusiness geo. Approximate; confirm against the
+  // Google Business Profile map pin once live so the schema matches GBP exactly.
+  geo: { latitude: 34.1466, longitude: -118.8055 },
   founded: "2022",
   areaServed: "California",
   sameAs: [
