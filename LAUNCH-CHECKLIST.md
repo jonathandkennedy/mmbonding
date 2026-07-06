@@ -19,6 +19,10 @@ reads. Inconsistency hurts local SEO.
 - [x] **Business hours** — confirmed: **Mon-Sat, 9:00am-5:00pm PT**.
 - [ ] **Google Business Profile URL** — send it once live so we can link your
   profile in the site's data.
+- [ ] **Map coordinates** — the LocalBusiness schema now carries office
+  coordinates (`34.1466, -118.8055`), set as an approximation. Confirm they match
+  your Google Business Profile map pin exactly once the profile is live, and we
+  will adjust `site.geo` in `lib/site.ts` if needed.
 - [x] **Founding year** — confirmed: **2022**. Shown on the about page and in the
   company `foundingDate` schema.
 
