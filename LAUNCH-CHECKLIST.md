@@ -25,8 +25,8 @@ reads. Inconsistency hurts local SEO.
 ## 2. Lead delivery
 
 - [ ] **Form inbox** — the quote, contact, and insurance-referral forms submit
-  through Formspree (form `xdarajbg`). Confirm that inbox is yours and that
-  someone watches it. Send a test lead from the live site before launch.
+  through your confirmed Formspree endpoint (form `mvzjllqa`). Last step: send a
+  test lead from the live site and confirm it lands in the inbox someone watches.
 
 ## 3. Legal review (important for a financial-services site)
 

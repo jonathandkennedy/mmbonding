@@ -23,7 +23,7 @@ export type FormKind = "quote" | "contact";
  * with the env vars below (e.g. a separate production form, or split
  * quote/contact inboxes).
  */
-const DEFAULT_FORMSPREE_ID = "xdarajbg";
+const DEFAULT_FORMSPREE_ID = "mvzjllqa";
 
 function formId(kind: FormKind): string | undefined {
   const specific =
