@@ -14,7 +14,7 @@ reads. Inconsistency hurts local SEO.
   CallRail tracking number later if you want call attribution.)
 - [x] **Email** — confirmed: **letstalk@mmbonding.com**. Live on the contact page
   and in the Organization schema.
-- [x] **Street address + suite + ZIP** — confirmed: **699 Hampshire Rd Ste 107B,
+- [x] **Street address + suite + ZIP** — confirmed: **699 Hampshire Rd Ste 107C,
   Westlake Village, CA 91361**. Live on the contact page, footer, and schema.
 - [x] **Business hours** — confirmed: **Mon-Sat, 9:00am-5:00pm PT**.
 - [ ] **Google Business Profile URL** — send it once live so we can link your
