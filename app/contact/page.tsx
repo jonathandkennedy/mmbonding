@@ -122,6 +122,39 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <section className="border-t border-ink-100 bg-surface py-16">
+        <Container size="wide" className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
+              What to have ready
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              A quick call goes faster with a few basics on hand. It helps to know the type of bond
+              you need, whether that is a contractor license bond, a bid, performance, or payment
+              bond, or a specialty or commercial bond. Have the bond amount if you know it, along
+              with the name of the party requiring the bond, which is often a state agency, a city,
+              the CSLB, or a project owner. If a deadline is driving the request, tell us the date.
+              And if credit or a past claim is a concern, mention it up front, because that is
+              exactly the kind of file we are built to place.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
+              What happens after you reach out
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              When you call or send the form, a licensed broker reviews your situation and responds
+              quickly, usually the same business day. For straightforward license and small
+              commercial bonds, we can often quote and issue right away. For contract and
+              hard-to-place bonds, we shop multiple surety markets and walk you through what each
+              underwriter needs. There is never a fee to get a quote, and reaching out puts you
+              under no obligation to buy. If we are not the right fit for your bond, we will tell you
+              that honestly and point you in a better direction.
+            </p>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }
