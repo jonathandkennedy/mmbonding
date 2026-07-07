@@ -12,7 +12,7 @@ import { BondPathCards } from "@/components/bond-path-cards";
 import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
-import { metros, getMetro } from "@/lib/locations";
+import { metros, getMetro, nearbyMetros } from "@/lib/locations";
 import { facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
 
@@ -40,6 +40,8 @@ export default async function Page({ params }: { params: Promise<{ metro: string
   const m = getMetro(metro);
   if (!m) notFound();
 
+  const nearby = nearbyMetros(m.slug, 4);
+
   const crumbs = [
     { name: "Home", url: "/" },
     { name: "Locations", url: "/surety-bonds" },
@@ -51,6 +53,7 @@ export default async function Page({ params }: { params: Promise<{ metro: string
       q: `How fast can I get a contractor bond in ${m.name}?`,
       a: `Quickly. Qualifying ${usd(facts.licenseBondAmount)} license bonds for ${m.region} contractors are often issued the same day, with CSLB e-filing typically posting within ${facts.filingWindow}. Contract bonds take a short underwriting review.`,
     },
+    ...(m.localFaq ? [m.localFaq] : []),
     {
       q: `Can ${m.name} contractors with bad credit get bonded?`,
       a: "Often, yes. Hard-to-place is our specialty. We shop multiple markets for credit-challenged files, prior claims, and newer businesses that instant-issue sites decline. Underwriting still applies and we never promise guaranteed approval.",
@@ -133,6 +136,16 @@ export default async function Page({ params }: { params: Promise<{ metro: string
           <Reveal className="max-w-3xl">
             <p className="text-lg leading-relaxed text-ink-700">{m.context}</p>
           </Reveal>
+          {m.localNeeds && (
+            <Reveal className="mt-8 max-w-3xl">
+              <div className="rounded-2xl border border-azure-100 bg-azure-50/60 p-6">
+                <h2 className="font-display text-lg font-extrabold tracking-tight text-navy-900">
+                  What {m.name} contractors get bonded for
+                </h2>
+                <p className="mt-2 leading-relaxed text-ink-700">{m.localNeeds}</p>
+              </div>
+            </Reveal>
+          )}
           <Reveal className="mt-10">
             <BondPathCards />
           </Reveal>
@@ -164,6 +177,25 @@ export default async function Page({ params }: { params: Promise<{ metro: string
               </span>
             ))}
           </Reveal>
+          {nearby.length > 0 && (
+            <Reveal className="mt-12">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
+                Nearby areas we serve
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-2.5">
+                {nearby.map((n) => (
+                  <Link
+                    key={n.slug}
+                    href={`/surety-bonds/${n.slug}`}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-azure-200 bg-white px-3.5 py-1.5 text-sm font-semibold text-azure-700 transition-colors hover:bg-azure-50"
+                  >
+                    <MapPin className="size-3.5" aria-hidden="true" />
+                    Surety bonds in {n.name}
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
+          )}
         </Container>
       </section>
 
