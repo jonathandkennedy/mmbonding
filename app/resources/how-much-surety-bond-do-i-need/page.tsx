@@ -5,13 +5,13 @@ import { Prose, Bullet } from "@/components/prose";
 import { BondCostCalculator } from "@/components/bond-cost-calculator";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("how-much-surety-bond-do-i-need")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `How much surety bond you need depends on the type: the CA license bond is a fixed ${usd(facts.licenseBondAmount)}, contract bonds run up to 100% of the contract, and permit and court amounts are set for you.`,
+  description: clampDescription(`How much surety bond you need depends on the type: the CA license bond is a fixed ${usd(facts.licenseBondAmount)}, contract bonds run up to 100% of the contract, and permit and court amounts are set for you.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

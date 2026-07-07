@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("what-a-contractor-license-bond-covers")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `What the ${usd(facts.licenseBondAmount)} California contractor license bond actually covers: it protects consumers, employees, and the public, not the contractor. Reviewed by a licensed broker.`,
+  description: clampDescription(`What the ${usd(facts.licenseBondAmount)} California contractor license bond actually covers: it protects consumers, employees, and the public, not the contractor. Reviewed by a licensed broker.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

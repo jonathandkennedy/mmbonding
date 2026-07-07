@@ -11,11 +11,11 @@ import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { facts } from "@/lib/regulatory";
 import { site } from "@/lib/site";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "California Contractor License School & Exam Prep",
-  description: `Get your CSLB contractor license. We connect you with a trusted license-school and exam-prep partner, and the ${usd(facts.licenseBondAmount)} contractor license bond you will need once you are licensed.`,
+  description: clampDescription(`Get your CSLB contractor license. We connect you with a trusted license-school and exam-prep partner, and the ${usd(facts.licenseBondAmount)} contractor license bond you will need once you are licensed.`),
   alternates: { canonical: "/contractor-license-school" },
 };
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -19,7 +20,7 @@ import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
 
-const description = `Fianzas de licitación en California para obras públicas y privadas. Garantice su oferta rápido, por lo general sin una prima aparte como parte de su programa de afianzamiento. Corredor con licencia, CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`Fianzas de licitación en California para obras públicas y privadas. Garantice su oferta rápido, por lo general sin una prima aparte como parte de su programa de afianzamiento. Corredor con licencia, CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
   title: "Fianza de Licitación en California",

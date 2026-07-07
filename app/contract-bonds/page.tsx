@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -18,7 +19,7 @@ import { hreflangFor } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Contract Bonds (Bid, Performance & Payment)",
   description:
-    "California contract surety bonds for public and private construction: bid, performance, and payment bonds. Capacity built by a broker, including hard-to-place. CA DOI #6009105.",
+    clampDescription("California contract surety bonds for public and private construction: bid, performance, and payment bonds. Capacity built by a broker, including hard-to-place. CA DOI #6009105."),
   alternates: {
     canonical: "/contract-bonds",
     languages: hreflangFor("/contract-bonds", "/es/fianzas-de-contrato"),

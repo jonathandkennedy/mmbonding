@@ -25,14 +25,14 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld
 import { site } from "@/lib/site";
 import { sba } from "@/lib/regulatory";
 import { hreflangFor } from "@/lib/i18n";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const limitM = `$${sba.contractLimit / 1_000_000}M`;
 const federalM = `$${sba.federalContractLimit / 1_000_000}M`;
 
 export const metadata: Metadata = {
   title: "SBA Surety Bonds for Small & Growing Contractors",
-  description: `The SBA Surety Bond Guarantee program backs bid, performance, and payment bonds up to ${usd(sba.contractLimit)} per contract for small and credit-challenged contractors. Hard-to-place specialists, CA DOI #${site.doiLicense}.`,
+  description: clampDescription(`The SBA Surety Bond Guarantee program backs bid, performance, and payment bonds up to ${usd(sba.contractLimit)} per contract for small and credit-challenged contractors. Hard-to-place specialists, CA DOI #${site.doiLicense}.`),
   alternates: {
     canonical: "/sba-surety-bonds",
     languages: hreflangFor("/sba-surety-bonds", "/es/fianzas-sba"),

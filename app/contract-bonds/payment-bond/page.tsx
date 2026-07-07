@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose } from "@/components/prose";
@@ -11,7 +12,7 @@ const parent = { name: "Contract Bonds", href: "/contract-bonds" };
 export const metadata: Metadata = {
   title: "Payment Bond",
   description:
-    "California labor and material payment bonds. Guarantee that subcontractors and suppliers are paid. Usually paired with a performance bond. Licensed broker, CA DOI #6009105.",
+    clampDescription("California labor and material payment bonds. Guarantee that subcontractors and suppliers are paid. Usually paired with a performance bond. Licensed broker, CA DOI #6009105."),
   alternates: {
     canonical: bond.href,
     languages: hreflangFor("/contract-bonds/payment-bond", "/es/fianza-de-pago"),

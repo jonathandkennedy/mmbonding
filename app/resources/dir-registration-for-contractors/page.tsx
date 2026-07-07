@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -9,7 +10,7 @@ const guide = getGuide("dir-registration-for-contractors")!;
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "DIR registration for California contractors: what it is under Labor Code §1725.5, who needs it for public works, and how it sits alongside your bid, performance, and payment bonds. Reviewed by a licensed broker.",
+    clampDescription("DIR registration for California contractors: what it is under Labor Code §1725.5, who needs it for public works, and how it sits alongside your bid, performance, and payment bonds. Reviewed by a licensed broker."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

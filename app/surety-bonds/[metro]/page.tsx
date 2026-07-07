@@ -14,7 +14,7 @@ import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { metros, getMetro, nearbyMetros } from "@/lib/locations";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export function generateStaticParams() {
   return metros.map((m) => ({ metro: m.slug }));
@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!m) return {};
   return {
     title: `Surety Bonds in ${m.name}`,
-    description: `Surety bonds for contractors in ${m.name}. ${usd(facts.licenseBondAmount)} license bonds, contract bonds, and hard-to-place. Fast quotes from a licensed California broker, CA DOI #${site.doiLicense}.`,
+    description: clampDescription(`Surety bonds for contractors in ${m.name}: ${usd(facts.licenseBondAmount)} license, contract, and hard-to-place bonds from a licensed California broker.`),
     alternates: { canonical: `/surety-bonds/${m.slug}` },
   };
 }

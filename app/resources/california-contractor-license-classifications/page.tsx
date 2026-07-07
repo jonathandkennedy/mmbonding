@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("california-contractor-license-classifications")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `What the A, B, and C-## CSLB classifications mean, and why every class carries the same ${usd(facts.licenseBondAmount)} license bond. What changes by trade is the project and permit bonds.`,
+  description: clampDescription(`What the A, B, and C-## CSLB classifications mean, and why every class carries the same ${usd(facts.licenseBondAmount)} license bond. What changes by trade is the project and permit bonds.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

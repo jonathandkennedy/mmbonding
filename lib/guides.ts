@@ -225,7 +225,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "surety-bond-collateral",
-    title: "Surety Bond Collateral: When It's Required & How to Get It Back",
+    title: "Surety Bond Collateral and How to Get It Back",
     excerpt:
       "When a surety asks for collateral, what forms it takes, and how to reduce or recover it.",
     category: "Underwriting",
@@ -249,7 +249,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "why-contract-bonds-are-not-instant",
-    title: "Why Contract & Performance Bonds Can't Be Bought Instantly",
+    title: "Why Contract & Performance Bonds Aren't Instant",
     excerpt:
       "What underwriters review on a contract bond, and why real bonding capacity beats a checkout button.",
     category: "Underwriting",
@@ -265,7 +265,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "get-bonded-with-a-disciplinary-history",
-    title: "Getting Bonded with a CSLB Complaint or Disciplinary History",
+    title: "Getting Bonded with a CSLB Disciplinary History",
     excerpt:
       "How a prior complaint, discipline, or claim affects bonding, and how we still place the file.",
     category: "Underwriting",
@@ -273,7 +273,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "surety-bond-premium-financing",
-    title: "Surety Bond Premium Financing: Is a Payment Plan Worth It?",
+    title: "Surety Bond Premium Financing: Payment Plans",
     excerpt:
       "When financing a bond premium makes sense, when paying annually is cheaper, and what to watch for.",
     category: "Bond Costs",
@@ -321,7 +321,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "california-contractor-bond-stack",
-    title: "The California Contractor Bond Stack: What You Need Together",
+    title: "The California Contractor Bond Stack Explained",
     excerpt:
       "License bond, LLC worker bond, workers' comp, and contract bonds: which ones your business actually needs.",
     category: "Licensing",
@@ -337,7 +337,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "california-cannabis-bond-local-permits",
-    title: "California Cannabis Bonds: The State $5,000, Plus Local Permits",
+    title: "California Cannabis Bonds: State and Local Permits",
     excerpt:
       "The $5,000 state cannabis bond, plus the local permit bonds cities like Los Angeles and Oakland can require.",
     category: "How-To",
@@ -353,7 +353,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "california-public-works-bonds-by-obligee",
-    title: "California Public Works Bonds by Obligee: Caltrans, DGS & LA",
+    title: "California Public Works Bonds by Obligee",
     excerpt:
       "The bid, performance, and payment bonds major California public agencies require, and how they set the amounts.",
     category: "Public Works",
@@ -385,7 +385,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "what-a-contractor-bond-pays-a-homeowner",
-    title: "What a Contractor's $25,000 Bond Actually Pays a Homeowner",
+    title: "What a Contractor's $25,000 Bond Pays a Homeowner",
     excerpt:
       "What the license bond covers for consumers, its limits, and when insurance or the CSLB is the better path.",
     category: "For Homeowners",

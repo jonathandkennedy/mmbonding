@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { LegalPage, type LegalSection } from "@/components/legal-page";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `How ${site.name} collects, uses, shares, and protects your information, plus your California privacy rights. Licensed California surety broker, CA DOI #${site.doiLicense}.`,
+  description: clampDescription(`How ${site.name} collects, uses, shares, and protects your information, plus your California privacy rights. Licensed California surety broker, CA DOI #${site.doiLicense}.`),
   alternates: { canonical: "/privacy-policy" },
 };
 

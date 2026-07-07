@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -19,7 +20,7 @@ import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
 
-const description = `Fianzas de contrato en California para construcción pública y privada: fianza de licitación, de cumplimiento y de pago. Capacidad construida por un corredor, incluso para casos difíciles. CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`Fianzas de contrato en California para construcción pública y privada: fianza de licitación, de cumplimiento y de pago. Capacidad construida por un corredor, incluso para casos difíciles. CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
   title: "Fianzas de Contrato (Licitación, Cumplimiento y Pago)",

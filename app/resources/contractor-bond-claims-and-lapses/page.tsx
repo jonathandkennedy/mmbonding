@@ -4,14 +4,14 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("contractor-bond-claims-and-lapses")!;
 
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "What happens when a claim is filed on your contractor bond, what happens if it lapses, and how to keep an active bond on file so the CSLB does not suspend your license. Reviewed by a licensed broker.",
+    clampDescription("What happens when a claim is filed on your contractor bond, what happens if it lapses, and how to keep an active bond on file so the CSLB does not suspend your license. Reviewed by a licensed broker."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

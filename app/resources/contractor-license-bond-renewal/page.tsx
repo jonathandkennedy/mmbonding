@@ -4,14 +4,14 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("contractor-license-bond-renewal")!;
 
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "Your California contractor license bond renews every year. What changes at renewal, how to avoid a lapse that can suspend your license, and how we re-shop for a better rate. Licensed broker, CA DOI #6009105.",
+    clampDescription("Your California contractor license bond renews every year. What changes at renewal, how to avoid a lapse that can suspend your license, and how we re-shop for a better rate. Licensed broker, CA DOI #6009105."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

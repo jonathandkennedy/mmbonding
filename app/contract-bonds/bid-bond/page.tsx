@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -11,7 +12,7 @@ const parent = { name: "Contract Bonds", href: "/contract-bonds" };
 export const metadata: Metadata = {
   title: "Bid Bond",
   description:
-    "California bid bonds for public and private construction. Guarantee your bid fast, often at no separate premium as part of your bonding program. Licensed broker, CA DOI #6009105.",
+    clampDescription("California bid bonds for public and private construction. Guarantee your bid fast, often at no separate premium as part of your bonding program. Licensed broker, CA DOI #6009105."),
   alternates: {
     canonical: bond.href,
     languages: hreflangFor("/contract-bonds/bid-bond", "/es/fianza-de-licitacion"),

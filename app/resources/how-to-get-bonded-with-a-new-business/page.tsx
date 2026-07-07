@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("how-to-get-bonded-with-a-new-business")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `Can a brand-new business get bonded with no financials? Usually yes. The ${usd(facts.licenseBondAmount)} license bond is underwritten on the owner's personal credit, so new contractors qualify routinely.`,
+  description: clampDescription(`Can a brand-new business get bonded with no financials? Usually yes. The ${usd(facts.licenseBondAmount)} license bond is underwritten on the owner's personal credit, so new contractors qualify routinely.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

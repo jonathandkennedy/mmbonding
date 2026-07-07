@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { LegalPage, type LegalSection } from "@/components/legal-page";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: `The terms and conditions that govern your use of ${site.url.replace("https://", "")} and requesting a quote from ${site.name}. Licensed California surety broker, CA DOI #${site.doiLicense}.`,
+  description: clampDescription(`The terms and conditions that govern your use of ${site.url.replace("https://", "")} and requesting a quote from ${site.name}. Licensed California surety broker, CA DOI #${site.doiLicense}.`),
   alternates: { canonical: "/terms-of-service" },
 };
 

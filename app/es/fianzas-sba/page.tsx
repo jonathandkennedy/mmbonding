@@ -29,20 +29,20 @@ import {
 import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { sba } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 import { hreflangFor } from "@/lib/i18n";
 
 const limitM = `$${sba.contractLimit / 1_000_000}M`;
 const federalM = `$${sba.federalContractLimit / 1_000_000}M`;
 
-const description = `El programa de Garantía de Fianzas de la SBA respalda fianzas de licitación, cumplimiento y pago de hasta ${usd(sba.contractLimit)} por contrato para contratistas pequeños y con mal crédito. Especialistas en casos difíciles, CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`El programa de Garantía de Fianzas de la SBA respalda fianzas de licitación, cumplimiento y pago de hasta ${usd(sba.contractLimit)} por contrato para contratistas pequeños y con mal crédito. Especialistas en casos difíciles, CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
-  title: "Fianzas de la SBA para Contratistas Pequeños y en Crecimiento",
+  title: "Fianzas SBA para Contratistas Pequeños y en Crecimiento",
   description,
   openGraph: {
     locale: "es_US",
-    title: "Fianzas de la SBA para Contratistas Pequeños y en Crecimiento",
+    title: "Fianzas SBA para Contratistas Pequeños y en Crecimiento",
     description,
   },
   alternates: {

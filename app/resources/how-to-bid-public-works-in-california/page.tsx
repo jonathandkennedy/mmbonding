@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -9,7 +10,7 @@ const guide = getGuide("how-to-bid-public-works-in-california")!;
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "How to bid public works in California: where to find bids, why DIR registration is required, and the bid, performance, and payment bonds you need to compete. Reviewed by a licensed broker, CA DOI #6009105.",
+    clampDescription("How to bid public works in California: where to find bids, why DIR registration is required, and the bid, performance, and payment bonds you need to compete. Reviewed by a licensed broker, CA DOI #6009105."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

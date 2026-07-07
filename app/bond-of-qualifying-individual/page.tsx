@@ -3,13 +3,13 @@ import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose, Bullet } from "@/components/prose";
 import { bonds, facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const bond = bonds["bond-of-qualifying-individual"];
 
 export const metadata: Metadata = {
   title: "Bond of Qualifying Individual (BQI)",
-  description: `The ${usd(facts.bqiAmount)} California Bond of Qualifying Individual, required when a license is qualified by an RME or a minority-owner RMO. Fast quotes from a licensed broker, CA DOI #6009105.`,
+  description: clampDescription(`The ${usd(facts.bqiAmount)} California Bond of Qualifying Individual, required when a license is qualified by an RME or a minority-owner RMO. Fast quotes from a licensed broker, CA DOI #6009105.`),
   alternates: { canonical: bond.href },
   openGraph: {
     images: [

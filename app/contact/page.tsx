@@ -43,6 +43,13 @@ export default function Page() {
               The fastest way to the right bond is a quick conversation. Call, or send a note and
               we&apos;ll get back to you fast.
             </p>
+            <p className="mt-4 text-muted">
+              Whether you need a routine contractor license bond, a bid or performance bond for a
+              project, or a hard-to-place bond after a credit or claims issue, you will talk to a
+              licensed broker who works the file personally. Tell us the bond type, the amount
+              required, and who is asking for it, and we will point you to the fastest path to
+              getting bonded. There is no charge to talk it through, and no obligation to apply.
+            </p>
           </div>
         </Container>
       </section>

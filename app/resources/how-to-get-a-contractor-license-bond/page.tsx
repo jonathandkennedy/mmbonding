@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("how-to-get-a-contractor-license-bond")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `How to get a California contractor license bond, step by step: quote, pay the premium, and your surety e-files the ${usd(facts.licenseBondAmount)} bond with the CSLB. Often same-day. Reviewed by a licensed broker.`,
+  description: clampDescription(`How to get a California contractor license bond, step by step: quote, pay the premium, and your surety e-files the ${usd(facts.licenseBondAmount)} bond with the CSLB. Often same-day. Reviewed by a licensed broker.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

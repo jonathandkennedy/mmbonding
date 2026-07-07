@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -30,7 +31,7 @@ import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
 
-const description = `¿Lo rechazaron en otro lugar? Colocamos fianzas para casos difíciles: mal crédito, reclamos previos, contratistas nuevos y clases de alto riesgo. Corredor con licencia en California que consulta varios mercados. CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`¿Lo rechazaron en otro lugar? Colocamos fianzas para casos difíciles: mal crédito, reclamos previos, contratistas nuevos y clases de alto riesgo. Corredor con licencia en California que consulta varios mercados. CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
   title: "Fianzas con Mal Crédito y Casos Difíciles",

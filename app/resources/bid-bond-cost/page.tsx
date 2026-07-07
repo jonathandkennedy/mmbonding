@@ -4,14 +4,14 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("bid-bond-cost")!;
 
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "Most bid bonds carry no separate premium. They are issued as part of your surety program, and what underwriters really price is your full contract capacity. Reviewed by a licensed broker.",
+    clampDescription("Most bid bonds carry no separate premium. They are issued as part of your surety program, and what underwriters really price is your full contract capacity. Reviewed by a licensed broker."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Info, Check } from "lucide-react";
@@ -26,7 +27,7 @@ export async function generateMetadata({
   if (!p) return {};
   return {
     title: p.name,
-    description: `${p.intro} A referral from ${site.shortName}, CA DOI #${site.doiLicense}.`,
+    description: clampDescription(p.intro),
     alternates: { canonical: `/insurance/${p.slug}` },
   };
 }

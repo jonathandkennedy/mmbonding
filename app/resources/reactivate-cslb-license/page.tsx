@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("reactivate-cslb-license")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `How to reactivate an inactive California contractor license, including the ${usd(facts.licenseBondAmount)} license bond you need on file. Fast bonding from a licensed broker, CA DOI #6009105.`,
+  description: clampDescription(`How to reactivate an inactive California contractor license, including the ${usd(facts.licenseBondAmount)} license bond you need on file. Fast bonding from a licensed broker, CA DOI #6009105.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

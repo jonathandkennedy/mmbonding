@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight, MapPin, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -12,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "California Surety Bonds by Location",
   description:
-    "Surety bonds for contractors across California: Los Angeles, Orange County, the Inland Empire, San Diego, the Bay Area, Sacramento, and Fresno. Licensed broker, CA DOI #6009105.",
+    clampDescription("Surety bonds for contractors across California: Los Angeles, Orange County, the Inland Empire, San Diego, the Bay Area, Sacramento, and Fresno. Licensed broker, CA DOI #6009105."),
   alternates: { canonical: "/surety-bonds" },
 };
 
