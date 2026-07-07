@@ -3,14 +3,14 @@ import Link from "next/link";
 import { BondPage } from "@/components/bond-page";
 import { Prose } from "@/components/prose";
 import { bonds, facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const bond = bonds["disciplinary-bond"];
 
 export const metadata: Metadata = {
   title: "CSLB Disciplinary Bond",
   description:
-    "California CSLB disciplinary bonds to reinstate a suspended or revoked license. Amount set by the Registrar, with a 2-year minimum. Hard-to-place specialists, CA DOI #6009105.",
+    clampDescription("California CSLB disciplinary bonds to reinstate a suspended or revoked license. Amount set by the Registrar, with a 2-year minimum. Hard-to-place specialists, CA DOI #6009105."),
   alternates: { canonical: bond.href },
   openGraph: {
     images: [

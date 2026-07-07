@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
@@ -13,7 +14,7 @@ import { guides, guideHref, guideThumb, guideImageAlt, guideCategories } from "@
 export const metadata: Metadata = {
   title: "Contractor Bond Guides & Resources",
   description:
-    "Plain-English guides to California contractor bonds: costs, how to get bonded, performance bonds, license reactivation, and bad-credit surety. Reviewed by a licensed broker, CA DOI #6009105.",
+    clampDescription("Plain-English guides to California contractor bonds: costs, how to get bonded, performance bonds, license reactivation, and bad-credit surety. Reviewed by a licensed broker, CA DOI #6009105."),
   alternates: { canonical: "/resources" },
 };
 

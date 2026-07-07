@@ -22,11 +22,11 @@ import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Fast & Same-Day Surety Bonds in California",
-  description: `Get bonded fast. License, permit, and small commercial bonds can be issued same day, and we serve every California city. Honest quotes, no card or SSN to start. CA DOI #${site.doiLicense}.`,
+  description: clampDescription(`Get bonded fast. License, permit, and small commercial bonds can be issued same day, and we serve every California city. Honest quotes, no card or SSN to start. CA DOI #${site.doiLicense}.`),
   alternates: { canonical: "/fast-surety-bonds" },
 };
 

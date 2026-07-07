@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -9,7 +10,7 @@ const guide = getGuide("how-to-get-bonded-as-a-new-contractor")!;
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "How to get bonded as a new contractor: start with the very placeable license bond, then build contract bonding through the SBA program and a broker. Reviewed by a licensed broker, CA DOI #6009105.",
+    clampDescription("How to get bonded as a new contractor: start with the very placeable license bond, then build contract bonding through the SBA program and a broker. Reviewed by a licensed broker, CA DOI #6009105."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

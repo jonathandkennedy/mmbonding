@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("california-llc-contractor-requirements")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `A California LLC contractor needs the ${usd(facts.licenseBondAmount)} license bond plus the ${usd(facts.llcWorkerBondAmount)} LLC employee/worker bond, and typically general liability insurance. Reviewed by a licensed broker.`,
+  description: clampDescription(`A California LLC contractor needs the ${usd(facts.licenseBondAmount)} license bond plus the ${usd(facts.llcWorkerBondAmount)} LLC employee/worker bond, and typically general liability insurance. Reviewed by a licensed broker.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

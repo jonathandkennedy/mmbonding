@@ -11,12 +11,12 @@ import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 import { hreflangFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Fianzas de California de un corredor con licencia",
-  description: `Fianzas de garantía en California de un corredor real. Fianza de licencia de contratista, de licitación y de cumplimiento. Rápido cuando califica y colocada en los casos difíciles, incluido el mal crédito. Licencia CA DOI #${site.doiLicense}.`,
+  description: clampDescription(`Fianzas de garantía en California de un corredor real. Fianza de licencia de contratista, de licitación y de cumplimiento. Rápido cuando califica y colocada en los casos difíciles, incluido el mal crédito. Licencia CA DOI #${site.doiLicense}.`),
   openGraph: {
     locale: "es_US",
     title: "Fianzas de California de un corredor con licencia",

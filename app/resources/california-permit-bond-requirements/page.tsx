@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -9,7 +10,7 @@ const guide = getGuide("california-permit-bond-requirements")!;
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "When California cities, counties, and Caltrans require a permit or encroachment bond for public right-of-way work, how the amount is set, and how to get one fast.",
+    clampDescription("When California cities, counties, and Caltrans require a permit or encroachment bond for public right-of-way work, how the amount is set, and how to get one fast."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

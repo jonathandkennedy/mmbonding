@@ -10,12 +10,12 @@ import { BondCostCalculator } from "@/components/bond-cost-calculator";
 import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Surety Bond Cost Calculator",
   description:
-    "Estimate your surety bond premium in seconds. Pick a bond amount and your credit to see an estimated annual cost, then get your exact rate from a licensed California broker. CA DOI #6009105.",
+    clampDescription("Estimate your surety bond premium in seconds. Pick a bond amount and your credit to see an estimated annual cost, then get your exact rate from a licensed California broker. CA DOI #6009105."),
   alternates: { canonical: "/surety-bond-cost-calculator" },
 };
 

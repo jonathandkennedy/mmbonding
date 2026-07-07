@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -9,7 +10,7 @@ const guide = getGuide("surety-bonds-with-bad-credit")!;
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "Yes, you can usually get a surety bond with bad credit. How bad-credit surety bonds work, what they cost, and how a broker places credit-challenged files. CA DOI #6009105.",
+    clampDescription("Yes, you can usually get a surety bond with bad credit. How bad-credit surety bonds work, what they cost, and how a broker places credit-challenged files. CA DOI #6009105."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

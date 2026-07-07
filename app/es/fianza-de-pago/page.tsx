@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -19,7 +20,7 @@ import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
 
-const description = `Fianzas de pago de mano de obra y materiales en California. Garantice que sus subcontratistas y proveedores reciban su pago. Suele ir junto a una fianza de cumplimiento. Corredor con licencia, CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`Fianzas de pago de mano de obra y materiales en California. Garantice que sus subcontratistas y proveedores reciban su pago. Suele ir junto a una fianza de cumplimiento. Corredor con licencia, CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
   title: "Fianza de Pago en California",

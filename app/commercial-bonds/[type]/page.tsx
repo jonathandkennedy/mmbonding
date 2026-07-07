@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -34,7 +35,7 @@ export async function generateMetadata({
   if (!b) return {};
   return {
     title: b.name,
-    description: `${b.intro} CA DOI #${site.doiLicense}`,
+    description: clampDescription(b.intro),
     alternates: { canonical: `/commercial-bonds/${b.slug}` },
     openGraph: {
       images: [

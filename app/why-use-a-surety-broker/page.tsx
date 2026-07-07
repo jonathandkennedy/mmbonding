@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -24,10 +25,9 @@ import { REGULATORY_REVIEWED } from "@/lib/regulatory";
 
 export const metadata: Metadata = {
   title: "Why Use a Surety Broker?",
-  description:
-    "A surety broker vs. an instant-issue bond site for California contractors. A broker shops multiple markets for the best placement, including hard-to-place credit and claims. Licensed CA DOI #" +
-    site.doiLicense +
-    ".",
+  description: clampDescription(
+    "A surety broker vs. an instant-issue bond site for California contractors. A broker shops multiple markets for the best placement, including hard-to-place credit and claims.",
+  ),
   alternates: { canonical: "/why-use-a-surety-broker" },
 };
 

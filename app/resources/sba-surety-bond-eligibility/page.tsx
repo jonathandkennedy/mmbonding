@@ -4,13 +4,13 @@ import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
 import { getGuide } from "@/lib/guides";
 import { sba } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 const guide = getGuide("sba-surety-bond-eligibility")!;
 
 export const metadata: Metadata = {
   title: guide.title,
-  description: `Who qualifies for the SBA Surety Bond Guarantee program: small businesses that cannot get standard bonding, backed up to ${usd(sba.contractLimit)} per contract with a ${sba.guaranteeLowPct}% to ${sba.guaranteeHighPct}% guarantee. Reviewed by a licensed broker.`,
+  description: clampDescription(`Who qualifies for the SBA Surety Bond Guarantee program: small businesses that cannot get standard bonding, backed up to ${usd(sba.contractLimit)} per contract with a ${sba.guaranteeLowPct}% to ${sba.guaranteeHighPct}% guarantee. Reviewed by a licensed broker.`),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -13,7 +14,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Surety Bond Glossary: Terms Explained",
   description:
-    "A plain-English glossary of surety bond terms for California contractors and businesses: principal, obligee, surety, indemnity, premium, penal sum, T-listing, and more. Reviewed by a licensed broker.",
+    clampDescription("A plain-English glossary of surety bond terms for California contractors and businesses: principal, obligee, surety, indemnity, premium, penal sum, T-listing, and more. Reviewed by a licensed broker."),
   alternates: { canonical: "/surety-bond-glossary" },
 };
 

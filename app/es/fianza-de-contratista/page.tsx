@@ -18,10 +18,10 @@ import {
 import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 import { hreflangFor } from "@/lib/i18n";
 
-const description = `La fianza de licencia de contratista de ${usd(facts.licenseBondAmount)} en California, exigida por ${facts.licenseBondStatute}. Cotizaciones rápidas y mal crédito bienvenido. Corredor con licencia, CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`La fianza de licencia de contratista de ${usd(facts.licenseBondAmount)} en California, exigida por ${facts.licenseBondStatute}. Cotizaciones rápidas y mal crédito bienvenido. Corredor con licencia, CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
   title: "Fianza de Licencia de Contratista en California",

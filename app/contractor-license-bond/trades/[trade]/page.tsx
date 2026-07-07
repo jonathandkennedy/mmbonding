@@ -14,7 +14,7 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld
 import { site } from "@/lib/site";
 import { getTrade, trades } from "@/lib/trades";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export function generateStaticParams() {
   return trades.map((t) => ({ trade: t.slug }));
@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!t) return {};
   return {
     title: `${t.name} Contractor Bond (${t.code})`,
-    description: `Which bonds a California ${t.code} ${t.name.toLowerCase()} contractor needs, starting with the ${usd(facts.licenseBondAmount)} license bond. Fast quotes, bad credit welcome. Licensed CA broker, DOI #${site.doiLicense}.`,
+    description: clampDescription(`Which bonds a California ${t.code} ${t.name.toLowerCase()} contractor needs, starting with the ${usd(facts.licenseBondAmount)} license bond. Fast quotes, bad credit welcome.`),
     alternates: { canonical: `/contractor-license-bond/trades/${t.slug}` },
   };
 }

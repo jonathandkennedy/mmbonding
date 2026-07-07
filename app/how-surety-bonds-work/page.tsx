@@ -23,12 +23,12 @@ import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts, REGULATORY_REVIEWED } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "How Surety Bonds Work: A Visual Guide",
   description:
-    "How a surety bond works, explained visually: the three parties, what you actually pay, how a claim works, and the steps to get bonded. Reviewed by a licensed California broker, CA DOI #6009105.",
+    clampDescription("How a surety bond works, explained visually: the three parties, what you actually pay, how a claim works, and the steps to get bonded. Reviewed by a licensed California broker, CA DOI #6009105."),
   alternates: { canonical: "/how-surety-bonds-work" },
 };
 

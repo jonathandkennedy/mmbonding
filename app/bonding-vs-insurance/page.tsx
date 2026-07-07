@@ -11,12 +11,12 @@ import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { facts, REGULATORY_REVIEWED } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Bonded vs. Insured: What Licensed, Bonded & Insured Means",
   description:
-    "The difference between a surety bond and insurance for California contractors, and what 'licensed, bonded, and insured' actually means. Reviewed by a licensed broker, CA DOI #6009105.",
+    clampDescription("The difference between a surety bond and insurance for California contractors, and what 'licensed, bonded, and insured' actually means. Reviewed by a licensed broker, CA DOI #6009105."),
   alternates: { canonical: "/bonding-vs-insurance" },
 };
 

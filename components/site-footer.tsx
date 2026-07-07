@@ -91,9 +91,9 @@ export function SiteFooter() {
 
           {footerCols.map((col) => (
             <nav key={col.heading} aria-label={col.heading}>
-              <h2 className="font-display text-sm font-bold uppercase tracking-wider text-navy-300">
+              <p className="font-display text-sm font-bold uppercase tracking-wider text-navy-300">
                 {col.heading}
-              </h2>
+              </p>
               <ul className="mt-4 space-y-2.5 text-sm">
                 {col.links.map((l) => (
                   <li key={l.href}>

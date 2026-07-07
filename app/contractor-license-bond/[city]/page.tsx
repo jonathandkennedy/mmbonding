@@ -14,7 +14,7 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld
 import { site } from "@/lib/site";
 import { getMetro } from "@/lib/locations";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 /**
  * Curated "contractor license bond + city" pages. Focused on the $25,000 CSLB
@@ -40,7 +40,7 @@ export async function generateMetadata({
   if (!m) return {};
   return {
     title: `Contractor License Bond in ${m.name}`,
-    description: `The ${usd(facts.licenseBondAmount)} CSLB contractor license bond for contractors in ${m.name}. Fast quotes, bad credit welcome, e-filed with the CSLB. Licensed California broker, CA DOI #${site.doiLicense}.`,
+    description: clampDescription(`The ${usd(facts.licenseBondAmount)} CSLB contractor license bond for contractors in ${m.name}. Fast quotes, bad credit welcome, e-filed with the CSLB.`),
     alternates: { canonical: `/contractor-license-bond/${city}` },
   };
 }

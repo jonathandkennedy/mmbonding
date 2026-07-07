@@ -8,12 +8,12 @@ import { TldrCard } from "@/components/tldr-card";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { trades } from "@/lib/trades";
 import { facts } from "@/lib/regulatory";
-import { usd } from "@/lib/utils";
+import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contractor Bonds by Trade & CSLB Classification",
   description:
-    "Which bonds each California contractor classification needs, from C-10 electrical to Class A engineering. Every trade carries the $25,000 license bond; see the contract and permit bonds yours adds.",
+    clampDescription("Which bonds each California contractor classification needs, from C-10 electrical to Class A engineering. Every trade carries the $25,000 license bond; see the contract and permit bonds yours adds."),
   alternates: { canonical: "/contractor-license-bond/trades" },
 };
 

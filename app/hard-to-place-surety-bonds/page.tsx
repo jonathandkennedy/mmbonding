@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -28,7 +29,7 @@ import { hreflangFor } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Hard-to-Place & Bad Credit Surety Bonds",
   description:
-    "Declined elsewhere? We place hard-to-place surety bonds: bad credit, prior claims, new contractors, and high-risk classes. A licensed California broker that shops multiple markets. CA DOI #6009105.",
+    clampDescription("Declined elsewhere? We place hard-to-place surety bonds: bad credit, prior claims, new contractors, and high-risk classes. A licensed California broker that shops multiple markets. CA DOI #6009105."),
   alternates: {
     canonical: "/hard-to-place-surety-bonds",
     languages: hreflangFor("/hard-to-place-surety-bonds", "/es/fianzas-mal-credito"),

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
@@ -19,7 +20,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Commercial, Permit & Specialty Surety Bonds",
   description:
-    "California commercial, permit, and specialty surety bonds: subdivision and encroachment permit bonds, notary, auto dealer, cannabis, freight broker, and more. Licensed broker, CA DOI #6009105.",
+    clampDescription("California commercial, permit, and specialty surety bonds: subdivision and encroachment permit bonds, notary, auto dealer, cannabis, freight broker, and more. Licensed broker, CA DOI #6009105."),
   alternates: { canonical: "/commercial-bonds" },
 };
 

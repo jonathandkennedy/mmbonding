@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
@@ -9,7 +10,7 @@ const guide = getGuide("funds-control-for-contractors")!;
 export const metadata: Metadata = {
   title: guide.title,
   description:
-    "Funds control is a neutral third party that holds a job's funds and pays labor and suppliers as work is verified, which lowers surety risk and can unlock a bond.",
+    clampDescription("Funds control is a neutral third party that holds a job's funds and pays labor and suppliers as work is verified, which lowers surety risk and can unlock a bond."),
   alternates: { canonical: `/resources/${guide.slug}` },
   openGraph: {
     images: [

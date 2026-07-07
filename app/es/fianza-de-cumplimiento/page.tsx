@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -19,7 +20,7 @@ import { SetHtmlLang } from "@/components/set-html-lang";
 import { site } from "@/lib/site";
 import { hreflangFor } from "@/lib/i18n";
 
-const description = `Fianzas de cumplimiento en California para construcción. Garantice la terminación del proyecto. Tarifas según el tamaño del contrato, el crédito y la experiencia. Capacidad para casos difíciles de un corredor con licencia, CA DOI #${site.doiLicense}.`;
+const description = clampDescription(`Fianzas de cumplimiento en California para construcción. Garantice la terminación del proyecto. Tarifas según el tamaño del contrato, el crédito y la experiencia. Capacidad para casos difíciles de un corredor con licencia, CA DOI #${site.doiLicense}.`);
 
 export const metadata: Metadata = {
   title: "Fianza de Cumplimiento en California",
