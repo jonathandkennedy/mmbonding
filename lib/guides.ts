@@ -51,6 +51,22 @@ export const guides: Guide[] = [
     keyword: "how to get a performance bond",
   },
   {
+    slug: "payment-bond-vs-performance-bond",
+    title: "Payment Bond vs Performance Bond",
+    excerpt:
+      "What each contract bond guarantees, who they protect, and why most public jobs require both.",
+    category: "Public Works",
+    keyword: "payment bond vs performance bond",
+  },
+  {
+    slug: "bid-bond-vs-performance-bond",
+    title: "Bid Bond vs Performance Bond",
+    excerpt:
+      "How the bid bond and the performance bond work at different stages of a job, and why you need both.",
+    category: "Public Works",
+    keyword: "bid bond vs performance bond",
+  },
+  {
     slug: "reactivate-cslb-license",
     title: "How to Reactivate an Inactive CSLB License",
     excerpt: "Reactivating a California contractor license, and the bond you need to do it.",
