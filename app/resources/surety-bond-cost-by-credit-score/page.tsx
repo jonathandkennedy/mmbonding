@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
 
@@ -60,6 +62,16 @@ export default function Page() {
         { label: "Bad credit bonds", href: "/resources/surety-bonds-with-bad-credit" },
       ]}
     >
+      <StatGrid
+        heading="License bond pricing by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "priorLicenseBond",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Credit sets your rate, within a range</h2>
         <p>

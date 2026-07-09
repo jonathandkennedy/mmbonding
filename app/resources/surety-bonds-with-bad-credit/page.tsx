@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("surety-bonds-with-bad-credit")!;
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote?path=hard-to-place" },
       ]}
     >
+      <StatGrid
+        heading="Bad-credit bonding by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "sbaGuarantee",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Credit is a rate factor, not a wall</h2>
         <p>
