@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { sba } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
 
@@ -57,6 +59,16 @@ export default function Page() {
         { label: "Contract Bonds", href: "/contract-bonds" },
       ]}
     >
+      <StatGrid
+        heading="Certified-firm bonding by the numbers"
+        items={pickStats([
+          "sbaContractLimit",
+          "sbaGuarantee",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Certification is not a bond</h2>
         <p>
