@@ -194,6 +194,12 @@ export const stats = {
     label: "Dealer bond for motorcycle/ATV-only and small wholesale-only dealers",
     source: sources.dmv,
   },
+  disciplinaryBond: {
+    id: "disciplinaryBond",
+    value: "$25k+",
+    label: "Disciplinary bond to reinstate a license, set by the Registrar up to 10x the license bond",
+    source: sources.bpc,
+  },
 } as const satisfies Record<string, Stat>;
 
 export type StatKey = keyof typeof stats;

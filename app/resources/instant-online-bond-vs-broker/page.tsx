@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("instant-online-bond-vs-broker")!;
 
@@ -59,6 +61,16 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="Online bond vs. broker by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "filingWindow",
+          "usSuretyPremium",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>When instant online is the right call</h2>
         <p>

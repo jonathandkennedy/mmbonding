@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("surety-bond-collateral")!;
 
@@ -63,6 +65,16 @@ export default function Page() {
         { label: "Appeal Bond", href: "/commercial-bonds/appeal-bond" },
       ]}
     >
+      <StatGrid
+        heading="Collateral by the numbers"
+        items={pickStats([
+          "usSuretyPremium",
+          "caContractors",
+          "caLicenseBond",
+          "sbaGuarantee",
+        ])}
+      />
+
       <Prose>
         <h2>When a surety asks for collateral</h2>
         <p>

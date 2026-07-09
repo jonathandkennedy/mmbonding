@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("surety-bond-indemnity-agreement")!;
 
@@ -63,6 +65,11 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="Indemnity by the numbers"
+        items={pickStats(["usSuretyPremium", "caContractors", "caLicenseBond"])}
+      />
+
       <Prose>
         <h2>What the indemnity agreement is</h2>
         <p>
