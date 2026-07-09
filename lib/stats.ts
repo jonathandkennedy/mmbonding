@@ -36,6 +36,9 @@ export const sources = {
   far: { name: "Acquisition.gov (FAR 28.102)", url: "https://www.acquisition.gov/far/28.102-1" },
   caLeg: { name: "CA Public Contract Code", url: "https://leginfo.legislature.ca.gov/" },
   bpc: { name: "CA Business & Professions Code", url: "https://leginfo.legislature.ca.gov/" },
+  bondExchange: { name: "BondExchange", url: "https://www.bondexchange.com/are-surety-bond-premiums-refundable/" },
+  suretyBondsCom: { name: "SuretyBonds.com", url: "https://www.suretybonds.com/edu/surety-bond-premium-financing" },
+  irs: { name: "IRS Pub. 535", url: "https://www.irs.gov/pub/irs-prior/p535--2022.pdf" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -96,6 +99,36 @@ export const stats = {
     value: "$100,000",
     label: "Additional worker bond required of LLC contractors",
     source: sources.bpc,
+  },
+  minEarnedPremium: {
+    id: "minEarnedPremium",
+    value: "$100",
+    label: "Common minimum-earned premium a surety keeps on a mid-term cancellation",
+    source: sources.bondExchange,
+  },
+  cancellationNotice: {
+    id: "cancellationNotice",
+    value: "30-60 days",
+    label: "Typical cancellation notice period that extends the surety's liability",
+    source: sources.bondExchange,
+  },
+  financeDownPayment: {
+    id: "financeDownPayment",
+    value: "30-40%",
+    label: "Typical down payment to finance a surety bond premium",
+    source: sources.suretyBondsCom,
+  },
+  financeInstallments: {
+    id: "financeInstallments",
+    value: "4-6",
+    label: "Monthly installments a financed premium is usually split into",
+    source: sources.suretyBondsCom,
+  },
+  premiumDeductible: {
+    id: "premiumDeductible",
+    value: "100%",
+    label: "Qualifying single-year bond premium generally deductible as a business expense",
+    source: sources.irs,
   },
 } as const satisfies Record<string, Stat>;
 
