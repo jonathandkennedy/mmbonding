@@ -67,6 +67,14 @@ export const guides: Guide[] = [
     keyword: "bid bond vs performance bond",
   },
   {
+    slug: "california-bid-bond-requirements",
+    title: "California Bid Bond Requirements",
+    excerpt:
+      "What California requires for a bid bond on public works: the 10% security rule, admitted sureties, and when private jobs need one.",
+    category: "Public Works",
+    keyword: "california bid bond requirements",
+  },
+  {
     slug: "reactivate-cslb-license",
     title: "How to Reactivate an Inactive CSLB License",
     excerpt: "Reactivating a California contractor license, and the bond you need to do it.",
