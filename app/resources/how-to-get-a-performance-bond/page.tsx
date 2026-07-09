@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("how-to-get-a-performance-bond")!;
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "Talk to an underwriter", href: "/get-a-quote?path=contract" },
       ]}
     >
+      <StatGrid
+        heading="Performance bonds by the numbers"
+        items={pickStats([
+          "millerActThreshold",
+          "bidSecurity",
+          "usSuretyPremium",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>Where you get one</h2>
         <p>

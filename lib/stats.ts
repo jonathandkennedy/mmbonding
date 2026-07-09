@@ -163,6 +163,12 @@ export const stats = {
     label: "New U.S. construction businesses that survive their first year",
     source: sources.bls,
   },
+  filingWindow: {
+    id: "filingWindow",
+    value: "24-48 hrs",
+    label: "Typical window for a surety to e-file your license bond with the CSLB",
+    source: sources.cslb,
+  },
 } as const satisfies Record<string, Stat>;
 
 export type StatKey = keyof typeof stats;

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("surety-bond-application-checklist")!;
 
@@ -59,6 +61,16 @@ export default function Page() {
         { label: "Contractor License Bond", href: "/contractor-license-bond" },
       ]}
     >
+      <StatGrid
+        heading="Applying by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "filingWindow",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>For a license or small commercial bond</h2>
         <p>
