@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("california-permit-bond-requirements")!;
 
@@ -60,6 +62,11 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="California permit bonds by the numbers"
+        items={pickStats(["caLicenseBond", "caContractors", "usSuretyPremium"])}
+      />
+
       <Prose>
         <h2>What a permit bond is</h2>
         <p>

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("used-car-dealer-bond-by-type")!;
 
@@ -59,6 +61,11 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="Dealer bonds by the numbers"
+        items={pickStats(["dealerBond", "dealerBondLow", "usSuretyPremium"])}
+      />
+
       <Prose>
         <h2>The California dealer bond</h2>
         <p>

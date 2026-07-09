@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("how-a-surety-broker-shops-the-market")!;
 
@@ -58,6 +60,16 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="Shopping the market by the numbers"
+        items={pickStats([
+          "usSuretyPremium",
+          "caContractors",
+          "caLicenseBond",
+          "sbaGuarantee",
+        ])}
+      />
+
       <Prose>
         <h2>One online quote is one market&apos;s opinion</h2>
         <p>

@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("funds-control-for-contractors")!;
 
@@ -60,6 +62,16 @@ export default function Page() {
         { label: "Contract Bonds", href: "/contract-bonds" },
       ]}
     >
+      <StatGrid
+        heading="Funds control by the numbers"
+        items={pickStats([
+          "sbaGuarantee",
+          "sbaContractLimit",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>What funds control is</h2>
         <p>

@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
+import { BarChart } from "@/components/bar-chart";
 import { getGuide } from "@/lib/guides";
+import { pickStats, sources } from "@/lib/stats";
 
 const guide = getGuide("california-bid-bond-requirements")!;
 
@@ -70,6 +73,16 @@ export default function Page() {
         },
       ]}
     >
+      <StatGrid
+        heading="Bid bonds by the numbers"
+        items={pickStats([
+          "bidSecurity",
+          "millerActThreshold",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>When California requires a bid bond</h2>
         <p>
@@ -126,6 +139,18 @@ export default function Page() {
           </tbody>
         </table>
       </div>
+
+      <BarChart
+        title="Typical bond size, as a share of the job"
+        data={[
+          { label: "Bid bond", value: 10, display: "~10%", emphasis: true },
+          { label: "Performance bond", value: 100, display: "up to 100%" },
+          { label: "Payment bond", value: 100, display: "up to 100%" },
+        ]}
+        max={100}
+        caption="Bid security is a fraction of your bid; the performance and payment bonds that follow can each run the full contract value."
+        source={sources.caLeg}
+      />
 
       <Prose>
         <h2>It has to come from an admitted surety</h2>

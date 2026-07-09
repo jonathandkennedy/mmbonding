@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("how-to-get-bonded-as-a-new-contractor")!;
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "Contractor License Bond", href: "/contractor-license-bond" },
       ]}
     >
+      <StatGrid
+        heading="New-contractor bonding by the numbers"
+        items={pickStats([
+          "constructionSurvival",
+          "caLicenseBond",
+          "sbaGuarantee",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>The new-contractor catch-22</h2>
         <p>

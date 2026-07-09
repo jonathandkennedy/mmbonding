@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("bid-bond-vs-performance-bond")!;
 
@@ -67,6 +69,16 @@ export default function Page() {
         },
       ]}
     >
+      <StatGrid
+        heading="Bid and performance bonds by the numbers"
+        items={pickStats([
+          "bidSecurity",
+          "millerActThreshold",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Same job, two stages</h2>
         <p>

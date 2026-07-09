@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("california-public-works-bonds-by-obligee")!;
 
@@ -59,6 +61,16 @@ export default function Page() {
         { label: "DIR registration", href: "/resources/dir-registration-for-contractors" },
       ]}
     >
+      <StatGrid
+        heading="California public works by the numbers"
+        items={pickStats([
+          "bidSecurity",
+          "millerActThreshold",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Public works means bonded work</h2>
         <p>

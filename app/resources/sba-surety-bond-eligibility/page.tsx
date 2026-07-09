@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { sba } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote?path=hard-to-place" },
       ]}
     >
+      <StatGrid
+        heading="SBA bond program by the numbers"
+        items={pickStats([
+          "sbaContractLimit",
+          "sbaGuarantee",
+          "constructionSurvival",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>Who qualifies</h2>
         <p>

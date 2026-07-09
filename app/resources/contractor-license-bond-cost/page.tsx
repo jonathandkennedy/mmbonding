@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
 import { facts } from "@/lib/regulatory";
+import { pickStats } from "@/lib/stats";
 import { usd } from "@/lib/utils";
 
 const guide = getGuide("contractor-license-bond-cost")!;
@@ -60,6 +62,16 @@ export default function Page() {
         { label: "Bad credit? We place it", href: "/hard-to-place-surety-bonds" },
       ]}
     >
+      <StatGrid
+        heading="License bond, by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "priorLicenseBond",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Premium, not face amount</h2>
         <p>

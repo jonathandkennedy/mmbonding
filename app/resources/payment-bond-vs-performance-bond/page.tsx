@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("payment-bond-vs-performance-bond")!;
 
@@ -64,6 +66,16 @@ export default function Page() {
         { label: "How to Get a Performance Bond", href: "/resources/how-to-get-a-performance-bond" },
       ]}
     >
+      <StatGrid
+        heading="Contract bonds by the numbers"
+        items={pickStats([
+          "millerActThreshold",
+          "bidSecurity",
+          "usSuretyPremium",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>The short version</h2>
         <p>

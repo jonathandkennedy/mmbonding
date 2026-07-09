@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("surety-bonds-after-bankruptcy-or-tax-lien")!;
 
@@ -59,6 +61,16 @@ export default function Page() {
         { label: "Funds control", href: "/resources/funds-control-for-contractors" },
       ]}
     >
+      <StatGrid
+        heading="Tough-file bonding by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "sbaGuarantee",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Yes, it is still placeable</h2>
         <p>

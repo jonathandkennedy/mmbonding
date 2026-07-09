@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
 
@@ -61,6 +63,16 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="Thin-credit bonding by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "sbaGuarantee",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>Yes, thin credit and an ITIN are placeable</h2>
         <p>

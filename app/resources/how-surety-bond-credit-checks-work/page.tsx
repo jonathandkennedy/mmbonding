@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("how-surety-bond-credit-checks-work")!;
 
@@ -63,6 +65,11 @@ export default function Page() {
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >
+      <StatGrid
+        heading="Surety credit checks by the numbers"
+        items={pickStats(["caLicenseBond", "caContractors", "usSuretyPremium"])}
+      />
+
       <Prose>
         <h2>Soft pull vs hard pull</h2>
         <p>

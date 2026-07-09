@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { BondCostCalculator } from "@/components/bond-cost-calculator";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
 
@@ -61,6 +63,16 @@ export default function Page() {
         { label: "Contract Bonds", href: "/contract-bonds" },
       ]}
     >
+      <StatGrid
+        heading="Bond amounts by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "llcWorkerBond",
+          "cannabisBond",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>It depends on the bond, not just you</h2>
         <p>

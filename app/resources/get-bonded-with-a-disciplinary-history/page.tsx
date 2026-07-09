@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
 
@@ -61,6 +63,16 @@ export default function Page() {
         { label: "Claims & lapses", href: "/resources/contractor-bond-claims-and-lapses" },
       ]}
     >
+      <StatGrid
+        heading="Disciplinary-history bonding by the numbers"
+        items={pickStats([
+          "disciplinaryBond",
+          "caLicenseBond",
+          "sbaGuarantee",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>A disciplinary history is placeable</h2>
         <p>

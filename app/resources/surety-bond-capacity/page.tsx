@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("surety-bond-capacity")!;
 
@@ -63,6 +65,16 @@ export default function Page() {
         { label: "Glossary", href: "/surety-bond-glossary" },
       ]}
     >
+      <StatGrid
+        heading="Bonding capacity by the numbers"
+        items={pickStats([
+          "sbaContractLimit",
+          "millerActThreshold",
+          "usSuretyPremium",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>What bonding capacity means</h2>
         <p>
