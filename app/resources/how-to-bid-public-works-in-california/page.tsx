@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("how-to-bid-public-works-in-california")!;
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "DIR Registration", href: "/resources/dir-registration-for-contractors" },
       ]}
     >
+      <StatGrid
+        heading="Bidding public works by the numbers"
+        items={pickStats([
+          "dirRegistrationFee",
+          "bidSecurity",
+          "millerActThreshold",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>Finding public works to bid</h2>
         <p>

@@ -39,6 +39,9 @@ export const sources = {
   bondExchange: { name: "BondExchange", url: "https://www.bondexchange.com/are-surety-bond-premiums-refundable/" },
   suretyBondsCom: { name: "SuretyBonds.com", url: "https://www.suretybonds.com/edu/surety-bond-premium-financing" },
   irs: { name: "IRS Pub. 535", url: "https://www.irs.gov/pub/irs-prior/p535--2022.pdf" },
+  dcc: { name: "CA Dept. of Cannabis Control", url: "https://www.cannabis.ca.gov/resources/dcc-forms/form-8113/" },
+  dir: { name: "CA DIR", url: "https://www.dir.ca.gov/public-works/contractor-registration.html" },
+  bls: { name: "U.S. BLS", url: "https://www.bls.gov/bdm/bdmage.htm" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -129,6 +132,36 @@ export const stats = {
     value: "100%",
     label: "Qualifying single-year bond premium generally deductible as a business expense",
     source: sources.irs,
+  },
+  contractorExperience: {
+    id: "contractorExperience",
+    value: "4 years",
+    label: "Journey-level experience the CSLB generally requires to qualify for a license",
+    source: sources.cslb,
+  },
+  cslbAppFee: {
+    id: "cslbAppFee",
+    value: "$450",
+    label: "CSLB license application processing fee",
+    source: sources.cslb,
+  },
+  cannabisBond: {
+    id: "cannabisBond",
+    value: "$5,000",
+    label: "California state cannabis licensee surety bond, per licensed premises",
+    source: sources.dcc,
+  },
+  dirRegistrationFee: {
+    id: "dirRegistrationFee",
+    value: "$400",
+    label: "Annual California DIR public works contractor registration fee",
+    source: sources.dir,
+  },
+  constructionSurvival: {
+    id: "constructionSurvival",
+    value: "~80%",
+    label: "New U.S. construction businesses that survive their first year",
+    source: sources.bls,
   },
 } as const satisfies Record<string, Stat>;
 

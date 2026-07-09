@@ -17,6 +17,13 @@ export function StatGrid({
   heading?: string;
   className?: string;
 }) {
+  const cols =
+    items.length >= 4
+      ? "sm:grid-cols-2 lg:grid-cols-4"
+      : items.length === 3
+        ? "sm:grid-cols-3"
+        : "sm:grid-cols-2";
+
   return (
     <section
       aria-label={heading ?? "Key figures"}
@@ -30,7 +37,7 @@ export function StatGrid({
       <dl
         className={cn(
           "mt-4 grid gap-px overflow-hidden rounded-2xl border border-ink-200 bg-ink-200",
-          "sm:grid-cols-2 lg:grid-cols-4",
+          cols,
         )}
       >
         {items.map((s) => (

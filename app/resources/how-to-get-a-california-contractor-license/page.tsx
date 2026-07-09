@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
 
@@ -60,6 +62,16 @@ export default function Page() {
         { label: "Bonded as a new contractor", href: "/resources/how-to-get-bonded-as-a-new-contractor" },
       ]}
     >
+      <StatGrid
+        heading="Getting licensed by the numbers"
+        items={pickStats([
+          "contractorExperience",
+          "cslbAppFee",
+          "caLicenseBond",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>Step 1: Meet the experience requirement</h2>
         <p>
