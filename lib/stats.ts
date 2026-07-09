@@ -42,6 +42,7 @@ export const sources = {
   dcc: { name: "CA Dept. of Cannabis Control", url: "https://www.cannabis.ca.gov/resources/dcc-forms/form-8113/" },
   dir: { name: "CA DIR", url: "https://www.dir.ca.gov/public-works/contractor-registration.html" },
   bls: { name: "U.S. BLS", url: "https://www.bls.gov/bdm/bdmage.htm" },
+  dmv: { name: "CA DMV (Veh. Code §11710)", url: "https://www.dmv.ca.gov/portal/vehicle-industry-registration-procedures-manual-2/occupational-licensing/" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -168,6 +169,30 @@ export const stats = {
     value: "24-48 hrs",
     label: "Typical window for a surety to e-file your license bond with the CSLB",
     source: sources.cslb,
+  },
+  classifications: {
+    id: "classifications",
+    value: "44",
+    label: "CSLB license classifications across A, B, and C-## specialty trades",
+    source: sources.cslb,
+  },
+  bqiBond: {
+    id: "bqiBond",
+    value: "$25,000",
+    label: "Bond of Qualifying Individual, when an RME or minority RMO qualifies the license",
+    source: sources.bpc,
+  },
+  dealerBond: {
+    id: "dealerBond",
+    value: "$50,000",
+    label: "California DMV motor vehicle dealer bond for most retail dealers",
+    source: sources.dmv,
+  },
+  dealerBondLow: {
+    id: "dealerBondLow",
+    value: "$10,000",
+    label: "Dealer bond for motorcycle/ATV-only and small wholesale-only dealers",
+    source: sources.dmv,
   },
 } as const satisfies Record<string, Stat>;
 
