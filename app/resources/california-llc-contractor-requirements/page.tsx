@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "General Liability", href: "/insurance/contractor-general-liability" },
       ]}
     >
+      <StatGrid
+        heading="LLC contractor bonding by the numbers"
+        items={pickStats([
+          "llcWorkerBond",
+          "caLicenseBond",
+          "caContractors",
+          "usSuretyPremium",
+        ])}
+      />
+
       <Prose>
         <h2>The two bonds an LLC needs</h2>
         <p>

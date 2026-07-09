@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
+import { BarChart } from "@/components/bar-chart";
 import { getGuide } from "@/lib/guides";
+import { pickStats, sources } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd } from "@/lib/utils";
 
@@ -60,6 +63,28 @@ export default function Page() {
         { label: "Bonding vs insurance", href: "/bonding-vs-insurance" },
       ]}
     >
+      <StatGrid
+        heading="The contractor bond stack by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "llcWorkerBond",
+          "bqiBond",
+          "caContractors",
+        ])}
+      />
+
+      <BarChart
+        title="Statutory bond amounts in the stack"
+        data={[
+          { label: "License bond", value: 25000, display: "$25,000", emphasis: true },
+          { label: "BQI bond", value: 25000, display: "$25,000" },
+          { label: "LLC worker bond", value: 100000, display: "$100,000" },
+        ]}
+        max={100000}
+        caption="The license bond is universal; the BQI and LLC worker bonds apply only to specific structures. Contract bonds are project-sized and not shown."
+        source={sources.bpc}
+      />
+
       <Prose>
         <h2>Every contractor: the license bond</h2>
         <p>

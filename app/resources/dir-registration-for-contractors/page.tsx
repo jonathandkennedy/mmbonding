@@ -3,7 +3,9 @@ import { clampDescription } from "@/lib/utils";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 
 const guide = getGuide("dir-registration-for-contractors")!;
 
@@ -56,6 +58,16 @@ export default function Page() {
         { label: "Performance Bonds", href: "/contract-bonds/performance-bond" },
       ]}
     >
+      <StatGrid
+        heading="DIR registration by the numbers"
+        items={pickStats([
+          "dirRegistrationFee",
+          "bidSecurity",
+          "millerActThreshold",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>What DIR registration is</h2>
         <p>

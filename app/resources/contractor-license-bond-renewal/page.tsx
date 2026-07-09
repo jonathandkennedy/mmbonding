@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuidePage } from "@/components/guide-page";
 import { Prose, Bullet } from "@/components/prose";
+import { StatGrid } from "@/components/stat-grid";
 import { getGuide } from "@/lib/guides";
+import { pickStats } from "@/lib/stats";
 import { facts } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
 
@@ -57,6 +59,16 @@ export default function Page() {
         { label: "Claims & lapses", href: "/resources/contractor-bond-claims-and-lapses" },
       ]}
     >
+      <StatGrid
+        heading="License bond renewal by the numbers"
+        items={pickStats([
+          "caLicenseBond",
+          "cancellationNotice",
+          "filingWindow",
+          "caContractors",
+        ])}
+      />
+
       <Prose>
         <h2>Why it renews every year</h2>
         <p>
