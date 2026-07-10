@@ -415,6 +415,30 @@ export const guides: Guide[] = [
     category: "For Homeowners",
     keyword: "what does contractor bond pay homeowner",
   },
+  {
+    slug: "types-of-surety-bonds",
+    title: "Types of Surety Bonds Explained",
+    excerpt:
+      "The four families of surety bonds, contract, license, court, and fidelity, and which one your situation calls for.",
+    category: "How-To",
+    keyword: "types of surety bonds",
+  },
+  {
+    slug: "surety-bond-vs-letter-of-credit",
+    title: "Surety Bond vs. Letter of Credit",
+    excerpt:
+      "How a surety bond and a bank letter of credit differ on capital, cost, and risk, and why contractors usually prefer the bond.",
+    category: "Underwriting",
+    keyword: "surety bond vs letter of credit",
+  },
+  {
+    slug: "licensed-bonded-and-insured",
+    title: "Licensed, Bonded & Insured: What It Means",
+    excerpt:
+      "What each of the three actually means for a California contractor, what it protects, and how to verify all three.",
+    category: "For Homeowners",
+    keyword: "licensed bonded and insured",
+  },
 ];
 
 export function guideHref(slug: string) {
