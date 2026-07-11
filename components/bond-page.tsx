@@ -285,6 +285,17 @@ function Sidebar({
           </ul>
         </div>
       )}
+
+      <p className="px-1 text-sm leading-relaxed text-muted">
+        New to surety bonds? See the{" "}
+        <Link
+          href="/resources/types-of-surety-bonds"
+          className="font-medium text-azure-600 underline underline-offset-2 hover:text-azure-700"
+        >
+          types of surety bonds
+        </Link>{" "}
+        overview.
+      </p>
     </aside>
   );
 }
