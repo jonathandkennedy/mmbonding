@@ -15,6 +15,7 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld
 import {
   commercialBonds,
   getCommercialBond,
+  getRelatedCommercialBonds,
   commercialReviewNote,
   commercialHero,
   commercialImageAlt,
@@ -67,6 +68,8 @@ export default async function Page({ params }: { params: Promise<{ type: string 
     { label: "Authority", value: b.authority },
     ...(b.statute ? [{ label: "Statute", value: b.statute }] : []),
   ];
+
+  const relatedBonds = getRelatedCommercialBonds(b.slug);
 
   const amountClause = b.amountLabel.trim().startsWith("$")
     ? `is a ${b.amountLabel} surety bond`
@@ -230,6 +233,53 @@ export default async function Page({ params }: { params: Promise<{ type: string 
           </Reveal>
         </Container>
       </section>
+
+      {/* Related bonds (silo interlinking) */}
+      {relatedBonds.length > 0 && (
+        <section className="border-t border-ink-100 py-14">
+          <Container size="wide">
+            <Eyebrow>{b.category ?? "Commercial & Specialty"}</Eyebrow>
+            <h2 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-navy-900">
+              Related bonds
+            </h2>
+            <p className="mt-3 max-w-2xl text-muted">
+              More bonds in the same family. New to bonding? See the{" "}
+              <Link
+                href="/resources/types-of-surety-bonds"
+                className="font-medium text-azure-600 underline underline-offset-2 hover:text-azure-700"
+              >
+                types of surety bonds
+              </Link>{" "}
+              overview, or browse all{" "}
+              <Link
+                href="/commercial-bonds"
+                className="font-medium text-azure-600 underline underline-offset-2 hover:text-azure-700"
+              >
+                commercial bonds
+              </Link>
+              .
+            </p>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedBonds.map((r) => (
+                <li key={r.slug}>
+                  <Link
+                    href={`/commercial-bonds/${r.slug}`}
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-ink-200 bg-white p-4 transition-colors hover:border-azure-300 hover:bg-surface"
+                  >
+                    <span className="font-semibold text-navy-900 group-hover:text-azure-600">
+                      {r.shortName}
+                    </span>
+                    <ArrowRight
+                      className="size-4 shrink-0 text-ink-300 transition-transform group-hover:translate-x-0.5 group-hover:text-azure-500"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-16">

@@ -815,6 +815,23 @@ export function getCommercialBond(slug: string): CommercialBond | undefined {
   return commercialBonds.find((b) => b.slug === slug);
 }
 
+/** Default category for bonds that omit one. */
+const DEFAULT_CATEGORY: CommercialCategory = "Commercial & Specialty";
+
+/**
+ * Other bonds in the same category, for silo interlinking. Keeps the court and
+ * permit clusters tightly cross-linked and gives every bond page same-family
+ * links (topical relevance + crawl discovery). Capped at `n`.
+ */
+export function getRelatedCommercialBonds(slug: string, n = 5): CommercialBond[] {
+  const bond = getCommercialBond(slug);
+  if (!bond) return [];
+  const cat = bond.category ?? DEFAULT_CATEGORY;
+  return commercialBonds
+    .filter((b) => b.slug !== slug && (b.category ?? DEFAULT_CATEGORY) === cat)
+    .slice(0, n);
+}
+
 /** Illustration paths for a commercial bond (in /public/images/commercial). */
 export const commercialHero = (slug: string) => `/images/commercial/${slug}-hero.webp`;
 export const commercialThumb = (slug: string) => `/images/commercial/${slug}-thumb.webp`;
