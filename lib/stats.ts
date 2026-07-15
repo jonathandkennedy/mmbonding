@@ -45,6 +45,7 @@ export const sources = {
   dmv: { name: "CA DMV (Veh. Code §11710)", url: "https://www.dmv.ca.gov/portal/vehicle-industry-registration-procedures-manual-2/occupational-licensing/" },
   fmcsa: { name: "FMCSA", url: "https://www.fmcsa.dot.gov/registration/get-mc-number-authority-operate" },
   caSos: { name: "CA Secretary of State", url: "https://www.sos.ca.gov/notary/qualifications" },
+  caCourts: { name: "California Courts", url: "https://selfhelp.courts.ca.gov/probate/small-estate" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -231,6 +232,30 @@ export const stats = {
     value: "6 hrs",
     label: "State-approved education required to become a California notary",
     source: sources.caSos,
+  },
+  caSmallEstate: {
+    id: "caSmallEstate",
+    value: "$239,700",
+    label: "Estate value above which formal California probate, and often a bond, is generally required",
+    source: sources.caCourts,
+  },
+  cannabisRetailFee: {
+    id: "cannabisRetailFee",
+    value: "$1,000",
+    label: "DCC annual license fee for a cannabis retailer (fees vary widely by license type)",
+    source: sources.dcc,
+  },
+  processServerBond: {
+    id: "processServerBond",
+    value: "$2,000",
+    label: "California registered process server bond, filed with the county clerk",
+    source: sources.bpc,
+  },
+  processServerTerm: {
+    id: "processServerTerm",
+    value: "2 years",
+    label: "How long a California process server registration stays effective",
+    source: sources.bpc,
   },
 } as const satisfies Record<string, Stat>;
 

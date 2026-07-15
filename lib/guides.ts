@@ -479,6 +479,30 @@ export const guides: Guide[] = [
     category: "How-To",
     keyword: "how to become a notary in california",
   },
+  {
+    slug: "probate-bond-cost",
+    title: "California Probate Bond Cost",
+    excerpt:
+      "The court sets the bond amount; you pay a small premium on a sliding scale. What executors and administrators actually pay.",
+    category: "Bond Costs",
+    keyword: "probate bond cost",
+  },
+  {
+    slug: "how-to-get-a-cannabis-license-in-california",
+    title: "How to Get a California Cannabis License",
+    excerpt:
+      "The two-step path through local approval and the DCC, the license types and fees, and the $5,000 state cannabis bond.",
+    category: "How-To",
+    keyword: "california cannabis license",
+  },
+  {
+    slug: "how-to-become-a-process-server-in-california",
+    title: "How to Become a Process Server in California",
+    excerpt:
+      "Who must register, the residency rule, and how to file the $2,000 process server bond with your county clerk.",
+    category: "How-To",
+    keyword: "how to become a process server in california",
+  },
 ];
 
 export function guideHref(slug: string) {
