@@ -43,6 +43,9 @@ export const sources = {
   dir: { name: "CA DIR", url: "https://www.dir.ca.gov/public-works/contractor-registration.html" },
   bls: { name: "U.S. BLS", url: "https://www.bls.gov/bdm/bdmage.htm" },
   dmv: { name: "CA DMV (Veh. Code §11710)", url: "https://www.dmv.ca.gov/portal/vehicle-industry-registration-procedures-manual-2/occupational-licensing/" },
+  fmcsa: { name: "FMCSA", url: "https://www.fmcsa.dot.gov/registration/get-mc-number-authority-operate" },
+  caSos: { name: "CA Secretary of State", url: "https://www.sos.ca.gov/notary/qualifications" },
+  caCourts: { name: "California Courts", url: "https://selfhelp.courts.ca.gov/probate/small-estate" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -198,6 +201,60 @@ export const stats = {
     id: "disciplinaryBond",
     value: "$25k+",
     label: "Disciplinary bond to reinstate a license, set by the Registrar up to 10x the license bond",
+    source: sources.bpc,
+  },
+  freightBrokerBond: {
+    id: "freightBrokerBond",
+    value: "$75,000",
+    label: "Federal BMC-84 freight broker bond required for FMCSA operating authority",
+    source: sources.fmcsa,
+  },
+  notaryBond: {
+    id: "notaryBond",
+    value: "$15,000",
+    label: "California notary public surety bond, filed for a four-year commission",
+    source: sources.caSos,
+  },
+  notaryTerm: {
+    id: "notaryTerm",
+    value: "4 years",
+    label: "Length of a California notary public commission",
+    source: sources.caSos,
+  },
+  dealerCourse: {
+    id: "dealerCourse",
+    value: "6 hrs",
+    label: "DMV pre-licensing course required for a first-time California dealer license",
+    source: sources.dmv,
+  },
+  notaryCourse: {
+    id: "notaryCourse",
+    value: "6 hrs",
+    label: "State-approved education required to become a California notary",
+    source: sources.caSos,
+  },
+  caSmallEstate: {
+    id: "caSmallEstate",
+    value: "$239,700",
+    label: "Estate value above which formal California probate, and often a bond, is generally required",
+    source: sources.caCourts,
+  },
+  cannabisRetailFee: {
+    id: "cannabisRetailFee",
+    value: "$1,000",
+    label: "DCC annual license fee for a cannabis retailer (fees vary widely by license type)",
+    source: sources.dcc,
+  },
+  processServerBond: {
+    id: "processServerBond",
+    value: "$2,000",
+    label: "California registered process server bond, filed with the county clerk",
+    source: sources.bpc,
+  },
+  processServerTerm: {
+    id: "processServerTerm",
+    value: "2 years",
+    label: "How long a California process server registration stays effective",
     source: sources.bpc,
   },
 } as const satisfies Record<string, Stat>;

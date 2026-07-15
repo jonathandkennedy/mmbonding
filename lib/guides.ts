@@ -439,6 +439,70 @@ export const guides: Guide[] = [
     category: "For Homeowners",
     keyword: "licensed bonded and insured",
   },
+  {
+    slug: "auto-dealer-bond-cost",
+    title: "California Auto Dealer Bond Cost",
+    excerpt:
+      "What the $50,000 DMV dealer bond actually costs, what moves the premium, and the lower amount wholesale dealers pay.",
+    category: "Bond Costs",
+    keyword: "auto dealer bond cost",
+  },
+  {
+    slug: "how-to-get-a-california-auto-dealer-license",
+    title: "How to Get a California Auto Dealer License",
+    excerpt:
+      "The step-by-step DMV path: pre-licensing course, exam, location, application, and the $50,000 dealer bond that finishes it.",
+    category: "How-To",
+    keyword: "california auto dealer license",
+  },
+  {
+    slug: "freight-broker-bond-cost",
+    title: "Freight Broker Bond (BMC-84) Cost",
+    excerpt:
+      "What the $75,000 FMCSA freight broker bond costs, how credit sets the premium, and how BMC-84 compares to a BMC-85.",
+    category: "Bond Costs",
+    keyword: "freight broker bond cost",
+  },
+  {
+    slug: "notary-bond-cost",
+    title: "California Notary Bond Cost",
+    excerpt:
+      "Why the $15,000 California notary bond is one of the cheapest there is, and how it differs from E&O insurance.",
+    category: "Bond Costs",
+    keyword: "notary bond cost",
+  },
+  {
+    slug: "how-to-become-a-notary-in-california",
+    title: "How to Become a Notary in California",
+    excerpt:
+      "The full path: the six-hour course, the exam, Live Scan, and filing the $15,000 notary bond and oath.",
+    category: "How-To",
+    keyword: "how to become a notary in california",
+  },
+  {
+    slug: "probate-bond-cost",
+    title: "California Probate Bond Cost",
+    excerpt:
+      "The court sets the bond amount; you pay a small premium on a sliding scale. What executors and administrators actually pay.",
+    category: "Bond Costs",
+    keyword: "probate bond cost",
+  },
+  {
+    slug: "how-to-get-a-cannabis-license-in-california",
+    title: "How to Get a California Cannabis License",
+    excerpt:
+      "The two-step path through local approval and the DCC, the license types and fees, and the $5,000 state cannabis bond.",
+    category: "How-To",
+    keyword: "california cannabis license",
+  },
+  {
+    slug: "how-to-become-a-process-server-in-california",
+    title: "How to Become a Process Server in California",
+    excerpt:
+      "Who must register, the residency rule, and how to file the $2,000 process server bond with your county clerk.",
+    category: "How-To",
+    keyword: "how to become a process server in california",
+  },
 ];
 
 export function guideHref(slug: string) {
