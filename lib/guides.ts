@@ -511,6 +511,38 @@ export const guides: Guide[] = [
     category: "Underwriting",
     keyword: "how to choose a surety bond broker",
   },
+  {
+    slug: "how-much-does-a-surety-bond-cost",
+    title: "How Much Does a Surety Bond Cost?",
+    excerpt:
+      "Cost depends on the bond type and your credit, not just the amount. Typical premiums by bond size, from a $100 minimum up.",
+    category: "Bond Costs",
+    keyword: "how much does a surety bond cost",
+  },
+  {
+    slug: "performance-bond-cost",
+    title: "Performance Bond Cost",
+    excerpt:
+      "Performance and payment bonds are priced as a percentage of the contract, driven by credit, financials, and experience.",
+    category: "Bond Costs",
+    keyword: "performance bond cost",
+  },
+  {
+    slug: "appeal-bond-cost",
+    title: "Appeal Bond (Supersedeas) Cost",
+    excerpt:
+      "The court sets the amount at 1.5x the judgment via an admitted surety; the premium is a small percentage, often with collateral.",
+    category: "Bond Costs",
+    keyword: "appeal bond cost",
+  },
+  {
+    slug: "how-to-get-a-bonded-title-in-california",
+    title: "How to Get a Bonded Title in California",
+    excerpt:
+      "When California requires a motor vehicle ownership bond, how the amount is set to the vehicle value, and what it costs.",
+    category: "How-To",
+    keyword: "bonded title california",
+  },
 ];
 
 export function guideHref(slug: string) {

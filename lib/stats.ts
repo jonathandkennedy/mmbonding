@@ -46,6 +46,7 @@ export const sources = {
   fmcsa: { name: "FMCSA", url: "https://www.fmcsa.dot.gov/registration/get-mc-number-authority-operate" },
   caSos: { name: "CA Secretary of State", url: "https://www.sos.ca.gov/notary/qualifications" },
   caCourts: { name: "California Courts", url: "https://selfhelp.courts.ca.gov/probate/small-estate" },
+  ccp: { name: "CA Code of Civil Procedure (§917.1)", url: "https://codes.findlaw.com/ca/code-of-civil-procedure/ccp-sect-917-1/" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -256,6 +257,24 @@ export const stats = {
     value: "2 years",
     label: "How long a California process server registration stays effective",
     source: sources.bpc,
+  },
+  appealBondMultiple: {
+    id: "appealBondMultiple",
+    value: "1.5x",
+    label: "California appeal bond amount as a multiple of the judgment, via an admitted surety",
+    source: sources.ccp,
+  },
+  vehicleBondThreshold: {
+    id: "vehicleBondThreshold",
+    value: "$5,000",
+    label: "Vehicle value at or above which a California motor vehicle ownership (bonded title) bond is required",
+    source: sources.dmv,
+  },
+  vehicleBondTerm: {
+    id: "vehicleBondTerm",
+    value: "3 years",
+    label: "Term of a California motor vehicle ownership surety bond (non-renewable)",
+    source: sources.dmv,
   },
 } as const satisfies Record<string, Stat>;
 
