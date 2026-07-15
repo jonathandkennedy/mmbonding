@@ -439,6 +439,46 @@ export const guides: Guide[] = [
     category: "For Homeowners",
     keyword: "licensed bonded and insured",
   },
+  {
+    slug: "auto-dealer-bond-cost",
+    title: "California Auto Dealer Bond Cost",
+    excerpt:
+      "What the $50,000 DMV dealer bond actually costs, what moves the premium, and the lower amount wholesale dealers pay.",
+    category: "Bond Costs",
+    keyword: "auto dealer bond cost",
+  },
+  {
+    slug: "how-to-get-a-california-auto-dealer-license",
+    title: "How to Get a California Auto Dealer License",
+    excerpt:
+      "The step-by-step DMV path: pre-licensing course, exam, location, application, and the $50,000 dealer bond that finishes it.",
+    category: "How-To",
+    keyword: "california auto dealer license",
+  },
+  {
+    slug: "freight-broker-bond-cost",
+    title: "Freight Broker Bond (BMC-84) Cost",
+    excerpt:
+      "What the $75,000 FMCSA freight broker bond costs, how credit sets the premium, and how BMC-84 compares to a BMC-85.",
+    category: "Bond Costs",
+    keyword: "freight broker bond cost",
+  },
+  {
+    slug: "notary-bond-cost",
+    title: "California Notary Bond Cost",
+    excerpt:
+      "Why the $15,000 California notary bond is one of the cheapest there is, and how it differs from E&O insurance.",
+    category: "Bond Costs",
+    keyword: "notary bond cost",
+  },
+  {
+    slug: "how-to-become-a-notary-in-california",
+    title: "How to Become a Notary in California",
+    excerpt:
+      "The full path: the six-hour course, the exam, Live Scan, and filing the $15,000 notary bond and oath.",
+    category: "How-To",
+    keyword: "how to become a notary in california",
+  },
 ];
 
 export function guideHref(slug: string) {
