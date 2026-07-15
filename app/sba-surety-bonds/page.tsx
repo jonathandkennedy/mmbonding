@@ -31,8 +31,8 @@ const limitM = `$${sba.contractLimit / 1_000_000}M`;
 const federalM = `$${sba.federalContractLimit / 1_000_000}M`;
 
 export const metadata: Metadata = {
-  title: "SBA Surety Bonds for Small & Growing Contractors",
-  description: clampDescription(`The SBA Surety Bond Guarantee program backs bid, performance, and payment bonds up to ${usd(sba.contractLimit)} per contract for small and credit-challenged contractors. Hard-to-place specialists, CA DOI #${site.doiLicense}.`),
+  title: "SBA Surety Bond Program: Bonding for Small Contractors",
+  description: clampDescription(`The SBA bond program (Surety Bond Guarantee) backs bid, performance, and payment bonding up to ${usd(sba.contractLimit)} per contract for small, new, and credit-challenged contractors. Hard-to-place specialists, CA DOI #${site.doiLicense}.`),
   alternates: {
     canonical: "/sba-surety-bonds",
     languages: hreflangFor("/sba-surety-bonds", "/es/fianzas-sba"),
@@ -132,12 +132,13 @@ export default function Page() {
           <div className="mt-6 max-w-3xl">
             <Eyebrow tone="dark">SBA Surety Bond Guarantee Program</Eyebrow>
             <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
-              SBA surety bonds for small and{" "}
+              The SBA bond program: bonding for small and{" "}
               <span className="italic text-azure-400">growing contractors.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-navy-200">
-              Cannot qualify for standard bonding yet? The SBA backs sureties so they can bond small,
-              new, and credit-challenged contractors. It is built for exactly who we specialize in.
+              Cannot qualify for standard bonding yet? The SBA bonding program backs sureties so they
+              can bond small, new, and credit-challenged contractors. It is built for exactly who we
+              specialize in.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button href="/get-a-quote?path=hard-to-place" variant="primary" size="lg">
@@ -310,7 +311,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <RelatedGuides slugs={["sba-surety-bond-eligibility", "dbe-sbe-dvbe-bonding-california", "surety-bond-capacity", "funds-control-for-contractors", "how-to-get-bonded-with-a-new-business"]} />
+      <RelatedGuides slugs={["how-the-sba-surety-bond-program-works", "how-to-get-bonded-through-the-sba", "sba-bond-vs-standard-surety-bond", "sba-surety-bond-eligibility", "how-to-get-a-performance-bond", "how-to-get-bonded-with-a-new-business"]} />
 
       {/* CTA */}
       <section className="py-16">

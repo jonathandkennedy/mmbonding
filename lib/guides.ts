@@ -543,6 +543,30 @@ export const guides: Guide[] = [
     category: "How-To",
     keyword: "bonded title california",
   },
+  {
+    slug: "how-the-sba-surety-bond-program-works",
+    title: "How the SBA Surety Bond Program Works",
+    excerpt:
+      "How the federal guarantee lets sureties bond small, new, and credit-challenged contractors, and the limits it covers.",
+    category: "How-To",
+    keyword: "sba bond program",
+  },
+  {
+    slug: "how-to-get-bonded-through-the-sba",
+    title: "How to Get Bonded Through the SBA",
+    excerpt:
+      "The steps to get an SBA-backed bid, performance, or payment bond, and what your application needs.",
+    category: "How-To",
+    keyword: "how to get an sba bond",
+  },
+  {
+    slug: "sba-bond-vs-standard-surety-bond",
+    title: "SBA Bond vs. Standard Surety Bond",
+    excerpt:
+      "When the SBA program gets you bonded and standard surety cannot, and how the two differ on access and cost.",
+    category: "How-To",
+    keyword: "sba bond vs standard surety bond",
+  },
 ];
 
 export function guideHref(slug: string) {
