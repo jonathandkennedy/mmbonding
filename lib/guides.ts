@@ -503,6 +503,14 @@ export const guides: Guide[] = [
     category: "How-To",
     keyword: "how to become a process server in california",
   },
+  {
+    slug: "how-to-choose-a-surety-bond-broker",
+    title: "How to Choose a Surety Bond Broker",
+    excerpt:
+      "What to look for: one shop for every bond, same-day filing on small bonds, tough credit placed, and a licensed local expert.",
+    category: "Underwriting",
+    keyword: "how to choose a surety bond broker",
+  },
 ];
 
 export function guideHref(slug: string) {
