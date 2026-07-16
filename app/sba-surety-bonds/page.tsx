@@ -39,10 +39,6 @@ export const metadata: Metadata = {
   },
 };
 
-// TODO (Michael): confirm MM's participation status in the SBA Surety Bond
-// Guarantee program (SBA-authorized agent/surety relationship) so we can state
-// it explicitly. Copy below is framed as "we help you access the program."
-
 const whoFor = [
   { icon: Sprout, title: "New contractors", body: "No bonding track record yet? The SBA program is designed to get you started." },
   { icon: TrendingUp, title: "Growing firms", body: "Bidding bigger than your current line supports? The guarantee builds capacity." },
@@ -258,8 +254,8 @@ export default function Page() {
             </h2>
             <p className="mt-4 text-lg text-muted">
               The SBA program is one of the most powerful tools for getting a growing contractor
-              bonded, and navigating it is exactly the kind of work we do every day. We help you
-              assemble the application and place your bonds with participating surety markets.
+              bonded, and we work with it every day. We assemble your SBA guarantee application and
+              place your bid, performance, and payment bonds through participating surety markets.
             </p>
             <p className="mt-4 text-muted">
               We will be straight with you: the SBA backing expands access, but underwriting still
