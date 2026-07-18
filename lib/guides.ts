@@ -28,6 +28,14 @@ export type Guide = {
 
 export const guides: Guide[] = [
   {
+    slug: "california-contractor-bonding-cost-report-2026",
+    title: "California Contractor Bonding Cost Report (2026)",
+    excerpt:
+      "What California contractors actually pay to get bonded in 2026: license and contract bond premiums by credit tier and bond type.",
+    category: "Bond Costs",
+    keyword: "california contractor bonding cost",
+  },
+  {
     slug: "contractor-license-bond-cost",
     title: "How Much Does a Contractor License Bond Cost?",
     excerpt:
