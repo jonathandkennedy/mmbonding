@@ -28,6 +28,46 @@ export type Guide = {
 
 export const guides: Guide[] = [
   {
+    slug: "california-money-transmitter-bond-requirements",
+    title: "California Money Transmitter Bond Requirements",
+    excerpt:
+      "The DFPI money transmitter bond runs on a sliding scale from $250,000 to $7 million. How the amount is set and what it costs.",
+    category: "Licensing",
+    keyword: "california money transmitter bond",
+  },
+  {
+    slug: "california-health-studio-bond",
+    title: "California Health Studio Bond (Gym Bond)",
+    excerpt:
+      "Gyms and studios selling prepaid memberships must post a health studio bond, starting at $50,000. Who needs it and what it costs.",
+    category: "Licensing",
+    keyword: "california health studio bond",
+  },
+  {
+    slug: "california-tax-preparer-bond-ctec",
+    title: "California Tax Preparer Bond (CTEC Bond)",
+    excerpt:
+      "Every CRTP must carry a $5,000 CTEC surety bond and renew it each year. What the tax preparer bond is and what it costs.",
+    category: "Licensing",
+    keyword: "ctec tax preparer bond",
+  },
+  {
+    slug: "california-debt-collector-bond",
+    title: "California Debt Collector Bond (DFPI)",
+    excerpt:
+      "The Debt Collection Licensing Act requires a $25,000 surety bond filed with the DFPI. Who needs it and how to get bonded.",
+    category: "Licensing",
+    keyword: "california debt collector bond",
+  },
+  {
+    slug: "lease-guarantee-bond-vs-cash-deposit",
+    title: "Lease Guarantee Bond vs Cash Deposit",
+    excerpt:
+      "A lease guarantee bond can replace a large cash security deposit on a commercial lease, freeing your working capital.",
+    category: "Underwriting",
+    keyword: "lease guarantee bond",
+  },
+  {
     slug: "california-contractor-bonding-cost-report-2026",
     title: "California Contractor Bonding Cost Report (2026)",
     excerpt:
