@@ -54,7 +54,7 @@ export function SiteHeader() {
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
             {primaryNav.map((item) =>
-              item.children ? (
+              item.columns ? (
                 <BondsMenu key={item.label} />
               ) : (
                 <Link
@@ -108,7 +108,7 @@ export function SiteHeader() {
 }
 
 function BondsMenu() {
-  const bonds = primaryNav.find((i) => i.children)!;
+  const bonds = primaryNav.find((i) => i.columns)!;
   return (
     <div className="group relative">
       <button
@@ -119,19 +119,26 @@ function BondsMenu() {
         <ChevronDown className="size-4 text-ink-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
       </button>
       <div
-        className="invisible absolute left-1/2 top-full z-50 w-[26rem] -translate-x-1/2 pt-3 opacity-0 transition-[opacity,transform] duration-200 ease-out group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+        className="invisible absolute left-1/2 top-full z-50 w-[46rem] -translate-x-1/2 pt-3 opacity-0 transition-[opacity,transform] duration-200 ease-out group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
         style={{ transitionTimingFunction: "cubic-bezier(0.23,1,0.32,1)" }}
       >
-        <div className="overflow-hidden rounded-2xl border border-ink-200 bg-white p-2 shadow-lg">
-          {bonds.children!.map((c) => (
-            <Link
-              key={c.href}
-              href={c.href}
-              className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-azure-50"
-            >
-              <span className="block text-sm font-semibold text-navy-900">{c.label}</span>
-              {c.blurb && <span className="mt-0.5 block text-xs leading-snug text-muted">{c.blurb}</span>}
-            </Link>
+        <div className="grid grid-cols-2 gap-2 overflow-hidden rounded-2xl border border-ink-200 bg-white p-3 shadow-lg">
+          {bonds.columns!.map((col) => (
+            <div key={col.heading}>
+              <p className="px-3 pb-1 pt-2 font-display text-xs font-bold uppercase tracking-wider text-azure-700">
+                {col.heading}
+              </p>
+              {col.links.map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="block rounded-xl px-3 py-2 transition-colors hover:bg-azure-50"
+                >
+                  <span className="block text-sm font-semibold text-navy-900">{c.label}</span>
+                  {c.blurb && <span className="mt-0.5 block text-xs leading-snug text-muted">{c.blurb}</span>}
+                </Link>
+              ))}
+            </div>
           ))}
         </div>
       </div>
@@ -168,16 +175,23 @@ function MobileMenu({
               >
                 {item.label}
               </Link>
-              {item.children && (
+              {item.columns && (
                 <div className="ml-3 border-l border-ink-200 pl-3">
-                  {item.children.map((c) => (
-                    <Link
-                      key={c.href}
-                      href={c.href}
-                      className="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-ink-100 hover:text-navy-900"
-                    >
-                      {c.label}
-                    </Link>
+                  {item.columns.map((col) => (
+                    <div key={col.heading}>
+                      <p className="px-3 pb-0.5 pt-2.5 font-display text-xs font-bold uppercase tracking-wider text-azure-700">
+                        {col.heading}
+                      </p>
+                      {col.links.map((c) => (
+                        <Link
+                          key={c.href}
+                          href={c.href}
+                          className="block rounded-lg px-3 py-2 text-sm text-muted hover:bg-ink-100 hover:text-navy-900"
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                 </div>
               )}

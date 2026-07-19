@@ -55,6 +55,7 @@ export default function Page() {
       related={[
         { label: "Contractor License Bond", href: "/contractor-license-bond" },
         { label: "What it costs", href: "/resources/contractor-license-bond-cost" },
+        { label: "Fast & same-day bonds", href: "/fast-surety-bonds" },
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
     >

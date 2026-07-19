@@ -57,6 +57,7 @@ export default function Page() {
       faqs={faqs}
       related={[
         { label: "Why use a surety broker", href: "/why-use-a-surety-broker" },
+        { label: "Fast & same-day bonds", href: "/fast-surety-bonds" },
         { label: "Hard-to-Place Bonds", href: "/hard-to-place-surety-bonds" },
         { label: "Get a Quote", href: "/get-a-quote" },
       ]}
