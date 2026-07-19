@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
-import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/lib/jsonld";
 import { metros } from "@/lib/locations";
 import { site } from "@/lib/site";
 
@@ -21,10 +21,16 @@ export default function Page() {
   return (
     <>
       <JsonLd
-        schema={breadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Locations", url: "/surety-bonds" },
-        ])}
+        schema={[
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Locations", url: "/surety-bonds" },
+          ]),
+          itemListSchema(
+            metros.map((m) => ({ name: `Surety Bonds in ${m.name}`, url: `/surety-bonds/${m.slug}` })),
+            { name: "California metros served" },
+          ),
+        ]}
       />
       <section className="border-b border-ink-100 bg-surface">
         <Container size="wide" className="py-14 lg:py-16">

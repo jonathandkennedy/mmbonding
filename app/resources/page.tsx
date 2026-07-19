@@ -8,7 +8,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
 import { PreferredSource } from "@/components/preferred-source";
-import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/lib/jsonld";
 import { guides, guideHref, guideThumb, guideImageAlt, guideCategories } from "@/lib/guides";
 
 export const metadata: Metadata = {
@@ -22,10 +22,16 @@ export default function Page() {
   return (
     <>
       <JsonLd
-        schema={breadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Resources", url: "/resources" },
-        ])}
+        schema={[
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Resources", url: "/resources" },
+          ]),
+          itemListSchema(
+            guides.map((g) => ({ name: g.title, url: guideHref(g.slug) })),
+            { name: "California surety bond guides" },
+          ),
+        ]}
       />
       <section className="border-b border-ink-100 bg-surface">
         <Container size="wide" className="py-14 lg:py-16">

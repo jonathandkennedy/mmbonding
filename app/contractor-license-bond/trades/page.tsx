@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
-import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/lib/jsonld";
 import { trades } from "@/lib/trades";
 import { facts } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
@@ -21,11 +21,20 @@ export default function Page() {
   return (
     <>
       <JsonLd
-        schema={breadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Contractor License Bond", url: "/contractor-license-bond" },
-          { name: "By Trade", url: "/contractor-license-bond/trades" },
-        ])}
+        schema={[
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Contractor License Bond", url: "/contractor-license-bond" },
+            { name: "By Trade", url: "/contractor-license-bond/trades" },
+          ]),
+          itemListSchema(
+            trades.map((t) => ({
+              name: `${t.name} Contractor License Bond`,
+              url: `/contractor-license-bond/trades/${t.slug}`,
+            })),
+            { name: "Contractor license bonds by trade" },
+          ),
+        ]}
       />
 
       <section className="border-b border-ink-100 bg-surface">
