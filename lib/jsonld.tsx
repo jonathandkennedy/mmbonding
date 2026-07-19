@@ -169,6 +169,28 @@ export function breadcrumbSchema(crumbs: { name: string; url: string }[]) {
   };
 }
 
+/**
+ * ItemList for a hub/collection page that lists its members in order. Clarifies
+ * the collection to search engines. `url` values are site-relative paths.
+ */
+export function itemListSchema(
+  items: { name: string; url: string }[],
+  opts?: { name?: string },
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    ...(opts?.name ? { name: opts.name } : {}),
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: `${site.url}${it.url}`,
+    })),
+  };
+}
+
 /** Render one or more schema objects as a single JSON-LD script tag. */
 export function JsonLd({ schema }: { schema: object | object[] }) {
   const json = JSON.stringify(Array.isArray(schema) ? schema : [schema]);

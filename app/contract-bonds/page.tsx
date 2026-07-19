@@ -11,7 +11,7 @@ import { Faq } from "@/components/faq";
 import { ReviewedBy } from "@/components/reviewed-by";
 import { TldrCard } from "@/components/tldr-card";
 import { RelatedGuides } from "@/components/related-guides";
-import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/jsonld";
+import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema, itemListSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { bonds, contractBondKeys } from "@/lib/regulatory";
 import { hreflangFor } from "@/lib/i18n";
@@ -67,6 +67,10 @@ export default function Page() {
           }),
           faqSchema(faqs),
           breadcrumbSchema(crumbs),
+          itemListSchema(
+            children.map((b) => ({ name: b.name, url: b.href })),
+            { name: "Contract surety bonds" },
+          ),
         ]}
       />
 

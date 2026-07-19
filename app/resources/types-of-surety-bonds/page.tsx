@@ -125,7 +125,10 @@ export default function Page() {
           <Link href="/contract-bonds/performance-bond">performance bond</Link> guarantees you finish
           the work, and a <Link href="/contract-bonds/payment-bond">payment bond</Link> guarantees
           your subcontractors and suppliers get paid. Public works almost always require them. See
-          the <Link href="/contract-bonds">contract bonds</Link> hub for how they fit together.
+          the <Link href="/contract-bonds">contract bonds</Link> hub for how they fit together. On
+          union work, a contractor may also post a{" "}
+          <Link href="/commercial-bonds/wage-welfare-bond">wage and welfare bond</Link> guaranteeing
+          the fringe-benefit contributions owed to the trust funds.
         </p>
 
         <h2>2. License and permit bonds</h2>
@@ -137,15 +140,33 @@ export default function Page() {
           <Link href="/commercial-bonds">commercial and permit bonds</Link>. They are the most common
           bonds because so many trades require one to operate.
         </p>
+        <p>
+          The family reaches well beyond the trades. Whole professions post their own license bond,
+          from a <Link href="/commercial-bonds/tax-preparer-bond">tax preparer bond</Link> and{" "}
+          <Link href="/commercial-bonds/immigration-consultant-bond">immigration consultant bond</Link>{" "}
+          to a <Link href="/commercial-bonds/talent-agency-bond">talent agency bond</Link>,{" "}
+          <Link href="/commercial-bonds/debt-collector-bond">debt collector bond</Link>, and{" "}
+          <Link href="/commercial-bonds/farm-labor-contractor-bond">farm labor contractor bond</Link>.
+          Consumer-facing and financial businesses have theirs too: the{" "}
+          <Link href="/commercial-bonds/money-transmitter-bond">money transmitter bond</Link>,{" "}
+          <Link href="/commercial-bonds/seller-of-travel-bond">seller of travel bond</Link>, and{" "}
+          <Link href="/commercial-bonds/lease-guarantee-bond">lease guarantee bond</Link>, plus the{" "}
+          <Link href="/commercial-bonds/health-studio-bond">health studio bond</Link>,{" "}
+          <Link href="/commercial-bonds/ticket-seller-bond">ticket seller bond</Link>, and{" "}
+          <Link href="/commercial-bonds/telephonic-seller-bond">telephonic seller bond</Link> that
+          protect the customers who pay them in advance.
+        </p>
 
         <h2>3. Court and probate bonds</h2>
         <p>
           Court bonds back a duty inside the legal system. Judicial bonds like an{" "}
           <Link href="/commercial-bonds/appeal-bond">appeal bond</Link> come up in litigation, while
           probate and fiduciary bonds like a{" "}
-          <Link href="/commercial-bonds/probate-bond">probate bond</Link> or{" "}
-          <Link href="/commercial-bonds/guardianship-bond">guardianship bond</Link> guarantee that an
-          executor, administrator, or guardian handles an estate or a person&apos;s affairs honestly.
+          <Link href="/commercial-bonds/probate-bond">probate bond</Link>,{" "}
+          <Link href="/commercial-bonds/guardianship-bond">guardianship bond</Link>, or{" "}
+          <Link href="/commercial-bonds/conservatorship-bond">conservatorship bond</Link> guarantee
+          that an executor, administrator, guardian, or conservator handles an estate or a
+          person&apos;s affairs honestly.
         </p>
 
         <h2>4. Fidelity bonds</h2>
@@ -154,8 +175,11 @@ export default function Page() {
           employee. A <Link href="/commercial-bonds/fidelity-bond">fidelity (employee dishonesty)
           bond</Link> covers general staff, and an{" "}
           <Link href="/commercial-bonds/erisa-bond">ERISA bond</Link> is the federally required
-          version protecting a retirement plan. Strictly, fidelity bonds are insurance-like coverage,
-          but they are placed through the same surety markets.
+          version protecting a retirement plan. Its client-facing mirror, the{" "}
+          <Link href="/commercial-bonds/business-service-bond">business service (janitorial) bond</Link>
+          , protects your customers instead, covering them if one of your employees steals on their
+          property. Strictly, fidelity bonds are insurance-like coverage, but they are placed through
+          the same surety markets.
         </p>
 
         <h2>Which one do you need?</h2>

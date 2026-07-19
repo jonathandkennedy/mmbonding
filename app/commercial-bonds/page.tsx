@@ -8,7 +8,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/reveal";
 import { TldrCard } from "@/components/tldr-card";
 import { RelatedGuides } from "@/components/related-guides";
-import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/lib/jsonld";
 import {
   commercialBonds,
   commercialCategories,
@@ -28,10 +28,16 @@ export default function Page() {
   return (
     <>
       <JsonLd
-        schema={breadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Commercial Bonds", url: "/commercial-bonds" },
-        ])}
+        schema={[
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Commercial Bonds", url: "/commercial-bonds" },
+          ]),
+          itemListSchema(
+            commercialBonds.map((b) => ({ name: b.name, url: `/commercial-bonds/${b.slug}` })),
+            { name: "Commercial and specialty surety bonds" },
+          ),
+        ]}
       />
 
       <section className="border-b border-ink-100 bg-surface">

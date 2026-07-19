@@ -47,6 +47,9 @@ export const sources = {
   caSos: { name: "CA Secretary of State", url: "https://www.sos.ca.gov/notary/qualifications" },
   caCourts: { name: "California Courts", url: "https://selfhelp.courts.ca.gov/probate/small-estate" },
   ccp: { name: "CA Code of Civil Procedure (§917.1)", url: "https://codes.findlaw.com/ca/code-of-civil-procedure/ccp-sect-917-1/" },
+  dfpi: { name: "CA DFPI", url: "https://dfpi.ca.gov/" },
+  ctec: { name: "CTEC", url: "https://www.ctec.org/" },
+  caCiv: { name: "CA Civil Code §1812.80 et seq.", url: "https://leginfo.legislature.ca.gov/faces/codesTOCSelected.xhtml?tocCode=CIV" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -275,6 +278,30 @@ export const stats = {
     value: "3 years",
     label: "Term of a California motor vehicle ownership surety bond (non-renewable)",
     source: sources.dmv,
+  },
+  moneyTransmitterBond: {
+    id: "moneyTransmitterBond",
+    value: "$250K-$7M",
+    label: "California money transmitter bond, a DFPI sliding scale on average daily outstanding obligations",
+    source: sources.dfpi,
+  },
+  debtCollectorBond: {
+    id: "debtCollectorBond",
+    value: "$25,000",
+    label: "California debt collector bond under the Debt Collection Licensing Act (DFPI)",
+    source: sources.dfpi,
+  },
+  healthStudioBond: {
+    id: "healthStudioBond",
+    value: "$50,000",
+    label: "Minimum California health studio bond for a studio's first year selling prepaid memberships",
+    source: sources.caCiv,
+  },
+  ctecBond: {
+    id: "ctecBond",
+    value: "$5,000",
+    label: "California CTEC registered tax preparer bond, required each year",
+    source: sources.ctec,
   },
 } as const satisfies Record<string, Stat>;
 

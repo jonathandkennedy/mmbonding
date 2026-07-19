@@ -57,10 +57,15 @@ export const site = {
   ] as string[],
 } as const;
 
+export type NavLink = { label: string; href: string; blurb?: string };
+export type NavColumn = { heading: string; links: NavLink[] };
 export type NavItem = {
   label: string;
   href: string;
-  children?: { label: string; href: string; blurb?: string }[];
+  /** Simple single-column dropdown. */
+  children?: NavLink[];
+  /** Grouped, multi-column mega-menu. Takes precedence over `children`. */
+  columns?: NavColumn[];
 };
 
 /** Primary navigation — kept to a single row at desktop (≤ 5 groups). */
@@ -68,41 +73,81 @@ export const primaryNav: NavItem[] = [
   {
     label: "Bonds",
     href: "/contractor-license-bond",
-    children: [
+    columns: [
       {
-        label: "Contractor License Bond",
-        href: "/contractor-license-bond",
-        blurb: "The $25,000 CSLB bond every California contractor needs.",
+        heading: "Contractor bonds",
+        links: [
+          {
+            label: "Contractor License Bond",
+            href: "/contractor-license-bond",
+            blurb: "The $25,000 CSLB bond every California contractor needs.",
+          },
+          {
+            label: "Contract Bonds",
+            href: "/contract-bonds",
+            blurb: "Bid, performance & payment bonds for public and private work.",
+          },
+          {
+            label: "Bond of Qualifying Individual",
+            href: "/bond-of-qualifying-individual",
+            blurb: "The $25,000 BQI for RME / minority-owner qualifiers.",
+          },
+          {
+            label: "LLC Employee/Worker Bond",
+            href: "/llc-employee-worker-bond",
+            blurb: "The $100,000 bond required of LLC contractors.",
+          },
+          {
+            label: "Disciplinary Bond",
+            href: "/disciplinary-bond",
+            blurb: "Reinstate a license after a CSLB disciplinary action.",
+          },
+          {
+            label: "Bonds by Trade",
+            href: "/contractor-license-bond/trades",
+            blurb: "License bonds by C-trade: electrical, plumbing, roofing & more.",
+          },
+        ],
       },
       {
-        label: "Contract Bonds",
-        href: "/contract-bonds",
-        blurb: "Bid, performance & payment bonds for public and private work.",
-      },
-      {
-        label: "SBA Surety Bonds",
-        href: "/sba-surety-bonds",
-        blurb: "Get bonded through the SBA program when standard markets say no.",
-      },
-      {
-        label: "Bond of Qualifying Individual",
-        href: "/bond-of-qualifying-individual",
-        blurb: "The $25,000 BQI for RME / minority-owner qualifiers.",
-      },
-      {
-        label: "LLC Employee/Worker Bond",
-        href: "/llc-employee-worker-bond",
-        blurb: "The $100,000 bond required of LLC contractors.",
-      },
-      {
-        label: "Disciplinary Bond",
-        href: "/disciplinary-bond",
-        blurb: "Reinstate a license after a CSLB disciplinary action.",
-      },
-      {
-        label: "Commercial & Specialty Bonds",
-        href: "/commercial-bonds",
-        blurb: "Notary, auto dealer, immigration consultant, and more.",
+        heading: "SBA, fast & specialty",
+        links: [
+          {
+            label: "SBA Surety Bonds",
+            href: "/sba-surety-bonds",
+            blurb: "Get bonded through the SBA program when standard markets say no.",
+          },
+          {
+            label: "Fast & Same-Day Bonds",
+            href: "/fast-surety-bonds",
+            blurb: "Need it today? Same-day issuance on eligible bonds.",
+          },
+          {
+            label: "Commercial & Specialty Bonds",
+            href: "/commercial-bonds",
+            blurb: "Notary, auto dealer, court, permit, and dozens more.",
+          },
+          {
+            label: "Notary Bond",
+            href: "/commercial-bonds/notary-bond",
+            blurb: "The $15,000 California notary public bond.",
+          },
+          {
+            label: "Auto Dealer Bond",
+            href: "/commercial-bonds/auto-dealer-bond",
+            blurb: "The $50,000 DMV motor vehicle dealer bond.",
+          },
+          {
+            label: "Freight Broker Bond",
+            href: "/commercial-bonds/freight-broker-bond",
+            blurb: "The $75,000 BMC-84 for FMCSA operating authority.",
+          },
+          {
+            label: "Probate Bond",
+            href: "/commercial-bonds/probate-bond",
+            blurb: "Executor, administrator & fiduciary bonds for the court.",
+          },
+        ],
       },
     ],
   },
