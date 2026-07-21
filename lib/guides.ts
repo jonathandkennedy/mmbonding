@@ -28,6 +28,14 @@ export type Guide = {
 
 export const guides: Guide[] = [
   {
+    slug: "how-to-verify-your-surety-bond-is-real",
+    title: "How to Verify Your Surety Bond Is Real and Filed",
+    excerpt:
+      "Premium theft is rare but real. How to confirm your bond exists, is filed with the obligee, and that your agent is licensed.",
+    category: "How-To",
+    keyword: "how to verify a surety bond is real",
+  },
+  {
     slug: "california-money-transmitter-bond-requirements",
     title: "California Money Transmitter Bond Requirements",
     excerpt:
