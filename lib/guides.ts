@@ -28,6 +28,22 @@ export type Guide = {
 
 export const guides: Guide[] = [
   {
+    slug: "surety-bond-premium-overcharges",
+    title: "Are You Overpaying for Your Surety Bond?",
+    excerpt:
+      "The carrier sets the premium, not a hidden markup. How surety bond pricing works and how to tell if you are being overcharged.",
+    category: "Bond Costs",
+    keyword: "surety bond overcharge",
+  },
+  {
+    slug: "how-to-verify-your-surety-bond-is-real",
+    title: "How to Verify Your Surety Bond Is Real and Filed",
+    excerpt:
+      "Premium theft is rare but real. How to confirm your bond exists, is filed with the obligee, and that your agent is licensed.",
+    category: "How-To",
+    keyword: "how to verify a surety bond is real",
+  },
+  {
     slug: "california-money-transmitter-bond-requirements",
     title: "California Money Transmitter Bond Requirements",
     excerpt:
