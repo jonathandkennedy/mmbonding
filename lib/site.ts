@@ -46,6 +46,7 @@ export const site = {
   areaServed: "California",
   sameAs: [
     "https://www.linkedin.com/in/mike-melshenker-64869722/",
+    "https://www.yelp.com/biz/mm-bonding-westlake-village",
     // TODO: add GBP profile URL once live
   ] as string[],
   /** Confirmed direct surety appointments. Named as a real trust signal. */
