@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin, Star } from "lucide-react";
 import { Wordmark } from "./wordmark";
 import { Container } from "./ui/container";
 import { PreferredSource } from "./preferred-source";
@@ -87,6 +87,15 @@ export function SiteFooter() {
                 </span>
               </li>
             </ul>
+            <a
+              href={site.yelp}
+              target="_blank"
+              rel="noopener"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              <Star className="size-4 text-azure-400" aria-hidden="true" />
+              Find us on Yelp
+            </a>
           </div>
 
           {footerCols.map((col) => (

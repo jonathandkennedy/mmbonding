@@ -44,6 +44,8 @@ export const site = {
   geo: { latitude: 34.1466, longitude: -118.8055 },
   founded: "2022",
   areaServed: "California",
+  /** Public Yelp listing (also included in sameAs below). */
+  yelp: "https://www.yelp.com/biz/mm-bonding-westlake-village",
   sameAs: [
     "https://www.linkedin.com/in/mike-melshenker-64869722/",
     "https://www.yelp.com/biz/mm-bonding-westlake-village",
