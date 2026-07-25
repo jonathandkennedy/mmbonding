@@ -44,6 +44,14 @@ export const guides: Guide[] = [
     keyword: "how to verify a surety bond is real",
   },
   {
+    slug: "california-unlicensed-contractor-report",
+    title: "The Real Cost of Unlicensed Contractors in California",
+    excerpt:
+      "Unlicensed contractors carry no license, no bond, and no insurance. A data report on the scale of the problem and how to protect yourself.",
+    category: "For Homeowners",
+    keyword: "unlicensed contractor california",
+  },
+  {
     slug: "california-money-transmitter-bond-requirements",
     title: "California Money Transmitter Bond Requirements",
     excerpt:
