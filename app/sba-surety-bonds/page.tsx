@@ -31,7 +31,7 @@ const limitM = `$${sba.contractLimit / 1_000_000}M`;
 const federalM = `$${sba.federalContractLimit / 1_000_000}M`;
 
 export const metadata: Metadata = {
-  title: "SBA Surety Bond Program: Bonding for Small Contractors",
+  title: "SBA Surety Bond Program for Small Contractors",
   description: clampDescription(`The SBA bond program (Surety Bond Guarantee) backs bid, performance, and payment bonding up to ${usd(sba.contractLimit)} per contract for small, new, and credit-challenged contractors. Hard-to-place specialists, CA DOI #${site.doiLicense}.`),
   alternates: {
     canonical: "/sba-surety-bonds",

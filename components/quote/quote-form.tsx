@@ -97,9 +97,9 @@ export function QuoteForm({
 
         {/* Shared contact */}
         <div className="border-t border-ink-100 pt-5">
-          <h3 className="font-display text-base font-bold tracking-tight text-navy-900">
+          <h2 className="font-display text-base font-bold tracking-tight text-navy-900">
             Where do we send your quote?
-          </h3>
+          </h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             <Field label="Full name" htmlFor="name">
               <input id="name" name="name" required autoComplete="name" className={inputCls} placeholder="Your name" />

@@ -14,7 +14,7 @@ import { facts, REGULATORY_REVIEWED } from "@/lib/regulatory";
 import { usd, clampDescription } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Bonded vs. Insured: What Licensed, Bonded & Insured Means",
+  title: "Bonded vs. Insured: What the Terms Really Mean",
   description:
     clampDescription("The difference between a surety bond and insurance for California contractors, and what 'licensed, bonded, and insured' actually means. Reviewed by a licensed broker, CA DOI #6009105."),
   alternates: { canonical: "/bonding-vs-insurance" },
