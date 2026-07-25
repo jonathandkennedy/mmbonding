@@ -50,6 +50,7 @@ export const sources = {
   dfpi: { name: "CA DFPI", url: "https://dfpi.ca.gov/" },
   ctec: { name: "CTEC", url: "https://www.ctec.org/" },
   caCiv: { name: "CA Civil Code §1812.80 et seq.", url: "https://leginfo.legislature.ca.gov/faces/codesTOCSelected.xhtml?tocCode=CIV" },
+  edd: { name: "CA EDD", url: "https://edd.ca.gov/en/Payroll_Taxes/Underground_Economy_Cost" },
 } as const satisfies Record<string, Source>;
 
 /** Keyed registry so pages reference a stat by id and never retype a number. */
@@ -302,6 +303,18 @@ export const stats = {
     value: "$5,000",
     label: "California CTEC registered tax preparer bond, required each year",
     source: sources.ctec,
+  },
+  undergroundEconomy: {
+    id: "undergroundEconomy",
+    value: "$60B-$140B",
+    label: "Estimated annual California underground economy, which unlicensed contracting feeds",
+    source: sources.edd,
+  },
+  unlicensedThreshold: {
+    id: "unlicensedThreshold",
+    value: "$1,000",
+    label: "Combined labor and materials value at or above which California work requires a licensed contractor",
+    source: sources.cslb,
   },
 } as const satisfies Record<string, Stat>;
 
