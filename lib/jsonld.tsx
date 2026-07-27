@@ -57,6 +57,13 @@ export function organizationSchema() {
     name: site.name,
     alternateName: site.shortName,
     url: site.url,
+    logo: {
+      "@type": "ImageObject",
+      url: `${site.url}/logo.png`,
+      width: 512,
+      height: 512,
+    },
+    image: `${site.url}/logo.png`,
     description: site.description,
     slogan: site.tagline,
     foundingDate: site.founded,
