@@ -105,6 +105,11 @@ export const metros: Metro[] = [
     geo: { lat: 38.5816, lng: -121.4944 },
     localNeeds: "Sacramento's public-works focus makes bid, performance, and payment bonds the everyday need on top of the $25,000 license bond, since state and local agency projects require them both to bid and to build.",
     localFaq: { q: "What bonds do I need to bid state or City of Sacramento public projects?", a: "Public agency projects in the Capital Region almost always require a bid bond with your proposal, then performance and payment bonds, each typically 100% of the contract value, once you are awarded. Your $25,000 CSLB license bond is separate and stays in place year-round. We handle the license bond and set up a bid and final bond line so you can pursue Sacramento public work with confidence." },
+    bidPortals: [
+      { agency: "City of Sacramento", label: "Bid opportunities", url: "https://www.cityofsacramento.gov/finance/procurement/bid-opportunities" },
+      { agency: "Sacramento County", label: "Selling to the county", url: "https://dgs.saccounty.gov/us/en/contract-purchasing-services/selling-to-the-county.html" },
+      { agency: "State of California", label: "Cal eProcure", url: "https://caleprocure.ca.gov/" },
+    ],
   },
   {
     slug: "fresno",
@@ -182,6 +187,11 @@ export const metros: Metro[] = [
     geo: { lat: 33.7701, lng: -118.1937 },
     localNeeds: "Long Beach and South Bay contractors need the $25,000 license bond for dense urban residential and tenant-improvement work, plus bid, performance, and payment bonds for port, industrial, and public projects.",
     localFaq: { q: "What bonding do Port of Long Beach or public harbor projects require?", a: "Port and public agency work in Long Beach almost always requires a bid bond to propose and performance and payment bonds, usually 100% of the contract, once awarded. Your $25,000 CSLB license bond is a separate, year-round requirement. We handle the license bond and arrange the project bonds for general engineering and specialty contractors working the harbor and industrial South Bay." },
+    bidPortals: [
+      { agency: "City of Long Beach", label: "Purchasing Division", url: "https://longbeach.gov/finance/business-info/purchasing-division/" },
+      { agency: "Port of Long Beach", label: "Business opportunities", url: "https://polb.com/business/business-opportunities/" },
+      { agency: "Long Beach Utilities", label: "Purchasing", url: "https://www.lbutilities.org/about-us/purchasing" },
+    ],
   },
   {
     slug: "anaheim",
@@ -237,6 +247,11 @@ export const metros: Metro[] = [
     geo: { lat: 33.9533, lng: -117.3962 },
     localNeeds: "Riverside contractors need the $25,000 license bond for the county seat's steady residential and commercial work, plus bid, performance, and payment bonds for UC Riverside, county, and public-infrastructure projects.",
     localFaq: { q: "Does work at UC Riverside or for the county require special bonding?", a: "University and county projects in Riverside are public work, which almost always requires a bid bond to propose and performance and payment bonds once awarded, typically at 100% of the contract. Your $25,000 CSLB license bond stays in place separately. We set up the license bond and a bid and final bond line so you can pursue UCR and Riverside County jobs." },
+    bidPortals: [
+      { agency: "City of Riverside", label: "Bidding opportunities", url: "https://www.riversideca.gov/finance/bids.asp" },
+      { agency: "City of Riverside", label: "Purchasing Division", url: "https://www.riversideca.gov/finance/purchase.asp" },
+      { agency: "Riverside County", label: "Bidding opportunities", url: "https://purchasing.co.riverside.ca.us/bidding-opportunities" },
+    ],
   },
   {
     slug: "san-bernardino",
@@ -248,6 +263,11 @@ export const metros: Metro[] = [
     geo: { lat: 34.1083, lng: -117.2898 },
     localNeeds: "San Bernardino contractors need the $25,000 license bond for the county seat's residential and commercial work, plus bid, performance, and payment bonds for the logistics, medical-campus, and public-infrastructure projects across the county.",
     localFaq: { q: "What bonds do warehouse and logistics projects around San Bernardino require?", a: "The contractor carries the $25,000 CSLB license bond, while the big distribution, rail, and airport-cargo builds are private or public jobs that usually require performance and payment bonds sized to the contract. We arrange that capacity for general engineering and site-work contractors across San Bernardino County and grow the limits as completed projects accumulate." },
+    bidPortals: [
+      { agency: "City of San Bernardino", label: "Request for bids", url: "https://www.sanbernardino.gov/843/Request-for-Bids" },
+      { agency: "San Bernardino County", label: "Purchasing", url: "https://wp.sbcounty.gov/purchasing/" },
+      { agency: "San Bernardino County", label: "Projects out for bid", url: "https://pfm.sbcounty.gov/projects-out-for-bid/" },
+    ],
   },
   {
     slug: "corona",
