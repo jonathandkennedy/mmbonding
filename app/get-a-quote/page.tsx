@@ -96,7 +96,6 @@ export default async function Page({
                   <p className="text-sm text-muted">Prefer to talk it through?</p>
                   <a
                     href={site.phone.href}
-                    data-callrail="phone"
                     className="mt-2 inline-flex items-center gap-2 font-display text-lg font-bold tracking-tight text-navy-900 hover:text-azure-600"
                   >
                     <Phone className="size-5 text-azure-500" aria-hidden="true" />

@@ -70,7 +70,7 @@ export function SiteFooter() {
             <ul className="mt-6 space-y-2.5 text-sm">
               <li className="flex items-center gap-2.5">
                 <Phone className="size-4 shrink-0 text-azure-400" aria-hidden="true" />
-                <a href={site.phone.href} data-callrail="phone" className="font-semibold text-white hover:text-azure-300">
+                <a href={site.phone.href} className="font-semibold text-white hover:text-azure-300">
                   {site.phone.display}
                 </a>
               </li>

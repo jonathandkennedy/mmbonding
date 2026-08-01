@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Phone, ChevronRight, MapPin } from "lucide-react";
+import { ArrowRight, Phone, ChevronRight, MapPin, Landmark, ExternalLink } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -116,7 +116,7 @@ export default async function Page({ params }: { params: Promise<{ metro: string
                 Get a Quote
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Button>
-              <Button href={site.phone.href} variant="outline" size="lg" data-callrail="phone">
+              <Button href={site.phone.href} variant="outline" size="lg">
                 <Phone className="size-4 text-azure-500" aria-hidden="true" />
                 <span className="tabular">{site.phone.display}</span>
               </Button>
@@ -199,6 +199,51 @@ export default async function Page({ params }: { params: Promise<{ metro: string
         </Container>
       </section>
 
+      {/* Where to find local public bids */}
+      {m.bidPortals && m.bidPortals.length > 0 && (
+        <section className="border-b border-ink-100 py-16">
+          <Container size="wide">
+            <Reveal className="max-w-2xl">
+              <div className="flex items-center gap-2.5">
+                <Landmark className="size-5 text-azure-500" aria-hidden="true" />
+                <h2 className="font-display text-2xl font-extrabold tracking-tight text-navy-900">
+                  Where {m.name} contractors find public bids
+                </h2>
+              </div>
+              <p className="mt-3 text-muted">
+                Local agencies post their own solicitations. If you find a job worth chasing, we can
+                have your bid bond ready before the deadline and the performance and payment bonds
+                lined up for award.
+              </p>
+            </Reveal>
+            <Reveal className="mt-8 grid gap-3 sm:grid-cols-2">
+              {m.bidPortals.map((p) => (
+                <a
+                  key={p.url}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="flex items-start justify-between gap-3 rounded-2xl border border-ink-200 bg-white p-5 transition-colors hover:border-azure-300 hover:bg-azure-50/40"
+                >
+                  <span>
+                    <span className="block font-semibold text-navy-900">{p.agency}</span>
+                    <span className="mt-0.5 block text-sm text-muted">{p.label}</span>
+                  </span>
+                  <ExternalLink className="mt-0.5 size-4 shrink-0 text-azure-500" aria-hidden="true" />
+                </a>
+              ))}
+            </Reveal>
+            <Reveal className="mt-5">
+              <p className="max-w-2xl text-xs leading-relaxed text-muted">
+                These links go to official agency websites and open in a new tab. {site.shortName} is
+                not affiliated with these agencies, and each one sets its own posting schedule,
+                registration process, and bonding requirements.
+              </p>
+            </Reveal>
+          </Container>
+        </section>
+      )}
+
       {/* FAQ */}
       <section className="py-16">
         <Container size="wide" className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
@@ -228,7 +273,7 @@ export default async function Page({ params }: { params: Promise<{ metro: string
               <Button href="/get-a-quote" variant="primary" size="lg">
                 Get a Quote
               </Button>
-              <Button href={site.phone.href} variant="white" size="lg" data-callrail="phone">
+              <Button href={site.phone.href} variant="white" size="lg">
                 <Phone className="size-4 text-azure-500" aria-hidden="true" />
                 Call now
               </Button>

@@ -107,7 +107,7 @@ function Hero() {
               Get a Quote
               <ArrowRight className="size-4" aria-hidden="true" />
             </Button>
-            <Button href={site.phone.href} variant="outline" size="lg" data-callrail="phone">
+            <Button href={site.phone.href} variant="outline" size="lg">
               <Phone className="size-4 text-azure-500" aria-hidden="true" />
               <span className="tabular">{site.phone.display}</span>
             </Button>
@@ -574,7 +574,7 @@ function FinalCta() {
               Get a Quote
               <ArrowRight className="size-4" aria-hidden="true" />
             </Button>
-            <Button href={site.phone.href} variant="white" size="lg" data-callrail="phone">
+            <Button href={site.phone.href} variant="white" size="lg">
               <Phone className="size-4 text-azure-500" aria-hidden="true" />
               <span className="tabular">{site.phone.display}</span>
             </Button>

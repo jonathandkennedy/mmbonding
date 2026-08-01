@@ -132,7 +132,6 @@ export function GuidePage({
                 </Button>
                 <a
                   href={site.phone.href}
-                  data-callrail="phone"
                   className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/15 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                 >
                   <Phone className="size-4 text-azure-300" aria-hidden="true" />

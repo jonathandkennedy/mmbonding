@@ -55,7 +55,7 @@ npm run start    # serve the production build
 These are marked `TODO` in `lib/site.ts` and noted on-page where relevant:
 
 - Confirmed **business address + hours** (must match the Google Business Profile exactly)
-- The **published CallRail number** (the header/footer phone is a placeholder)
+- The **published CallScaler number** (the header/footer phone is a placeholder)
 - Founding year / years in business, for the About page
 - The **carriers/markets** MM is appointed with (for any "A-rated carrier" claim + carrier pages)
 - A **headshot/bio** for Michael (the About page uses an initials avatar placeholder)
@@ -77,7 +77,7 @@ The submit handler (`lib/forms.ts`) captures UTM params + `gclid` for attributio
 hard-to-place leads with a priority subject, routes insurance and license-school referrals with
 their own subjects, and includes a honeypot. It's deliberately swappable:
 when the richer **Supabase** pipeline lands (structured `leads` / `insurance_referrals` tables, RLS,
-CallRail integration, Slack/email webhooks, renewal reminders — plan §7), point `submitLead()` at a
+CallScaler integration, Slack/email webhooks, renewal reminders — plan §7), point `submitLead()` at a
 server action and the form components don't change.
 
 ## Search indexing (IndexNow)

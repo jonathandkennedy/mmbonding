@@ -141,7 +141,7 @@ const sections: LegalSection[] = [
           </li>
           <li>
             Phone:{" "}
-            <a href={site.phone.href} data-callrail="phone">
+            <a href={site.phone.href}>
               {site.phone.display}
             </a>
           </li>

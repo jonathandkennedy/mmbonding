@@ -10,8 +10,8 @@ _Last updated: July 2026._
 These appear in the footer, the contact page, and the structured data Google
 reads. Inconsistency hurts local SEO.
 
-- [x] **Published phone number** — confirmed: **(805) 752-8600**. (Swap for a
-  CallRail tracking number later if you want call attribution.)
+- [x] **Published phone number** — confirmed: **(805) 752-8600**. (CallScaler
+  swaps in a dynamic tracking number client-side for call attribution.)
 - [x] **Email** — confirmed: **letstalk@mmbonding.com**. Live on the contact page
   and in the Organization schema.
 - [x] **Street address + suite + ZIP** — confirmed: **699 Hampshire Rd Ste 107C,

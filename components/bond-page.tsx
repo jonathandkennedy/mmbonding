@@ -102,7 +102,7 @@ export function BondPage({
                   Quote this bond
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </Button>
-                <Button href={site.phone.href} variant="outline" size="lg" data-callrail="phone">
+                <Button href={site.phone.href} variant="outline" size="lg">
                   <Phone className="size-4 text-azure-500" aria-hidden="true" />
                   <span className="tabular">{site.phone.display}</span>
                 </Button>
@@ -235,7 +235,6 @@ function Sidebar({
           </Button>
           <a
             href={site.phone.href}
-            data-callrail="phone"
             className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/15 text-sm font-semibold text-white transition-colors hover:bg-white/10"
           >
             <Phone className="size-4 text-azure-300" aria-hidden="true" />
@@ -343,7 +342,7 @@ function FinalCta({ bondName, bondKey }: { bondName: string; bondKey: string }) 
             <Button href={`/get-a-quote?bond=${bondKey}`} variant="primary" size="lg">
               Get a Quote
             </Button>
-            <Button href={site.phone.href} variant="white" size="lg" data-callrail="phone">
+            <Button href={site.phone.href} variant="white" size="lg">
               <Phone className="size-4 text-azure-500" aria-hidden="true" />
               Call now
             </Button>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const methods = [
-  { icon: Phone, label: "Call or text", value: site.phone.display, href: site.phone.href, callrail: true },
+  { icon: Phone, label: "Call or text", value: site.phone.display, href: site.phone.href },
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
   { icon: Clock, label: "Hours", value: site.hours },
   { icon: MapPin, label: "Serving", value: `All of ${site.areaServed}` },
@@ -80,7 +80,6 @@ export default function Page() {
                     {m.href ? (
                       <a
                         href={m.href}
-                        {...(m.callrail ? { "data-callrail": "phone" } : {})}
                         className="block transition-opacity hover:opacity-80"
                       >
                         {inner}

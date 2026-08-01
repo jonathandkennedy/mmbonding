@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Archivo, Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
@@ -80,6 +81,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-[100dvh] antialiased">
         <JsonLd schema={organizationSchema()} />
+        {/* CallScaler call tracking (dynamic number insertion + attribution) */}
+        <Script id="callscaler-tracking" strategy="afterInteractive">
+          {`(function(c,a,l,s){c._cs=c._cs||[];var t=a.createElement('script');t.async=1;t.src=l+'/api/v1/public/tracking.js?bid='+s;a.head.appendChild(t);})(window,document,'https://v3.callscaler.com','a37cc53a-7ce2-4737-a69b-96f0692c6c51');`}
+        </Script>
         <a
           href="#main"
           className="sr-only rounded-lg bg-navy-900 px-4 py-2 text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]"

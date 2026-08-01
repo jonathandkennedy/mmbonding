@@ -330,7 +330,6 @@ function SuccessPanel({ path, configured }: { path: Path; configured: boolean })
       <p className="mx-auto mt-3 max-w-md text-muted">{msg}</p>
       <a
         href={site.phone.href}
-        data-callrail="phone"
         className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-navy-900 px-6 font-display font-semibold text-white transition-colors hover:bg-navy-800"
       >
         <PhoneCall className="size-4 text-azure-300" aria-hidden="true" />
