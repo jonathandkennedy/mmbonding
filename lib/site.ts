@@ -19,7 +19,7 @@ export const site = {
     title: "CEO",
     linkedin: "https://www.linkedin.com/in/mike-melshenker-64869722/",
   },
-  // Tracking number is swapped client-side by CallRail; this is the fallback.
+  // Tracking number is swapped client-side by CallScaler; this is the fallback.
   phone: {
     display: "(805) 752-8600",
     href: "tel:+18057528600",

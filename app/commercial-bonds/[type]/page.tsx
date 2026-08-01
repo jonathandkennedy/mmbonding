@@ -124,7 +124,7 @@ export default async function Page({ params }: { params: Promise<{ type: string 
                   Quote this bond
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </Button>
-                <Button href={site.phone.href} variant="outline" size="lg" data-callrail="phone">
+                <Button href={site.phone.href} variant="outline" size="lg">
                   <Phone className="size-4 text-azure-500" aria-hidden="true" />
                   <span className="tabular">{site.phone.display}</span>
                 </Button>
@@ -297,7 +297,7 @@ export default async function Page({ params }: { params: Promise<{ type: string 
               <Button href="/get-a-quote" variant="primary" size="lg">
                 Get a Quote
               </Button>
-              <Button href={site.phone.href} variant="white" size="lg" data-callrail="phone">
+              <Button href={site.phone.href} variant="white" size="lg">
                 <Phone className="size-4 text-azure-500" aria-hidden="true" />
                 Call now
               </Button>

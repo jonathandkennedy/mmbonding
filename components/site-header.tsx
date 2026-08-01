@@ -80,7 +80,6 @@ export function SiteHeader() {
             </Link>
             <a
               href={site.phone.href}
-              data-callrail="phone"
               className="hidden items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-azure-50 lg:inline-flex"
             >
               <Phone className="size-4 text-azure-500" aria-hidden="true" />
@@ -203,7 +202,6 @@ function MobileMenu({
             </Button>
             <a
               href={site.phone.href}
-              data-callrail="phone"
               className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-ink-300 text-sm font-semibold text-navy-900"
             >
               <Phone className="size-4 text-azure-500" aria-hidden="true" />
