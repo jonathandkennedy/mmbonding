@@ -5,6 +5,21 @@
  * sections. No invented statistics; claims are qualitative and verifiable.
  */
 
+/**
+ * An official agency purchasing page where local contractors find public bids.
+ * Always point at the department's landing page, never an individual open
+ * solicitation: bid-specific URLs die the moment the bid closes, while the
+ * purchasing page stays put for years. Links are editorial (followed) and
+ * should be re-checked periodically, since city sites re-platform.
+ */
+export type BidPortal = {
+  /** Agency name, e.g. "City of Temecula". */
+  agency: string;
+  /** Page name as it reads on the agency's own site. */
+  label: string;
+  url: string;
+};
+
 export type Metro = {
   slug: string;
   name: string; // used in H1 / "surety bonds in {name}"
@@ -20,6 +35,8 @@ export type Metro = {
   localNeeds?: string;
   /** A city-specific FAQ, distinct from the template's generic questions. */
   localFaq?: { q: string; a: string };
+  /** Official agency purchasing pages for contractors chasing local public work. */
+  bidPortals?: BidPortal[];
 };
 
 export const metros: Metro[] = [
@@ -253,6 +270,12 @@ export const metros: Metro[] = [
     geo: { lat: 33.4936, lng: -117.1484 },
     localNeeds: "Temecula contractors need the $25,000 license bond for the area's wine-country, custom-home, and hospitality work, plus performance and payment bonds for winery, resort, and public projects across Southwest Riverside County.",
     localFaq: { q: "Do winery and hospitality projects in Temecula Wine Country need bonding?", a: "The contractor requirement is the same $25,000 CSLB license bond, but winery, tasting-room, and resort projects are often private jobs where the owner or lender requires a performance and payment bond, and any public road or infrastructure work requires bid and contract bonds. We place those alongside your Temecula license bond and size them to the project." },
+    bidPortals: [
+      { agency: "City of Temecula", label: "Purchasing & Contract Administration", url: "https://temeculaca.gov/314/Purchasing-Contract-Administration" },
+      { agency: "City of Temecula", label: "Bid postings", url: "https://temeculaca.gov/Bids.aspx" },
+      { agency: "City of Murrieta", label: "Bids & public notices", url: "https://www.murrietaca.gov/374/Bids-Public-Notices" },
+      { agency: "City of Murrieta", label: "Purchasing", url: "https://www.murrietaca.gov/181/Purchasing" },
+    ],
   },
   {
     slug: "menifee",
