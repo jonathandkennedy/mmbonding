@@ -43,9 +43,14 @@ export function SiteHeader() {
     <header
       className={cn(
         "sticky top-0 z-50 transition-[background-color,box-shadow,border-color] duration-200 ease-out",
-        scrolled
-          ? "border-b border-ink-200 bg-white/85 shadow-sm backdrop-blur-md"
-          : "border-b border-transparent bg-white/0",
+        // The open mobile menu needs an opaque backdrop of its own; at the top of
+        // the page the header is transparent, which let page content show through
+        // the nav.
+        open
+          ? "border-b border-ink-200 bg-white shadow-sm"
+          : scrolled
+            ? "border-b border-ink-200 bg-white/85 shadow-sm backdrop-blur-md"
+            : "border-b border-transparent bg-white/0",
       )}
     >
       <Container size="wide">
@@ -155,7 +160,10 @@ function MobileMenu({
   switchLang: string;
 }) {
   return (
-    <div className="lg:hidden">
+    // Cap the panel to the space under the header and let it scroll on its own:
+    // body scroll is locked while the menu is open, so without this the tail of
+    // a long nav (Locations, Resources, and the CTAs) is unreachable.
+    <div className="max-h-[calc(100dvh-var(--header-h))] overflow-y-auto overscroll-contain lg:hidden">
       <Container size="wide">
         <div className="space-y-1 border-t border-ink-200 py-4">
           <Link
