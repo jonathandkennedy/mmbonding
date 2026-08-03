@@ -81,7 +81,10 @@ export default function Page() {
           The extra requirement exists for a reason. An LLC limits the owners&apos; personal
           liability, so the state requires a larger bond to <strong>protect employee wages and
           benefits</strong> if the company cannot pay. The second bond fills the gap the LLC
-          structure creates.
+          structure creates. If an employee rather than an owner qualifies your license, a{" "}
+          <Link href="/resources/rmo-vs-rme-california-license">third bond</Link> comes with it, and{" "}
+          <Link href="/resources/california-contractor-bond-stack">the full bond stack</Link> shows
+          how the layers fit together.
         </p>
 
         <h2>Plus liability insurance</h2>

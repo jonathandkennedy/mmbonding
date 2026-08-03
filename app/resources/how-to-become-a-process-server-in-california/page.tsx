@@ -95,7 +95,9 @@ export default function Page() {
             <span>
               <strong>Post a $2,000 bond.</strong> A{" "}
               <Link href="/commercial-bonds/process-server-bond">process server bond</Link> from an
-              admitted surety, or a $2,000 cash deposit with the clerk as an alternative.
+              admitted surety, or a $2,000 cash deposit with the clerk as an alternative. You pay{" "}
+              <Link href="/resources/how-much-does-a-surety-bond-cost">a premium</Link>, not the
+              $2,000, which is usually what makes the bond the cheaper option.
             </span>
           </li>
         </ul>

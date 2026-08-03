@@ -73,7 +73,11 @@ export default function Page() {
         <p>
           Instant-issue sites treat credit as a yes-or-no gate: outside their box, you are declined.
           A broker treats it as a <strong>pricing</strong> factor and shops the markets that write
-          credit-challenged files. The result is usually a higher rate, not a closed door.
+          credit-challenged files. The result is usually a higher rate, not a closed door, and{" "}
+          <Link href="/resources/surety-bond-cost-by-credit-score">
+            cost by credit score
+          </Link>{" "}
+          shows roughly where each tier lands.
         </p>
 
         <h2>What we place</h2>
@@ -84,15 +88,28 @@ export default function Page() {
           </li>
           <li>
             <Bullet />
-            <span>Thin or no credit history at all</span>
+            <span>
+              Thin or no credit history at all, including{" "}
+              <Link href="/resources/surety-bond-with-itin-or-thin-credit">
+                applicants bonding on an ITIN
+              </Link>
+            </span>
           </li>
           <li>
             <Bullet />
-            <span>Prior surety claims or losses</span>
+            <span>
+              Prior surety claims or losses, and bonds{" "}
+              <Link href="/resources/surety-bonds-after-bankruptcy-or-tax-lien">
+                after a bankruptcy or tax lien
+              </Link>
+            </span>
           </li>
           <li>
             <Bullet />
-            <span>New businesses with no track record yet</span>
+            <span>
+              <Link href="/resources/how-to-get-bonded-with-a-new-business">New businesses</Link>{" "}
+              with no track record yet
+            </span>
           </li>
         </ul>
         <p>

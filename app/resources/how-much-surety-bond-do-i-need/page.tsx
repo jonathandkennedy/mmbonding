@@ -79,8 +79,12 @@ export default function Page() {
           There is no single surety bond amount. The number you need is set by the{" "}
           <strong>type of bond</strong> and who requires it. A license bond is a fixed statutory
           figure, a contract bond scales with the job, and a permit or court bond is whatever the
-          obligee says it is. The good news is the same for all of them: you pay a{" "}
-          <strong>premium</strong>, a small percentage of the bond amount, not the full amount itself.
+          obligee says it is. If you are not sure which one applies to you,{" "}
+          <Link href="/resources/types-of-surety-bonds">the types of surety bonds</Link> sorts them
+          out. The good news is the same for all of them: you pay a <strong>premium</strong>, a
+          small percentage of the bond amount, not the full amount itself, and{" "}
+          <Link href="/resources/how-much-does-a-surety-bond-cost">what that premium runs</Link> is
+          a separate question from the bond&apos;s size.
         </p>
 
         <h2>License bonds: a fixed amount</h2>
@@ -103,7 +107,8 @@ export default function Page() {
             <Bullet />
             <span>
               <strong>Bid bond.</strong> Usually about 5% to 10% of your bid amount, guaranteeing you
-              will honor the bid if you win.
+              will honor the bid if you win. California agencies set their own{" "}
+              <Link href="/resources/california-bid-bond-requirements">bid security rules</Link>.
             </span>
           </li>
           <li>

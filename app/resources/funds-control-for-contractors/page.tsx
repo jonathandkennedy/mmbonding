@@ -123,7 +123,10 @@ export default function Page() {
         <p>
           A surety&apos;s biggest fear on a contract bond is that the money will not make it to the
           people who finish the job, which is exactly what triggers a claim. Funds control removes
-          that fear. Because the administrator guarantees the money reaches the right places, the
+          that fear, much the way{" "}
+          <Link href="/resources/surety-bond-collateral">posting collateral</Link> does, but without
+          tying up your cash. Because the administrator guarantees the money reaches the right
+          places, the
           surety&apos;s risk drops, and a{" "}
           <Link href="/contract-bonds/performance-bond">performance bond</Link> that credit alone
           could not support suddenly becomes workable.

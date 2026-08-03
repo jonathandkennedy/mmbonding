@@ -75,7 +75,11 @@ export default function Page() {
           and make sure your required records are current, including an active{" "}
           <strong>{usd(facts.licenseBondAmount)}</strong>{" "}
           <Link href="/contractor-license-bond">contractor license bond</Link>. If your bond lapsed
-          while the license sat inactive, you will put a fresh one in place.
+          while the license sat inactive, you will put a fresh one in place, and{" "}
+          <Link href="/resources/contractor-bond-claims-and-lapses">
+            what a lapse does to your license
+          </Link>{" "}
+          is worth understanding before you refile.
         </p>
 
         <h2>The bond step</h2>
@@ -99,7 +103,11 @@ export default function Page() {
           Reactivating after a suspension or revocation is different. The CSLB may require a{" "}
           <Link href="/disciplinary-bond">disciplinary bond</Link>, with an amount set by the
           Registrar. Those applicants have history by definition, which is exactly the kind of file we
-          place when others will not.
+          place when others will not; see{" "}
+          <Link href="/resources/get-bonded-with-a-disciplinary-history">
+            getting bonded with a CSLB disciplinary history
+          </Link>{" "}
+          for how those files get underwritten.
         </p>
 
         <h2>Get the bond handled</h2>

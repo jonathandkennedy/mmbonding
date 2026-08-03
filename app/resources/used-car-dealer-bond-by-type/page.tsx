@@ -69,8 +69,12 @@ export default function Page() {
       <Prose>
         <h2>The California dealer bond</h2>
         <p>
-          To sell vehicles in California you need a Department of Motor Vehicles dealer license, and
-          that license requires a <strong>motor vehicle dealer bond</strong> filed with the DMV. For
+          To sell vehicles in California you need a{" "}
+          <Link href="/resources/how-to-get-a-california-auto-dealer-license">
+            Department of Motor Vehicles dealer license
+          </Link>
+          , and that license requires a <strong>motor vehicle dealer bond</strong> filed with the
+          DMV. For
           most retail used-vehicle dealers, that bond is <strong>$50,000</strong> under{" "}
           <strong>California Vehicle Code §11710</strong>. The bond protects customers and the state
           if a dealer violates the Vehicle Code, for example by failing to clear a lien or deliver
@@ -119,8 +123,10 @@ export default function Page() {
         <h2>What it costs</h2>
         <p>
           You do not pay the full bond amount. You pay a <strong>premium</strong>, a percentage of
-          the bond, set mostly by your personal credit. A $50,000 bond does not mean $50,000 out of
-          pocket; it means an annual premium that is a fraction of that.
+          the bond, set mostly by your personal credit, and{" "}
+          <Link href="/resources/auto-dealer-bond-cost">what a dealer bond actually costs</Link>{" "}
+          breaks the range down by credit tier. A $50,000 bond does not mean $50,000 out of pocket;
+          it means an annual premium that is a fraction of that.
         </p>
         <p>
           Strong credit earns the lowest rate. Challenged credit costs more but is still very

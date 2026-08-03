@@ -125,7 +125,13 @@ export default function Page() {
           <Link href="/contract-bonds/performance-bond">performance bond</Link> guarantees you finish
           the work, and a <Link href="/contract-bonds/payment-bond">payment bond</Link> guarantees
           your subcontractors and suppliers get paid. Public works almost always require them. See
-          the <Link href="/contract-bonds">contract bonds</Link> hub for how they fit together. On
+          the <Link href="/contract-bonds">contract bonds</Link> hub for how they fit together, or
+          the side-by-side breakdowns of{" "}
+          <Link href="/resources/payment-bond-vs-performance-bond">
+            payment vs. performance bonds
+          </Link>{" "}
+          and{" "}
+          <Link href="/resources/bid-bond-vs-performance-bond">bid vs. performance bonds</Link>. On
           union work, a contractor may also post a{" "}
           <Link href="/commercial-bonds/wage-welfare-bond">wage and welfare bond</Link> guaranteeing
           the fringe-benefit contributions owed to the trust funds.
@@ -166,7 +172,9 @@ export default function Page() {
           <Link href="/commercial-bonds/guardianship-bond">guardianship bond</Link>, or{" "}
           <Link href="/commercial-bonds/conservatorship-bond">conservatorship bond</Link> guarantee
           that an executor, administrator, guardian, or conservator handles an estate or a
-          person&apos;s affairs honestly.
+          person&apos;s affairs honestly. Both are priced on a sliding scale; see{" "}
+          <Link href="/resources/probate-bond-cost">probate bond cost</Link> and{" "}
+          <Link href="/resources/appeal-bond-cost">appeal bond cost</Link> for the numbers.
         </p>
 
         <h2>4. Fidelity bonds</h2>
@@ -186,7 +194,9 @@ export default function Page() {
         <p>
           You rarely choose. The <strong>obligee</strong>, the agency, court, or owner requiring the
           bond, names it in a statute or on a bond form. Your job is to read that requirement; ours is
-          to place the exact bond fast and at the best rate. Not sure which family you are in? The{" "}
+          to place the exact bond fast and at the best rate. Once you know the family,{" "}
+          <Link href="/resources/how-much-surety-bond-do-i-need">how the amount gets set</Link> is
+          the next question. Not sure which family you are in? The{" "}
           <Link href="/surety-bond-glossary">glossary</Link> defines the terms, and a{" "}
           <Link href="/get-a-quote">quote</Link> gets you the specific bond identified and priced.
         </p>

@@ -76,7 +76,12 @@ export default function Page() {
           An instant quote feels like the answer, but it is really just one surety&apos;s answer.
           That single price reflects that one company&apos;s appetite, its pricing model, and the
           classes it likes on that particular day. Change the market and the same application can
-          get a very different number, or a yes where the first said no.
+          get a very different number, or a yes where the first said no. That does not make the fast
+          path wrong;{" "}
+          <Link href="/resources/instant-online-bond-vs-broker">
+            instant online versus a broker
+          </Link>{" "}
+          covers when each one is the better tool.
         </p>
         <p>
           A broker exists to work that gap. Instead of accepting the first opinion, we put your
@@ -147,9 +152,15 @@ export default function Page() {
         <p>
           Shopping the file has two payoffs. On price, competition between markets tends to push
           your premium down rather than up. On approval, a file that one market rejects can still
-          be placed somewhere else. Underwriting still applies, so nothing is guaranteed and
-          results vary, but one online quote is rarely your best available rate, and it is never
-          the whole market.
+          be placed somewhere else, which is why{" "}
+          <Link href="/resources/why-was-my-surety-bond-declined">a decline</Link> is rarely the end
+          of the story. Underwriting still applies, so nothing is guaranteed and results vary, but
+          one online quote is rarely your best available rate, and it is never the whole market. If
+          you are weighing who should shop it, here is{" "}
+          <Link href="/resources/how-to-choose-a-surety-bond-broker">
+            how to choose a surety bond broker
+          </Link>
+          .
         </p>
         <p>
           See <Link href="/why-use-a-surety-broker">why a surety broker helps</Link>, how we

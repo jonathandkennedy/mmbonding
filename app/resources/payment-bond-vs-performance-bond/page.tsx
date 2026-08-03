@@ -149,7 +149,13 @@ export default function Page() {
           On federal work, the Miller Act requires both a performance bond and a payment bond on
           contracts above a set threshold. California and most other states have their own Little
           Miller Act that does the same for state and local public work. So on a public bid you are
-          almost always providing both, usually each at 100% of the contract value.
+          almost always providing both, usually each at 100% of the contract value, on top of the{" "}
+          <Link href="/resources/california-bid-bond-requirements">bid bond</Link> you posted to
+          propose. Requirements vary by agency, which is why it helps to check{" "}
+          <Link href="/resources/california-public-works-bonds-by-obligee">
+            what each California obligee asks for
+          </Link>{" "}
+          before you bid.
         </p>
 
         <h2>Are they issued separately?</h2>
@@ -164,7 +170,11 @@ export default function Page() {
         <p>
           Contract bonds are priced as a percentage of the contract amount on a sliding scale, and
           the performance and payment bonds are quoted together as one premium rather than billed
-          separately. If your credit or track record makes the pair hard to place, that is exactly
+          separately, so{" "}
+          <Link href="/resources/performance-bond-cost">what a performance bond costs</Link>{" "}
+          effectively prices the pair. How large a pair you qualify for is a question of{" "}
+          <Link href="/resources/surety-bond-capacity">bonding capacity</Link>. If your credit or
+          track record makes the pair hard to place, that is exactly
           the kind of file we work through our{" "}
           <Link href="/hard-to-place-surety-bonds">hard-to-place</Link> markets. Underwriting always
           applies, and we never promise guaranteed approval.

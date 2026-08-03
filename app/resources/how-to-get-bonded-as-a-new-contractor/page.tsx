@@ -78,7 +78,11 @@ export default function Page() {
         <p>
           The good news: it is not actually a dead end. You do not need years of history to get your
           first bond, and you do not have to solve contract bonding before you are licensed. You
-          start in the right place and build from there.
+          start in the right place and build from there, the same way{" "}
+          <Link href="/resources/how-to-get-bonded-with-a-new-business">
+            a brand-new business gets bonded
+          </Link>{" "}
+          without a track record.
         </p>
 
         <h2>Start with the license bond</h2>
@@ -101,7 +105,11 @@ export default function Page() {
               <strong>Thin credit is workable.</strong> A low or short credit file usually means a
               higher rate, not a decline. See{" "}
               <Link href="/hard-to-place-surety-bonds">hard-to-place surety bonds</Link> for how we
-              place tougher files.
+              place tougher files, or{" "}
+              <Link href="/resources/surety-bond-with-itin-or-thin-credit">
+                bonding on an ITIN or a thin U.S. credit file
+              </Link>{" "}
+              if you have barely any history yet.
             </span>
           </li>
         </ul>

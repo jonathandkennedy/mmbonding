@@ -157,7 +157,11 @@ export default function Page() {
         <h2>What a broker does that a button can&apos;t</h2>
         <p>
           An instant quote is a single surety answering a fixed set of questions. A broker does
-          the work a form cannot:
+          the work a form cannot, and{" "}
+          <Link href="/resources/how-a-surety-broker-shops-the-market">
+            shopping the file across markets
+          </Link>{" "}
+          is most of it:
         </p>
         <ul>
           <li>
@@ -186,9 +190,16 @@ export default function Page() {
         <h2>How to decide</h2>
         <p>
           Use the fast path when it fits. If your bond is standard and your credit is clean,
-          buying it instantly online is a perfectly good choice. If your file is tougher, or an
-          automated quote has already said no, that is exactly when a broker earns its keep. You
-          can always start online and bring a broker in if the button does not work for you.
+          buying it instantly online is a perfectly good choice. If your file is tougher, or{" "}
+          <Link href="/resources/why-was-my-surety-bond-declined">
+            an automated quote has already said no
+          </Link>
+          , that is exactly when a broker earns its keep, and{" "}
+          <Link href="/resources/how-to-choose-a-surety-bond-broker">
+            picking the right one
+          </Link>{" "}
+          matters. You can always start online and bring a broker in if the button does not work
+          for you.
         </p>
         <p>
           Not sure which bucket you are in? Start a real{" "}

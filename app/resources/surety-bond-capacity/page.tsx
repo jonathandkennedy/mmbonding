@@ -142,7 +142,9 @@ export default function Page() {
         <h2>How to increase it</h2>
         <p>
           Capacity is not fixed. You grow it by giving the surety more reasons to trust you with bigger
-          work. The most effective moves are:
+          work, and if credit is the thing holding the number down,{" "}
+          <Link href="/resources/funds-control-for-contractors">funds control</Link> can unlock a
+          program that credit alone will not. The most effective moves are:
         </p>
         <ul>
           <li>

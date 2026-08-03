@@ -73,7 +73,11 @@ export default function Page() {
         <p>
           You get a performance bond through a <strong>surety broker</strong>, who places it with a
           surety company. Unlike a quick license bond, it is underwritten on your business, so the
-          path runs through a real underwriter, not an instant checkout. See the full{" "}
+          path runs through a real underwriter, not an instant checkout, and{" "}
+          <Link href="/resources/why-contract-bonds-are-not-instant">
+            there are good reasons contract bonds cannot be instant
+          </Link>
+          . See the full{" "}
           <Link href="/contract-bonds/performance-bond">performance bond</Link> page for what it
           guarantees.
         </p>
@@ -102,8 +106,11 @@ export default function Page() {
           <li>
             <Bullet />
             <span>
-              <strong>Work on hand.</strong> How much you already have under contract, against your
-              capacity.
+              <strong>Work on hand.</strong> How much you already have under contract, against your{" "}
+              <Link href="/resources/surety-bond-capacity">
+                single and aggregate capacity limits
+              </Link>
+              .
             </span>
           </li>
         </ul>
@@ -111,8 +118,9 @@ export default function Page() {
         <h2>What it costs</h2>
         <p>
           Performance bond premiums are a percentage of the contract value. Strong files pay the
-          lowest rates; larger contracts, thinner experience, or tougher credit raise it. We quote
-          your specific job rather than a generic rate.
+          lowest rates; larger contracts, thinner experience, or tougher credit raise it, and{" "}
+          <Link href="/resources/performance-bond-cost">the rate bands by contract size</Link> show
+          roughly where you land. We quote your specific job rather than a generic rate.
         </p>
 
         <h2>Bidding bigger than your current line?</h2>

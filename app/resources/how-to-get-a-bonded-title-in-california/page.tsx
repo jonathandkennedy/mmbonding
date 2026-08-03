@@ -82,7 +82,9 @@ export default function Page() {
           The bond is written for the vehicle&apos;s <strong>fair market value</strong>, established
           by a licensed dealer or insurance appraisal, or by averaging the high and low{" "}
           <strong>Kelley Blue Book</strong> values on the DMV&apos;s Statement of Facts. You do not
-          pick the number; the value does.
+          pick the number; the value does. As with any surety bond, you pay{" "}
+          <Link href="/resources/how-much-does-a-surety-bond-cost">an annual premium</Link>, a
+          fraction of that value, not the value itself.
         </p>
 
         <h2>The steps</h2>

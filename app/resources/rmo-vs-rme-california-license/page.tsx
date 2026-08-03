@@ -139,7 +139,15 @@ export default function Page() {
           The BQI is a <strong>{usd(facts.bqiAmount)}</strong> bond, the same face amount as the
           license bond, and it is separate from and in addition to your{" "}
           <Link href="/contractor-license-bond">contractor license bond</Link>. A company qualified
-          by an RME therefore carries both bonds at once.
+          by an RME therefore carries both bonds at once, which is how{" "}
+          <Link href="/resources/california-contractor-bond-stack">
+            the California bond stack
+          </Link>{" "}
+          grows with your structure. An LLC qualified this way adds a third bond on top, covered in{" "}
+          <Link href="/resources/california-llc-contractor-requirements">
+            the LLC requirements
+          </Link>
+          .
         </p>
         <p>
           We place the{" "}

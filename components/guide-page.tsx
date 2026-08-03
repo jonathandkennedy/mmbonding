@@ -13,7 +13,7 @@ import { PreferredSource } from "./preferred-source";
 import { JsonLd, faqSchema, breadcrumbSchema, type FaqItem } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { REGULATORY_REVIEWED } from "@/lib/regulatory";
-import { guides, guideHref, guideHero, guideImageAlt, type Guide } from "@/lib/guides";
+import { guideHref, guideHero, guideImageAlt, relatedGuides, type Guide } from "@/lib/guides";
 
 export function GuidePage({
   guide,
@@ -39,15 +39,7 @@ export function GuidePage({
     { name: "Resources", url: "/resources" },
     { name: guide.title, url: href },
   ];
-  // Prefer guides in the same category so the "More guides" sidebar is
-  // topically tight, then fill with others.
-  const sameCategory = guides.filter(
-    (g) => g.slug !== guide.slug && g.category === guide.category,
-  );
-  const otherGuides = guides.filter(
-    (g) => g.slug !== guide.slug && g.category !== guide.category,
-  );
-  const moreGuides = [...sameCategory, ...otherGuides].slice(0, 4);
+  const moreGuides = relatedGuides(guide.slug, 4);
 
   return (
     <>

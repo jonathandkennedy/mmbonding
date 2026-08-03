@@ -664,6 +664,51 @@ export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
 }
 
+/**
+ * Words too common across the corpus to signal topical relatedness. Nearly
+ * every title contains "surety" or "bond", so leaving them in would score all
+ * 78 guides identically and collapse the ranking back to registry order.
+ */
+const COMMON_TOKENS = new Set([
+  "a", "an", "the", "and", "or", "for", "of", "to", "in", "on", "is", "it", "its", "are", "be",
+  "do", "does", "you", "your", "my", "what", "how", "when", "why", "who", "which", "vs", "with",
+  "by", "get", "california", "surety", "bond", "bonds", "explained",
+]);
+
+function topicTokens(guide: Guide): Set<string> {
+  return new Set(
+    `${guide.title} ${guide.keyword}`
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, " ")
+      .split(/[\s-]+/)
+      .filter((t) => t.length > 2 && !COMMON_TOKENS.has(t)),
+  );
+}
+
+/**
+ * Guides most topically related to `slug`, ranked by shared title/keyword
+ * vocabulary with a nudge for same-category siblings. This backs the sidebar
+ * block only: the load-bearing internal links are the contextual ones written
+ * into each guide's body copy, where they carry the surrounding sentence with
+ * them. Ties break on slug so the build stays deterministic.
+ */
+export function relatedGuides(slug: string, limit = 4): Guide[] {
+  const current = getGuide(slug);
+  if (!current) return guides.slice(0, limit);
+  const mine = topicTokens(current);
+
+  return guides
+    .filter((g) => g.slug !== slug)
+    .map((g) => {
+      let overlap = 0;
+      for (const t of topicTokens(g)) if (mine.has(t)) overlap++;
+      return { guide: g, score: overlap * 2 + (g.category === current.category ? 1 : 0) };
+    })
+    .sort((a, b) => b.score - a.score || a.guide.slug.localeCompare(b.guide.slug))
+    .slice(0, limit)
+    .map((x) => x.guide);
+}
+
 export const guideCategories: GuideCategory[] = [
   "Bond Costs",
   "How-To",
