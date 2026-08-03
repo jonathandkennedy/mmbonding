@@ -63,6 +63,20 @@ export const sba = {
   guaranteeHighThreshold: 100_000,
 } as const;
 
+/**
+ * Subdivision improvement security. The Subdivision Map Act lets a local agency
+ * condition final-map approval on security for the required public
+ * improvements. Percentages are set by local ordinance and vary by agency, so
+ * they are described qualitatively on the site rather than stated as fixed
+ * figures. VERIFY the code sections at build and quarterly.
+ */
+export const subdivision = {
+  mapAct: "Subdivision Map Act",
+  mapActCode: "Gov. Code §66410 et seq.",
+  /** Forms of security a subdivider may post (bond, cash deposit, instrument of credit). */
+  securityStatute: "Gov. Code §66499",
+} as const;
+
 export type BondKey =
   | "contractor-license-bond"
   | "bid-bond"

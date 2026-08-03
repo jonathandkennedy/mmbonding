@@ -24,9 +24,25 @@ export type Guide = {
   category: GuideCategory;
   /** Primary keyword target (for internal notes / intent). */
   keyword: string;
+  /**
+   * Borrow another guide's illustration until this one has its own. Set only as
+   * a temporary measure; remove once `{slug}-hero.webp` and `{slug}-thumb.webp`
+   * are added to /public/images/guides.
+   */
+  imageSlug?: string;
 };
 
 export const guides: Guide[] = [
+  {
+    slug: "california-subdivision-improvement-bonds",
+    title: "California Subdivision Improvement Bonds (and Getting Them Released)",
+    excerpt:
+      "Cities require security before they will record your final map. How the amount is set, the three bonds a project usually posts, and how to get your capacity back.",
+    category: "Public Works",
+    keyword: "california subdivision improvement bond",
+    // TODO: replace with bespoke art; borrowing the permit-bond illustration.
+    imageSlug: "california-permit-bond-requirements",
+  },
   {
     slug: "surety-bond-premium-overcharges",
     title: "Are You Overpaying for Your Surety Bond?",
@@ -645,14 +661,23 @@ export function guideHref(slug: string) {
   return `/resources/${slug}`;
 }
 
+/**
+ * Illustrations are authored outside the repo, so a guide can ship before its
+ * own art exists by borrowing a topical neighbour's via `imageSlug`. Resolve
+ * that here so every image path goes through one place.
+ */
+function imageBase(slug: string) {
+  return getGuide(slug)?.imageSlug ?? slug;
+}
+
 /** Featured (hero) image path for a guide. 1200x675 WebP in /public. */
 export function guideHero(slug: string) {
-  return `/images/guides/${slug}-hero.webp`;
+  return `/images/guides/${imageBase(slug)}-hero.webp`;
 }
 
 /** Thumbnail image path for a guide. 640x640 WebP in /public. */
 export function guideThumb(slug: string) {
-  return `/images/guides/${slug}-thumb.webp`;
+  return `/images/guides/${imageBase(slug)}-thumb.webp`;
 }
 
 /** Descriptive, under-125-char alt text for a guide's illustration. */

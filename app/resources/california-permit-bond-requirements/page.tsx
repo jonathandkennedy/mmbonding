@@ -103,8 +103,11 @@ export default function Page() {
             <Bullet />
             <span>
               <strong>Subdivisions and site improvements.</strong> Public streets, sidewalks,
-              sewers, and utilities that the agency will eventually own, which often sit alongside
-              the{" "}
+              sewers, and utilities that the agency will eventually own, secured by a{" "}
+              <Link href="/resources/california-subdivision-improvement-bonds">
+                subdivision improvement bond
+              </Link>{" "}
+              that often sits alongside the{" "}
               <Link href="/resources/california-public-works-bonds-by-obligee">
                 contract bonds the obligee requires
               </Link>
