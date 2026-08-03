@@ -54,7 +54,9 @@
   --color-muted: #51617a; /* AA on white */
   --color-border: #e3e9f1;
   --color-ring: #0090d8;
-  --color-success: #1f9d6b; /* semantic only: "License Active", verified */
+  /* Darkened from #1f9d6b, which only reached 3.09:1 on --color-success-bg and
+     failed WCAG AA for normal text. Now 4.91:1 on the tint, 5.48:1 on white. */
+  --color-success: #15784f; /* semantic only: "License Active", verified */
   --color-success-bg: #e7f6ef;
 
   /* ---- Type ---- */

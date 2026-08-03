@@ -124,7 +124,7 @@ export function BondCostCalculator() {
             <div className="flex flex-col gap-2.5">
               <a
                 href="/get-a-quote"
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-azure-500 font-display font-semibold text-white transition-colors hover:bg-azure-600"
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-azure-600 font-display font-semibold text-white transition-colors hover:bg-azure-700"
               >
                 Get my exact rate
                 <ArrowRight className="size-4" aria-hidden="true" />

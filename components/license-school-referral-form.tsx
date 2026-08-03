@@ -122,7 +122,7 @@ export function LicenseSchoolReferralForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="mt-5 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-azure-500 font-display font-semibold text-white shadow-[0_8px_22px_-8px_rgba(0,144,216,0.55)] transition-[transform,background-color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-azure-600 active:scale-[0.98] disabled:opacity-70"
+        className="mt-5 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-azure-600 font-display font-semibold text-white shadow-[0_8px_22px_-8px_rgba(0,144,216,0.55)] transition-[transform,background-color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-azure-700 active:scale-[0.98] disabled:opacity-70"
       >
         {submitting ? (
           <>
