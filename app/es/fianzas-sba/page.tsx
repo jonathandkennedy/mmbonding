@@ -337,7 +337,7 @@ export default function Page() {
               <ol className="mt-6 space-y-6">
                 {steps.map((s, i) => (
                   <li key={s.title} className="flex gap-4">
-                    <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-azure-500 font-mono text-sm font-semibold text-white">
+                    <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-azure-600 font-mono text-sm font-semibold text-white">
                       {i + 1}
                     </span>
                     <div>

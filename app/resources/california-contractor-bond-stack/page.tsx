@@ -93,7 +93,11 @@ export default function Page() {
           <strong>{usd(facts.licenseBondAmount)}</strong> license bond under{" "}
           <strong>{facts.licenseBondStatute}</strong>. It is the base of the stack, and it is the
           same for everyone. Start with the{" "}
-          <Link href="/contractor-license-bond">contractor license bond</Link>.
+          <Link href="/contractor-license-bond">contractor license bond</Link>, and know{" "}
+          <Link href="/resources/what-a-contractor-license-bond-covers">
+            what it actually covers
+          </Link>{" "}
+          before you need it.
         </p>
 
         <h2>If you are an LLC: add the worker bond</h2>
@@ -102,7 +106,12 @@ export default function Page() {
           license bond. The <strong>{usd(facts.llcWorkerBondAmount)}</strong> LLC employee/worker
           bond, required under <strong>{facts.llcWorkerBondStatute}</strong>, protects your
           employees&apos; wages and benefits. A corporation or sole proprietor does not carry it; an
-          LLC does. See the <Link href="/llc-employee-worker-bond">LLC worker bond</Link>.
+          LLC does. See the <Link href="/llc-employee-worker-bond">LLC worker bond</Link>, or the
+          full rundown of{" "}
+          <Link href="/resources/california-llc-contractor-requirements">
+            what California asks of an LLC contractor
+          </Link>
+          .
         </p>
 
         <h2>If you have employees: workers&apos; compensation</h2>
@@ -117,7 +126,11 @@ export default function Page() {
         <p>
           Move into public works or larger commercial projects and owners will require{" "}
           <strong>contract bonds</strong>, project by project. These are not license bonds; they back
-          a specific job.
+          a specific job, and{" "}
+          <Link href="/resources/payment-bond-vs-performance-bond">
+            the performance and payment bonds travel together
+          </Link>{" "}
+          on almost every public award.
         </p>
         <ul>
           <li>

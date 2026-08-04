@@ -138,7 +138,8 @@ export function SiteFooter() {
               <Link href="/terms-of-service" className="transition-colors hover:text-azure-300">
                 Terms of Service
               </Link>
-              <span className="font-mono text-navy-400">{site.tagline}</span>
+              {/* navy-300, not navy-400: on the navy-950 footer, navy-400 is 2.78:1. */}
+              <span className="font-mono text-navy-300">{site.tagline}</span>
             </nav>
           </div>
         </div>

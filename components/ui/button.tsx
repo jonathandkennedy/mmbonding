@@ -12,7 +12,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-azure-500 text-white shadow-[0_8px_22px_-8px_rgba(0,144,216,0.55)] hover:bg-azure-600 hover:shadow-[0_12px_28px_-8px_rgba(0,144,216,0.6)]",
+    // azure-600, not the logo azure-500: white on azure-500 is only 3.51:1 and
+    // fails WCAG AA for button-sized text. azure-600 clears it at 4.74:1.
+    "bg-azure-600 text-white shadow-[0_8px_22px_-8px_rgba(0,144,216,0.55)] hover:bg-azure-700 hover:shadow-[0_12px_28px_-8px_rgba(0,144,216,0.6)]",
   navy: "bg-navy-900 text-white hover:bg-navy-800 shadow-sm",
   outline:
     "border border-ink-300 bg-white text-navy-900 hover:border-azure-400 hover:bg-azure-50",

@@ -78,7 +78,12 @@ export default function Page() {
         <p>
           Many California agencies call this an <strong>encroachment bond</strong> when the work
           happens in the street, sidewalk, or other public right-of-way. The idea is the same: the
-          agency wants assurance that the road is put back the way it found it.
+          agency wants assurance that the road is put back the way it found it. Amounts and forms are
+          set locally, so it is worth checking{" "}
+          <Link href="/resources/california-contractor-bond-requirements-by-city">
+            what your city asks of contractors
+          </Link>{" "}
+          before you pull the permit.
         </p>
 
         <h2>When California agencies require one</h2>
@@ -98,7 +103,15 @@ export default function Page() {
             <Bullet />
             <span>
               <strong>Subdivisions and site improvements.</strong> Public streets, sidewalks,
-              sewers, and utilities that the agency will eventually own.
+              sewers, and utilities that the agency will eventually own, secured by a{" "}
+              <Link href="/resources/california-subdivision-improvement-bonds">
+                subdivision improvement bond
+              </Link>{" "}
+              that often sits alongside the{" "}
+              <Link href="/resources/california-public-works-bonds-by-obligee">
+                contract bonds the obligee requires
+              </Link>
+              .
             </span>
           </li>
           <li>

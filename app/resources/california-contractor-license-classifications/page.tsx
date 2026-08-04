@@ -78,7 +78,12 @@ export default function Page() {
           A CSLB classification is the scope of work your license lets you contract for. When you
           pass the trade exam, you are licensed in one or more classifications, and you can only bid
           and perform work that falls within them. The classification defines your{" "}
-          <strong>trade</strong>, not your bonding.
+          <strong>trade</strong>, not your bonding: an A, a B, and a C-10 all carry the same{" "}
+          <Link href="/resources/what-a-contractor-license-bond-covers">
+            {usd(facts.licenseBondAmount)} license bond
+          </Link>
+          . What changes your bonding is your business structure, which{" "}
+          <Link href="/resources/california-contractor-bond-stack">the bond stack</Link> lays out.
         </p>
 
         <h2>The groups: A, B, and C</h2>

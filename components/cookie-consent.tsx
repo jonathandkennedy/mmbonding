@@ -66,7 +66,7 @@ export function CookieConsent() {
             <button
               type="button"
               onClick={() => choose("accepted")}
-              className="inline-flex h-9 items-center rounded-xl bg-azure-500 px-4 text-sm font-semibold text-white transition-colors hover:bg-azure-600"
+              className="inline-flex h-9 items-center rounded-xl bg-azure-600 px-4 text-sm font-semibold text-white transition-colors hover:bg-azure-700"
             >
               Accept
             </button>

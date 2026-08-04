@@ -78,8 +78,13 @@ export default function Page() {
           surety program.
         </p>
         <p>
-          The cost you pay sits on the final bonds, not the bid. The bid bond is the door; the real
-          underwriting is the room behind it.
+          The cost you pay sits on the final bonds, not the bid: what a{" "}
+          <Link href="/resources/performance-bond-cost">performance bond costs</Link> is the number
+          that matters, and{" "}
+          <Link href="/resources/bid-bond-vs-performance-bond">
+            how the two bonds differ
+          </Link>{" "}
+          explains why. The bid bond is the door; the real underwriting is the room behind it.
         </p>
 
         <h2>What actually drives the cost</h2>
@@ -88,7 +93,9 @@ export default function Page() {
             <Bullet />
             <span>
               <strong>Full contract capacity.</strong> Underwriters ask the real question up front:
-              if you win, can they bond the whole job? Your approved program is what they are pricing.
+              if you win, can they bond the whole job? Your approved program is what they are
+              pricing, which comes down to your{" "}
+              <Link href="/resources/surety-bond-capacity">single and aggregate limits</Link>.
             </span>
           </li>
           <li>

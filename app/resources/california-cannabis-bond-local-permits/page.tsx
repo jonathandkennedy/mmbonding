@@ -68,7 +68,12 @@ export default function Page() {
           Every California cannabis license carries a $5,000 surety bond, payable to the state and
           filed with the Department of Cannabis Control. It is a condition of getting and keeping your
           license, and it helps cover the cost of destroying cannabis goods if that ever becomes
-          necessary. One bond, per license, statewide.
+          necessary. One bond, per license, statewide. If you are still working through the license
+          itself, start with{" "}
+          <Link href="/resources/how-to-get-a-cannabis-license-in-california">
+            how to get a California cannabis license
+          </Link>
+          .
         </p>
 
         <h2>Local permit bonds vary</h2>
@@ -100,7 +105,11 @@ export default function Page() {
         </ul>
         <p>
           Because local rules move, confirm the exact requirement with your local cannabis authority
-          rather than assuming.
+          rather than assuming. Local bonding is its own patchwork in California, and{" "}
+          <Link href="/resources/california-permit-bond-requirements">
+            permit bond requirements by city and county
+          </Link>{" "}
+          shows how differently jurisdictions handle it.
         </p>
 
         <h2>What each costs</h2>

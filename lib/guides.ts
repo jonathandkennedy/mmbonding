@@ -24,9 +24,25 @@ export type Guide = {
   category: GuideCategory;
   /** Primary keyword target (for internal notes / intent). */
   keyword: string;
+  /**
+   * Borrow another guide's illustration until this one has its own. Set only as
+   * a temporary measure; remove once `{slug}-hero.webp` and `{slug}-thumb.webp`
+   * are added to /public/images/guides.
+   */
+  imageSlug?: string;
 };
 
 export const guides: Guide[] = [
+  {
+    slug: "california-subdivision-improvement-bonds",
+    title: "California Subdivision Improvement Bonds (and Getting Them Released)",
+    excerpt:
+      "Cities require security before they will record your final map. How the amount is set, the three bonds a project usually posts, and how to get your capacity back.",
+    category: "Public Works",
+    keyword: "california subdivision improvement bond",
+    // TODO: replace with bespoke art; borrowing the permit-bond illustration.
+    imageSlug: "california-permit-bond-requirements",
+  },
   {
     slug: "surety-bond-premium-overcharges",
     title: "Are You Overpaying for Your Surety Bond?",
@@ -645,14 +661,23 @@ export function guideHref(slug: string) {
   return `/resources/${slug}`;
 }
 
+/**
+ * Illustrations are authored outside the repo, so a guide can ship before its
+ * own art exists by borrowing a topical neighbour's via `imageSlug`. Resolve
+ * that here so every image path goes through one place.
+ */
+function imageBase(slug: string) {
+  return getGuide(slug)?.imageSlug ?? slug;
+}
+
 /** Featured (hero) image path for a guide. 1200x675 WebP in /public. */
 export function guideHero(slug: string) {
-  return `/images/guides/${slug}-hero.webp`;
+  return `/images/guides/${imageBase(slug)}-hero.webp`;
 }
 
 /** Thumbnail image path for a guide. 640x640 WebP in /public. */
 export function guideThumb(slug: string) {
-  return `/images/guides/${slug}-thumb.webp`;
+  return `/images/guides/${imageBase(slug)}-thumb.webp`;
 }
 
 /** Descriptive, under-125-char alt text for a guide's illustration. */
@@ -662,6 +687,51 @@ export function guideImageAlt(guide: Guide) {
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
+}
+
+/**
+ * Words too common across the corpus to signal topical relatedness. Nearly
+ * every title contains "surety" or "bond", so leaving them in would score all
+ * 78 guides identically and collapse the ranking back to registry order.
+ */
+const COMMON_TOKENS = new Set([
+  "a", "an", "the", "and", "or", "for", "of", "to", "in", "on", "is", "it", "its", "are", "be",
+  "do", "does", "you", "your", "my", "what", "how", "when", "why", "who", "which", "vs", "with",
+  "by", "get", "california", "surety", "bond", "bonds", "explained",
+]);
+
+function topicTokens(guide: Guide): Set<string> {
+  return new Set(
+    `${guide.title} ${guide.keyword}`
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, " ")
+      .split(/[\s-]+/)
+      .filter((t) => t.length > 2 && !COMMON_TOKENS.has(t)),
+  );
+}
+
+/**
+ * Guides most topically related to `slug`, ranked by shared title/keyword
+ * vocabulary with a nudge for same-category siblings. This backs the sidebar
+ * block only: the load-bearing internal links are the contextual ones written
+ * into each guide's body copy, where they carry the surrounding sentence with
+ * them. Ties break on slug so the build stays deterministic.
+ */
+export function relatedGuides(slug: string, limit = 4): Guide[] {
+  const current = getGuide(slug);
+  if (!current) return guides.slice(0, limit);
+  const mine = topicTokens(current);
+
+  return guides
+    .filter((g) => g.slug !== slug)
+    .map((g) => {
+      let overlap = 0;
+      for (const t of topicTokens(g)) if (mine.has(t)) overlap++;
+      return { guide: g, score: overlap * 2 + (g.category === current.category ? 1 : 0) };
+    })
+    .sort((a, b) => b.score - a.score || a.guide.slug.localeCompare(b.guide.slug))
+    .slice(0, limit)
+    .map((x) => x.guide);
 }
 
 export const guideCategories: GuideCategory[] = [

@@ -92,8 +92,12 @@ export default function Page() {
           <li>
             <Bullet />
             <span>
-              <strong>Credit.</strong> The single biggest factor. Strong credit earns the lowest
-              rates; challenged credit costs more but is still very placeable.
+              <strong>Credit.</strong> The single biggest factor, and it is worth knowing{" "}
+              <Link href="/resources/how-surety-bond-credit-checks-work">
+                how the surety actually runs that credit check
+              </Link>{" "}
+              before you apply. Strong credit earns the lowest rates; challenged credit costs more
+              but is still very placeable.
             </span>
           </li>
           <li>
@@ -126,7 +130,11 @@ export default function Page() {
           A low score does not mean no bond. It means a higher rate and, sometimes, a different
           market. That is our specialty. See{" "}
           <Link href="/hard-to-place-surety-bonds">hard-to-place surety bonds</Link> for how we place
-          credit-challenged files.
+          credit-challenged files, or{" "}
+          <Link href="/resources/surety-bond-cost-by-credit-score">
+            what each credit tier typically pays
+          </Link>{" "}
+          if you want the numbers before you call.
         </p>
       </Prose>
     </GuidePage>

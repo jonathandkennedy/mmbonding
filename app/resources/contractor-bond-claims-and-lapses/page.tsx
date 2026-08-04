@@ -79,8 +79,15 @@ export default function Page() {
           others, it is not insurance that absorbs your loss.
         </p>
         <p>
-          A paid claim is also a mark on your record, which can raise your rate or move you into
-          hard-to-place territory at renewal.
+          That reimbursement duty is the{" "}
+          <Link href="/resources/surety-bond-indemnity-agreement">indemnity agreement</Link> doing
+          its job. A paid claim is also a mark on your record, which can raise your rate at{" "}
+          <Link href="/resources/contractor-license-bond-renewal">renewal</Link> or move you into
+          hard-to-place territory, and it is one of the{" "}
+          <Link href="/resources/why-was-my-surety-bond-declined">
+            more common reasons a bond gets declined
+          </Link>{" "}
+          later.
         </p>
 
         <h2>If your bond lapses</h2>

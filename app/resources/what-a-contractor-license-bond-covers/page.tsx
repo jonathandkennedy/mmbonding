@@ -78,7 +78,11 @@ export default function Page() {
         </p>
         <p>
           You carry it as a condition of your license. The people it pays out to are the ones you
-          serve, not you.
+          serve, not you, and{" "}
+          <Link href="/resources/what-a-contractor-bond-pays-a-homeowner">
+            what the bond actually pays a homeowner
+          </Link>{" "}
+          is capped at that same face amount.
         </p>
 
         <h2>What a valid claim looks like</h2>
@@ -115,7 +119,17 @@ export default function Page() {
         </p>
         <p>
           And remember the reimbursement rule: if the surety pays a valid claim, you pay the surety
-          back. The bond backstops the public, not your wallet. The full{" "}
+          back, which is precisely what the{" "}
+          <Link href="/resources/surety-bond-indemnity-agreement">indemnity agreement</Link> you
+          signed commits you to. If someone is coming after your bond, here is{" "}
+          <Link href="/resources/how-to-file-a-claim-against-a-contractor-bond">
+            how a claim gets filed
+          </Link>{" "}
+          and{" "}
+          <Link href="/resources/contractor-bond-claims-and-lapses">
+            what a paid claim does to your license
+          </Link>
+          . The bond backstops the public, not your wallet. The full{" "}
           <Link href="/contractor-license-bond">contractor license bond</Link> page covers how to get
           and keep one.
         </p>

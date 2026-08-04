@@ -72,8 +72,13 @@ export default function Page() {
         <h2>Who qualifies</h2>
         <p>
           The <Link href="/sba-surety-bonds">SBA Surety Bond Guarantee program</Link> is for small
-          businesses that meet SBA size standards and cannot get standard surety credit. If a
-          surety has turned you down, this is often the path that gets you bonded.
+          businesses that meet SBA size standards and cannot get standard surety credit. If a{" "}
+          <Link href="/resources/why-was-my-surety-bond-declined">surety has turned you down</Link>,
+          this is often the path that gets you bonded, and{" "}
+          <Link href="/resources/how-the-sba-surety-bond-program-works">
+            how the guarantee works
+          </Link>{" "}
+          explains why a surety says yes with the SBA behind it.
         </p>
         <ul>
           <li>

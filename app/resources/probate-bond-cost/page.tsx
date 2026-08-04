@@ -80,8 +80,10 @@ export default function Page() {
         <h2>What you actually pay</h2>
         <p>
           Probate bond premiums run on a <strong>sliding scale</strong>, typically starting around{" "}
-          <strong>0.5%</strong> of the bond amount and declining as the bond grows. These are general
-          figures, not a quote, and your credit and the estate factor in.
+          <strong>0.5%</strong> of the bond amount and declining as the bond grows. That premium
+          model is the same one behind{" "}
+          <Link href="/resources/how-much-does-a-surety-bond-cost">every surety bond</Link>. These
+          are general figures, not a quote, and your credit and the estate factor in.
         </p>
       </Prose>
 
@@ -145,11 +147,14 @@ export default function Page() {
 
         <h2>Getting it placed</h2>
         <p>
-          When the court does require a bond, we place it fast, credit challenges included, and often
-          coordinate with your attorney. See the full{" "}
+          When the court does require a bond, we place it fast,{" "}
+          <Link href="/resources/surety-bonds-with-bad-credit">credit challenges</Link> included, and
+          often coordinate with your attorney. See the full{" "}
           <Link href="/commercial-bonds/probate-bond">probate bond</Link> page, or if your matter is a{" "}
           <Link href="/commercial-bonds/guardianship-bond">guardianship</Link> or{" "}
-          <Link href="/commercial-bonds/appeal-bond">appeal</Link>, we place those court bonds too.{" "}
+          <Link href="/commercial-bonds/appeal-bond">appeal</Link>, we place those court bonds too
+          and price the appeal bond{" "}
+          <Link href="/resources/appeal-bond-cost">the same sliding-scale way</Link>.{" "}
           <Link href="/get-a-quote">Start a quote</Link> with the amount the court set.
         </p>
       </Prose>
